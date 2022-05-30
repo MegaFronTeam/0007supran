@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-arrrow-right {
+	font-size:math.div(8,10)*1rem;
+	width: math.div(40,8)*1em;
+}
 .icon-basket {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(22,24)*1em;
@@ -15,11 +19,23 @@
 	font-size:math.div(27,10)*1rem;
 	width: math.div(27,27)*1em;
 }
+.icon-chevron-down {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-chevron-right {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
 .icon-fb {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
 .icon-instagram {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-search {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }

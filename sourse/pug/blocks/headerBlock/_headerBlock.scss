@@ -1,17 +1,36 @@
 // start .headerBlock
-.headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
+.headerBlock { 
+	min-height: 100vh; 
+	background-color: #000000; 
+	position: relative;
+	z-index: 2;
+	display: flex;
+	@include media-breakpoint-up(md) {
 
-	h1 {
-		margin-bottom: 1px;
+		align-items: center;
 	}
-
-	h2 {
-		margin-bottom: 1px;
+	align-items: flex-end;
+	color: #fff;
+	h1{ 
+		span{
+			color: $primary;
+		}
+	}
+	p{
+		opacity: 0.5;
+	}
+	&__inner{
+		margin-left: auto;
+		max-width: rem(510px);
+	}
+	video{
+		position: absolute;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		width: 100% !important;
+		height: 100% !important;
+		z-index: -1;
 	}
 
 	@include media-breakpoint-up(xl) {}

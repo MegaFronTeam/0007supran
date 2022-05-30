@@ -1,0 +1,30 @@
+mixin newItem(i,t,p)
+	+b.new-item(href="#")
+		+e.title= t
+		+e.text= p
+		+e.img-wrap.bg-wrap
+			+img(`img/news-${i}.jpg`,'bg').picture-bg
+		+e.date 27 июня 2022
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 Новости
+					.col-auto 
+						+b.link-more(href="#") Все новости и публикации
+							+icon("arrrow-right")
+				
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.slide.swiper-slide
+							+newItem(`1`,`Сотрудники ИНВИТРО ставят цели  и планируют развитие с помощью SAP SuccessFactors`,`Москва, Россия – 10 февраля, 2022 года— Группа компаний «Инвитро», одна из крупнейших медицинских групп РФ, продолжает масштабную трансформацию своей HR-функции`)
+						+e.slide.swiper-slide
+							+newItem(`2`,`«Узпромстройбанк» первым внедрит механизмы определения себестоимости продуктов`,`Команда SAPRUN не только внедряет новые системы SAP, но и оперативно сопровождает тысячи пользователей в компаниях по всей стране.`)
+						+e.slide.swiper-slide
+							+newItem(`3`,`Онлайн-конференция «Инновационный день фармацевтических компаний 2021»`,`Организаторами мероприятия 9 декабря выступили компании SAP, SAPRUN и DSM Group (ведущее маркетинговое агентство в сфере исследований фармацевтического рынка).`)
+				.swiper-scrollbar
+	// end sNews

@@ -1,0 +1,30 @@
+mixin itemEvent()
+	+b.item-event(href="#")
+		+e.head.row
+			+e.date.col 12 Cентября 2022
+			+e.label.col-auto online
+		+e.body
+			+e.title SAPRUN – участник Большой встречи клуба первых лиц ритейла
+			+e.text  100 представителей фармкомпаний посетили онлайн-конференцию с участием SAPRUN
+		+e.footer
+			+e.btn() Хочу пойти
+
+mixin sEvents(data)
+	// start sEvents
+	+b.SECTION.sEvents.section#sEvents&attributes(attributes) 
+		video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp')
+			source(src='video/video.webm' type='video/webm')
+			source(src='video/video.mp4' type='video/mp4')
+		.container
+			+b.section-title.text-center
+				h2 Ближайшие мероприятия
+				
+			+e.row.row
+				+e.col.col-md-5
+					+itemEvent()
+				+e.col.col
+					+itemEvent()
+			+e.footer.text-md-end
+				+b.link-more(href="#") Все мероприятия 
+					+icon("arrrow-right")
+	// end sEvents

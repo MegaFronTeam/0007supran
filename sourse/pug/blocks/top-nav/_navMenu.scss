@@ -26,11 +26,13 @@
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: 1px;
+	--color: #fff;
+	--position: calc(var(--h) * 5);
+
+
 	&.on span {
-		--color: transparent;
+		background: transparent;
 	}
 
 	&.on  { 
@@ -38,11 +40,12 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
+	width: rem(48px);
+	height: rem(48px);
 	position: relative; 
-	font-size: 32px;
-	width: 1em;
+	font-size: 1rem; 
 	cursor: pointer;
+	background: rgba(255, 255, 255, .2);
 	span:after,
 	span:before {
 		content: "";
@@ -50,7 +53,7 @@
 		left: 0;
 	} 
 	span {
-		@include a-cent(y);
+		@include a-cent();
 		display: block;
 	}
 
@@ -75,7 +78,7 @@
 		transform-origin: 50% 50%;
 	} 
 }
-@include media-breakpoint-down(lg) {
+// @include media-breakpoint-down(lg) {
 
 	
 
@@ -149,4 +152,4 @@
 			}
 		}
 	}
-}
+// }

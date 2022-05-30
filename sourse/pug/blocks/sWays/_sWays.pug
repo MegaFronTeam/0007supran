@@ -1,0 +1,33 @@
+mixin sWays(data)
+	// start sWays
+	+b.sWays.section#sWays&attributes(attributes)
+		.container
+			+e.row.row.tabs
+				.col-md-5.tabs__caption.d-none.d-md-block
+						.tabs__btn.active Финансы
+						.tabs__btn Сеть и управление расходами
+						.tabs__btn Управление цепочками поставок
+						.tabs__btn Взаимоотношения  с&nbsp;клиентами и&nbsp;клиентский опыт
+						.tabs__btn Предиктивная аналитика
+						.tabs__line
+				.tabs__wrap.col-md-7
+					mixin tab(t)
+						.tabs__content&attributes(attributes)
+							.tabs__toggle.d-md-none!= t
+								+icon("chevron-down")
+							.tabs__block.d-md-block
+								- let items = [`Финансовый менеджмент`,`Бухгалтерский учёт и финансовое закрытие`,`Управление дебиторской задолженностью, счетами и&nbsp;доходами`,`Корпоративное управление, риски  и&nbsp;кибербезопасность`,`Бизнес-планирование и бюджетирование`,`Отчетность и&nbsp;управление по&nbsp;KPI`,`Разработка финансовой методологии`,`Налоговый мониторинг`]
+								ul
+									each a in items
+										li 
+											a(href="#")
+												span!= a
+													+icon('chevron-right')
+					+tab(`Финансы`).active
+					+tab(`Сеть и управление расходами`) 
+					+tab(`Управление цепочками поставок`) 
+					+tab(`Взаимоотношения  с&nbsp;клиентами и&nbsp;клиентский опыт`) 
+					+tab(`Предиктивная аналитика`) 
+
+
+	// end sWays

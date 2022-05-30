@@ -1,12 +1,13 @@
 
 :root {
 	--animate-delay: 1.2s;
-	--bs-body-font-size: #{$em-base};
-
+	
+	// --bs-body-font-size: #{$em-base};
 	@include media-breakpoint-up(md) {
+		--bs-body-font-size: #{$em-base};
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
+		--sPT: #{rem(94)};
+		--sPB: #{rem(94)};
 		--sTPB: #{rem(40)};
 	}
 
@@ -28,6 +29,11 @@
 
 	--fancybox-bg: rgba(24, 24, 27, .77);
 
+
+	@include media-breakpoint-up(md) {
+		--c-g: #{rem(83)};
+	}
+	--c-g: 16px;
 
 
 	  //  --carousel-button-width: 48px;

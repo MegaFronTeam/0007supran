@@ -4,11 +4,14 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/headerBlock/_headerBlock.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContact/_sContact.pug 
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sTrust/_sTrust.pug
+include ../blocks/sJoin/_sJoin.pug 
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
@@ -20,33 +23,18 @@ block title
 	- let  title= index.head.title
 	title= title
 block pagecontent
-	//- +mob-mnu()
+	+mob-mnu()
 	
 	
-	+header()
 	+top-nav()
-	+topLine
-	.container
-		+in-c('radio', 'sdasdasdasd')
-		+in-c('radio', 'sdasdasdasd')
-	form
-		+input('fsdfs','tel')(required)
-		button  btn
-	+headerBlock
-
-	+soc()
-	+sForm()
-	//- +sForm()
-	//- - let list = items[0].title
-	//- p= list
-	.container
-		each item in items
-			li 
-				h2= item.title
-				p= item.text
-	//- +sContact()
-	
-	+footer()
+	+headerBlock.bg-dark
+	+sNews
+	+sEvents.bg-dark
+	+sWays
+	+sTrust.bg-dark
+	+sJoin
+	+sForm().bg-dark
+	+footer().bg-dark
       
 
 

@@ -1,10 +1,12 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+		video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp')
+			source(src='video/video.webm' type='video/webm')
+			source(src='video/video.mp4' type='video/mp4')
 
-			.row
-						
+		.container
+			+e.inner
+				h1 Открываем для компаний #[span новые возможности] в&nbsp;проектах цифровой&nbsp;трансформации
+				p Разрабатываем и&nbsp;внедряем комплексные IT-решения  в&nbsp;области управления ресурсами предприятия
 	// end headerBlock

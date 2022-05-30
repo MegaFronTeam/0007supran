@@ -15,6 +15,8 @@ const JSCCommon = {
 			autoFocus: false,
 			groupAll: false,
 			groupAttr: false,
+			// showClass: "fancybox-throwOutUp",
+			// hideClass: "fancybox-throwOutDown",
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
@@ -135,14 +137,29 @@ const JSCCommon = {
 		// 		});
 		// 	})
 		// })
-
+		function setLine(el) {
+			let line = document.querySelector('.tabs__line');
+			if (line) {
+				let h = el.offsetHeight;
+				let y = el.offsetTop;
+				line.style.setProperty('--line-h', `${h}px`);
+				line.style.setProperty('--line-y', `${y}px`);
+			}
+		}
+		setLine(document.querySelector(`.sWays .${tab}__btn.active`));
+		
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			setLine(this);
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
 
 		});
+
+		$('.tabs__toggle').click(function () {
+			$(this).toggleClass("active").next().slideToggle();
+		})
 
 	},
 	// /tabs
@@ -287,7 +304,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -361,6 +378,24 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	
+	const swipersNews = new Swiper('.sNews__slider--js', { 
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: { 
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 47,
+			}
+		}
+	});
+
 	// modal window
 
 };

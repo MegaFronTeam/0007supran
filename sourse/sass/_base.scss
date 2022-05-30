@@ -14,7 +14,8 @@
 
 body,
 html {
-	font-size: var(--bs-body-font-size);
+	font-size: calc(var(--bs-body-font-size) + .2vw + .2vh);
+	font-feature-settings: 'pnum' on, 'lnum' on;
 }
 html{
 	-webkit-text-size-adjust: 100%;
@@ -126,9 +127,23 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	h2{
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	&__link{
+	}
 }
 
-
+.link-more{
+	font-weight: 300;
+	.icon{
+		stroke: currentColor;
+		fill: none;
+		font-size: em(7);
+		margin-left: em(4);
+	}
+}
 
 .mono {
 	font-family: $font-family-code;
@@ -267,11 +282,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -486,4 +501,41 @@ iframe {
 .swiper-wrapper{
 	
 	// @include row-sw(10px, sm, 100px);
+}
+
+
+.container{
+	padding-left: var(--c-g);
+	padding-right: var(--c-g);
+	width: 100%;
+}
+
+.swiper-scrollbar-drag{
+	cursor: pointer;
+	background-color: $primary;
+}
+.swiper-horizontal>.swiper-scrollbar{
+	height: 2px;
+}
+
+.btn-outline-primary{
+	--bs-btn-active-color: #fff;
+	--bs-btn-hover-color: #fff;
+}
+
+.tabs__line{
+	top: var(--line-y,0);
+	height: var(--line-h, 100px);
+	width: 1px;
+	right: 0;
+	background-color: $primary;
+	@include mt;
+	position: absolute;
+
+}
+
+.bg-dark{
+	background: $body-color;
+	background: #08080B;
+	color: #fff;
 }
