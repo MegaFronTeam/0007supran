@@ -153,6 +153,9 @@ const JSCCommon = {
 					line.style.setProperty('--line-x', `${x}px`);
 				}
 			}
+			window.addEventListener('resize', () => { 
+				setLine(item.querySelector(` .${tab}__btn.active`));
+			}, { passive: true });
 			setLine(item.querySelector(` .${tab}__btn.active`));
 			
 			$(item.querySelector('.' + tab + '__caption')).on('click', '.' + tab + '__btn:not(.active)', function (e) {
@@ -400,6 +403,16 @@ function eventHandler() {
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 47,
+			}
+		}
+	});
+	
+	const swiperstabs = new Swiper('.tabs-slider--js', { 
+		slidesPerView: 'auto',
+		spaceBetween: 0, 
+		breakpoints: { 
+			992: {
+				slidesPerView: 4
 			}
 		}
 	});

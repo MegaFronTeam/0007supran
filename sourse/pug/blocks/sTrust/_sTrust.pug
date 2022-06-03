@@ -5,7 +5,7 @@ mixin sTrust(data)
 			+b.section-title.text-center
 				h2 Нам доверяют
 			.tabs
-				.tabs-slider--js
+				.tabs-slider--js.swiper
 					.tabs__caption.swiper-wrapper
 						.tabs__btn.swiper-slide.active  InfinBANK
 						.tabs__btn.swiper-slide Транснефть
@@ -16,30 +16,31 @@ mixin sTrust(data)
 				.tabs__wrap
 					mixin tab()
 						.tabs__content&attributes(attributes)
-							.row
-								.col-lg-6
-									+e.img-wrap.bg-wrap
-										+img("img/trust-img.jpg",'bg').picture-bg
-								.col-lg-6
-									h4 Программа проектов «Реновация» цифровой трансформации банка InfinBank
-									+e.row.row
-										+e.col.col-6
-											+e.count №1
-											p Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017
-											
-										+e.col.col-6
-											+e.count 220+
-											p Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД
-										+e.col.col-6
-											+e.count 400
-											p Количество пользователей единой системы
+							.tabs__content-inner
+								.row
+									.col-lg-6
+										+e.img-wrap.bg-wrap
+											+img("img/trust-img.jpg",'bg').picture-bg
+									.col-lg-6
+										h4 Программа проектов «Реновация» цифровой трансформации банка InfinBank
+										+e.row.row
+											+e.col.col-6
+												+e.count №1
+												p Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017
+												
+											+e.col.col-6
+												+e.count 220+
+												p Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД
+											+e.col.col-6
+												+e.count 400
+												p Количество пользователей единой системы
 
-										+e.col.col-6
-											+b.link-more(href="#")
+											+e.col.col-6
+												+b.link-more(href="#")
 
-												+icon("arrrow-right")
-												br
-												| Перейти в раздел проекты
+													+icon("arrrow-right")
+													br
+													| Перейти в раздел проекты
 					+tab().active
 					+tab()
 					+tab()

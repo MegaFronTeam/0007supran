@@ -1,9 +1,13 @@
 mixin sJoin(data)
 	// start sJoin
-	+b.SECTION.sJoin.section#sJoin&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sJoin
-				
-			.row
+	+b.SECTION.sJoin#sJoin&attributes(attributes)
+		+e.img-wrap
+			+img("img/sjoin-img.jpg",'bg').img-animate
+		.container 
+			+e.col.col-lg-6
+				.section
+					h2 Присоединяйтесь <br>  к&nbsp;команде &laquo;SAPRUN&raquo;
+					p В&nbsp;SAPRUN мы&nbsp;создаем успешный бизнес, в&nbsp;котором всем нам комфортно и&nbsp;интересно работать. Бизнес,  в&nbsp;котором отношения строятся на&nbsp;доверии, взаимовыгодном, доброжелательном и&nbsp;долгосрочном сотрудничестве. Наша цель&nbsp;&mdash; максимально реализовать потенциал клиентов и&nbsp;сотрудников.
+					+b.link-more(href="#") Присоединиться
+							+icon("arrrow-right")
 	// end sJoin

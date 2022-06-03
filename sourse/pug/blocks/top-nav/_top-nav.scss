@@ -2,7 +2,13 @@
 	position: fixed;
 	width: 100%;
 	left: 0;
-	top: 0;
+	@include media-breakpoint-down(md) {
+		bottom: 0;
+	}
+	@include media-breakpoint-up(md) {
+
+		top: 0;
+	}
 	z-index: 1000;
 	color: var(--color, #fff);
 	&__lang{

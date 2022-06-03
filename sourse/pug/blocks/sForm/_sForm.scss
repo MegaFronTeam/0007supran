@@ -1,6 +1,19 @@
 
 	// start .sForm
 	.sForm {
+
+		--sTPB: #{rem(32)};
+		.form-wrap{
+			max-width: calc( 556 / 1114 * 100%);
+			&__btn{
+				@extend .btn;
+				color: #fff;
+				width: rem(185px);
+			}
+			h2{
+				text-transform: none;
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

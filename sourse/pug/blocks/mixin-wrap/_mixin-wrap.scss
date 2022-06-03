@@ -1,14 +1,26 @@
  
 	  
 .soc{
-	@include roww(10px, m);
+	@include roww(#{rem(18)}, m);
 	display: flex;
+	flex-wrap: wrap;
+	margin-top: rem(-18);
+	@include media-breakpoint-up(lg) {
+
+		justify-content: flex-end;
+		max-width: rem(200);
+		margin-left: auto;
+	}
 	&__item{
 		text-decoration: none !important; 
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
+		margin-top: rem(18);
+		img{
+			width: rem(28);
+		}
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;

@@ -14,7 +14,7 @@
 
 body,
 html {
-	font-size: calc(var(--bs-body-font-size) + .2vw + .2vh);
+	font-size: var(--bs-body-font-size);
 	font-feature-settings: 'pnum' on, 'lnum' on;
 }
 html{
@@ -123,6 +123,14 @@ body {
 	@include bgs;
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
+	// min-height: 100vh;
+}
+
+.section--vh{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .section-title {
@@ -525,8 +533,25 @@ iframe {
 
 
 
-.bg-dark{
-	background: $body-color;
-	background: #08080B;
+.bg-dark{ 
+	// background: #08080B;
 	color: #fff;
+}
+
+.page-fixed-video{
+	background-color: #000;
+}
+.bg-video{
+	position: fixed;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+	width: 100% !important;
+	height: 100% !important;
+	z-index: -1;
+
+}
+
+.bg-white{
+	z-index: 2;
 }

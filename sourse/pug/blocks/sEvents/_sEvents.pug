@@ -12,9 +12,6 @@ mixin itemEvent()
 mixin sEvents(data)
 	// start sEvents
 	+b.SECTION.sEvents.section#sEvents&attributes(attributes) 
-		video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp')
-			source(src='video/video.webm' type='video/webm')
-			source(src='video/video.mp4' type='video/mp4')
 		.container
 			+b.section-title.text-center
 				h2 Ближайшие мероприятия

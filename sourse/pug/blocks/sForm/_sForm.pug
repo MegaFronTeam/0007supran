@@ -2,7 +2,20 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-			.row
+			+form-wrap
+				+b.section-title
+					h2 Давайте обсудим, как мы&nbsp;могли  бы&nbsp;работать вместе
+				+e.row.row
+					.col-md-6
+						+input("Имя")
+					.col-md-6
+						+input("Фамилия")
+					.col-md-6
+						+input("Телефон",'tel')
+					.col-md-6
+						+input("E-mail",'email')
+					.col-12
+						+input("Что вы хотите обсудить?",'textarea')
+				+policy
+				+e.btn.btn-primary(type="submit")  Отправить
 	// end sForm

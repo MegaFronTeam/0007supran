@@ -13,7 +13,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page page-fixed-video">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -29,6 +29,10 @@
 				</div>
 			</div>
 			<!--  мобильное меню-->
+			<video class="bg-video" preload="auto" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted" poster="img/poster.webp">
+				<source src="video/video.webm" type="video/webm">
+				<source src="video/video.mp4" type="video/mp4">
+			</video>
 			<!-- start top-nav-->
 			<div class="top-nav"> 
 				<div class="row">
@@ -52,11 +56,7 @@
 			</div>
 			<!-- end top-nav-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section bg-dark" id="headerBlock">
-				<video preload="auto" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted" poster="img/poster.webp">
-					<source src="video/video.webm" type="video/webm"/>
-					<source src="video/video.mp4" type="video/mp4"/>
-				</video>
+			<div class="headerBlock section bg-dark section section--vh" id="headerBlock">
 				<div class="container">
 					<div class="headerBlock__inner">
 						<h1>Открываем для компаний <span>новые возможности</span> в&nbsp;проектах цифровой&nbsp;трансформации</h1>
@@ -66,7 +66,7 @@
 			</div>
 			<!-- end headerBlock-->
 			<!-- start sNews-->
-			<section class="sNews section" id="sNews">
+			<section class="sNews section bg-white section section--vh" id="sNews">
 				<div class="container">
 					<div class="section-title">
 						<div class="row">
@@ -199,11 +199,7 @@
 			</section>
 			<!-- end sNews-->
 			<!-- start sEvents-->
-			<section class="sEvents section bg-dark" id="sEvents"> 
-				<video preload="auto" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted" poster="img/poster.webp">
-					<source src="video/video.webm" type="video/webm"/>
-					<source src="video/video.mp4" type="video/mp4"/>
-				</video>
+			<section class="sEvents section bg-dark section section--vh" id="sEvents"> 
 				<div class="container">
 					<div class="section-title text-center">
 						<h2>Ближайшие мероприятия</h2>
@@ -261,7 +257,7 @@
 			</section>
 			<!-- end sEvents-->
 			<!-- start sWays-->
-			<div class="sWays section" id="sWays">
+			<div class="sWays section bg-white section section--vh" id="sWays">
 				<div class="container">
 					<div class="sWays__row row tabs">
 						<div class="col-md-5 tabs__caption d-none d-md-block">
@@ -493,13 +489,13 @@
 			</div>
 			<!-- end sWays-->
 			<!-- start sTrust-->
-			<section class="sTrust section bg-dark" id="sTrust">
+			<section class="sTrust section bg-dark section section--vh" id="sTrust">
 				<div class="container">
 					<div class="section-title text-center">
 						<h2>Нам доверяют</h2>
 					</div>
 					<div class="tabs">
-						<div class="tabs-slider--js">
+						<div class="tabs-slider--js swiper">
 							<div class="tabs__caption swiper-wrapper">
 								<div class="tabs__btn swiper-slide active"> InfinBANK</div>
 								<div class="tabs__btn swiper-slide">Транснефть</div>
@@ -510,175 +506,185 @@
 						</div>
 						<div class="tabs__wrap">
 										<div class="tabs__content active">
-											<div class="row">
-												<div class="col-lg-6">
-													<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
-													</div>
-												</div>
-												<div class="col-lg-6">
-													<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
-													<div class="sTrust__row row">
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">№1
-															</div>
-															<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">220+
-															</div>
-															<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">400
-															</div>
-															<p>Количество пользователей единой системы</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<a class="link-more" href="#">
-																<svg class="icon icon-arrrow-right ">
-																	<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
-																</svg><br/>Перейти в раздел проекты
-															</a>
+											<div class="tabs__content-inner">
+												<div class="row">
+													<div class="col-lg-6">
+														<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
 														</div>
 													</div>
-												</div>
-											</div>
-										</div>
-										<div class="tabs__content">
-											<div class="row">
-												<div class="col-lg-6">
-													<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
-													</div>
-												</div>
-												<div class="col-lg-6">
-													<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
-													<div class="sTrust__row row">
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">№1
+													<div class="col-lg-6">
+														<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
+														<div class="sTrust__row row">
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">№1
+																</div>
+																<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
 															</div>
-															<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">220+
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">220+
+																</div>
+																<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
 															</div>
-															<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">400
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">400
+																</div>
+																<p>Количество пользователей единой системы</p>
 															</div>
-															<p>Количество пользователей единой системы</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<a class="link-more" href="#">
-																<svg class="icon icon-arrrow-right ">
-																	<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
-																</svg><br/>Перейти в раздел проекты
-															</a>
+															<div class="sTrust__col col-6">
+																<a class="link-more" href="#">
+																	<svg class="icon icon-arrrow-right ">
+																		<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
+																	</svg><br/>Перейти в раздел проекты
+																</a>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="tabs__content">
-											<div class="row">
-												<div class="col-lg-6">
-													<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
-													</div>
-												</div>
-												<div class="col-lg-6">
-													<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
-													<div class="sTrust__row row">
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">№1
-															</div>
-															<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">220+
-															</div>
-															<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">400
-															</div>
-															<p>Количество пользователей единой системы</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<a class="link-more" href="#">
-																<svg class="icon icon-arrrow-right ">
-																	<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
-																</svg><br/>Перейти в раздел проекты
-															</a>
+											<div class="tabs__content-inner">
+												<div class="row">
+													<div class="col-lg-6">
+														<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
 														</div>
 													</div>
-												</div>
-											</div>
-										</div>
-										<div class="tabs__content">
-											<div class="row">
-												<div class="col-lg-6">
-													<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
-													</div>
-												</div>
-												<div class="col-lg-6">
-													<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
-													<div class="sTrust__row row">
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">№1
+													<div class="col-lg-6">
+														<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
+														<div class="sTrust__row row">
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">№1
+																</div>
+																<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
 															</div>
-															<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">220+
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">220+
+																</div>
+																<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
 															</div>
-															<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">400
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">400
+																</div>
+																<p>Количество пользователей единой системы</p>
 															</div>
-															<p>Количество пользователей единой системы</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<a class="link-more" href="#">
-																<svg class="icon icon-arrrow-right ">
-																	<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
-																</svg><br/>Перейти в раздел проекты
-															</a>
+															<div class="sTrust__col col-6">
+																<a class="link-more" href="#">
+																	<svg class="icon icon-arrrow-right ">
+																		<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
+																	</svg><br/>Перейти в раздел проекты
+																</a>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="tabs__content">
-											<div class="row">
-												<div class="col-lg-6">
-													<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
+											<div class="tabs__content-inner">
+												<div class="row">
+													<div class="col-lg-6">
+														<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+													<div class="col-lg-6">
+														<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
+														<div class="sTrust__row row">
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">№1
+																</div>
+																<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
+															</div>
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">220+
+																</div>
+																<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
+															</div>
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">400
+																</div>
+																<p>Количество пользователей единой системы</p>
+															</div>
+															<div class="sTrust__col col-6">
+																<a class="link-more" href="#">
+																	<svg class="icon icon-arrrow-right ">
+																		<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
+																	</svg><br/>Перейти в раздел проекты
+																</a>
+															</div>
+														</div>
 													</div>
 												</div>
-												<div class="col-lg-6">
-													<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
-													<div class="sTrust__row row">
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">№1
-															</div>
-															<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="tabs__content-inner">
+												<div class="row">
+													<div class="col-lg-6">
+														<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
 														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">220+
+													</div>
+													<div class="col-lg-6">
+														<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
+														<div class="sTrust__row row">
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">№1
+																</div>
+																<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
 															</div>
-															<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
-														</div>
-														<div class="sTrust__col col-6">
-															<div class="sTrust__count">400
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">220+
+																</div>
+																<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
 															</div>
-															<p>Количество пользователей единой системы</p>
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">400
+																</div>
+																<p>Количество пользователей единой системы</p>
+															</div>
+															<div class="sTrust__col col-6">
+																<a class="link-more" href="#">
+																	<svg class="icon icon-arrrow-right ">
+																		<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
+																	</svg><br/>Перейти в раздел проекты
+																</a>
+															</div>
 														</div>
-														<div class="sTrust__col col-6">
-															<a class="link-more" href="#">
-																<svg class="icon icon-arrrow-right ">
-																	<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
-																</svg><br/>Перейти в раздел проекты
-															</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="tabs__content-inner">
+												<div class="row">
+													<div class="col-lg-6">
+														<div class="sTrust__img-wrap bg-wrap"><img class="object-fit-js picture-bg" src="img/trust-img.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+													<div class="col-lg-6">
+														<h4>Программа проектов «Реновация» цифровой трансформации банка InfinBank</h4>
+														<div class="sTrust__row row">
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">№1
+																</div>
+																<p>Первое внедрение SAP в банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017</p>
+															</div>
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">220+
+																</div>
+																<p>Источников информации  из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД</p>
+															</div>
+															<div class="sTrust__col col-6">
+																<div class="sTrust__count">400
+																</div>
+																<p>Количество пользователей единой системы</p>
+															</div>
+															<div class="sTrust__col col-6">
+																<a class="link-more" href="#">
+																	<svg class="icon icon-arrrow-right ">
+																		<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
+																	</svg><br/>Перейти в раздел проекты
+																</a>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -690,37 +696,197 @@
 			</section>
 			<!-- end sTrust-->
 			<!-- start sJoin-->
-			<section class="sJoin section" id="sJoin">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sJoin</h2>
+			<section class="sJoin bg-white" id="sJoin">
+				<div class="sJoin__img-wrap"><img class="object-fit-js img-animate" src="img/sjoin-img.jpg" alt="" loading="lazy"/>
+				</div>
+				<div class="container"> 
+					<div class="sJoin__col col-lg-6">
+						<div class="section">
+							<h2>Присоединяйтесь <br>  к&nbsp;команде &laquo;SAPRUN&raquo;</h2>
+							<p>В&nbsp;SAPRUN мы&nbsp;создаем успешный бизнес, в&nbsp;котором всем нам комфортно и&nbsp;интересно работать. Бизнес,  в&nbsp;котором отношения строятся на&nbsp;доверии, взаимовыгодном, доброжелательном и&nbsp;долгосрочном сотрудничестве. Наша цель&nbsp;&mdash; максимально реализовать потенциал клиентов и&nbsp;сотрудников.</p>
+							<a class="link-more" href="#">Присоединиться
+								<svg class="icon icon-arrrow-right ">
+									<use xlink:href="img/svg/sprite.svg#arrrow-right"></use>
+								</svg>
+							</a>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sJoin-->
 			<!-- start sForm-->
-			<section class="sForm section bg-dark" id="sForm">
+			<section class="sForm section bg-dark section section--vh" id="sForm">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="form-wrap">
+						<form>
+							<div class="section-title">
+								<h2>Давайте обсудим, как мы&nbsp;могли  бы&nbsp;работать вместе</h2>
+							</div>
+							<div class="form-wrap__row row">
+								<div class="col-md-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/><span class="form-wrap__input-title">Имя</span>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-md-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Фамилия"/><span class="form-wrap__input-title">Фамилия</span>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-md-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-md-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/><span class="form-wrap__input-title">E-mail</span>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-12">
+									<div class="form-wrap__input-wrap form-group">
+										<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Что вы хотите обсудить?"></textarea><span class="form-wrap__input-title">Что вы хотите обсудить?</span>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+							</div>
+							<div class="form-wrap__policy"> Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; я&nbsp;соглашаюсь с&nbsp;условиями  <a href="#">обработки персональных данных</a>
+							</div>
+							<button class="form-wrap__btn btn-primary" type="submit"> Отправить
+							</button>
+						</form>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sForm-->
 			<footer class="footer">
-				<div class="container">
+				<div class="footer__block container">
 					<div class="row">
-						<div class="col"></div>
-						<div class="col">Footer</div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+						<div class="col-md-6">
+							<h4>Получайте последние новости от&nbsp;Saprun</h4>
+							<p>Поделитесь своей электронной почтой, чтобы мы&nbsp;могли отправлять вам новости отрасли.</p>
+						</div>
+						<div class="col-md-6">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите e-mail"/><span class="form-wrap__input-title">Введите e-mail</span>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="form-wrap__btn" type="submit">
+										<svg class="icon icon-arrow-right ">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+										</svg>
+									</button>
+									<div class="form-wrap__policy">Вы&nbsp;можете отписаться в&nbsp;любое время. Ознакомьтесь с&nbsp;нашей <a href="#">политикой конфиденциальности</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__block container">
+					<div class="row">
+						<div class="col-lg-9">
+							<div class="row">
+											<div class="footer__col col-md-4">
+												<div class="footer__title">Офис Москвы
+												</div>
+												<div class="footer__text">ул. Октябрьская, 72
+												</div>
+											</div>
+											<div class="footer__col col-md-4">
+												<div class="footer__title">Офис Санкт-Петербурга
+												</div>
+												<div class="footer__text">ул. Белоостровская 17к2
+												</div>
+											</div>
+											<div class="footer__col col-md-4">
+												<div class="footer__title">Офис Перми
+												</div>
+												<div class="footer__text">ул. Стахановская, д.54И
+												</div>
+											</div>
+											<div class="footer__col col-md-4">
+												<div class="footer__title">Офис Казахстана
+												</div>
+												<div class="footer__text">г. Алматы  <br> ул. Октябрьская, 72
+												</div>
+											</div>
+											<div class="footer__col col-md-4">
+												<div class="footer__title">Офис Латвии
+												</div>
+												<div class="footer__text">г. Мадона <br> ул. Белоостровская 17к2
+												</div>
+											</div>
+											<div class="footer__col col-md-4">
+												<div class="footer__title">Офис Белорусии
+												</div>
+												<div class="footer__text">г. Минск <br> ул. Стахановская, д.54И
+												</div>
+											</div>
+							</div>
+						</div>
+						<div class="col-lg-3"> 
+							<div class="footer__contact">
+								<a class="footer__tel" href="tel:+74956637759">+7 495 663 7759
+								</a><br/>
+								<a class="footer__email" href="mailto:info@saprun.com">info@saprun.com 
+								</a>
+							</div>
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/facebook.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/instagram.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/linkedin.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/telegram.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/whatsApp.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/youtube.svg" alt=""/>
+								</a>
+								<a class="soc__item" href="#" target="_blank"><img src="img/svg/vk.svg" alt=""/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="footer__block footer__block--footer ttu">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="footer__copy">Политика обработки персональных данных
+								</div>
+							</div>
+							<div class="col-md">
+								<div class="footer__year">© 2022 SAPRUN
+								</div>
+							</div>
+							<div class="col-md-auto">
+								<a class="footer__develop" href="#">
+									<svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M23 11L22 9C22.022 9 22.042 9 22 9C25.048 8.925 26.049 7.343 26.049 5.5C26.0328 4.57139 25.6583 3.68499 25.0038 3.02604C24.3493 2.36708 23.4655 1.98656 22.537 1.964C18.108 2 19.307 8.381 19 7C18.435 6.69 18.108 5.657 17.314 5.46C15.1469 4.84692 12.8521 4.84692 10.685 5.46C9.891 5.66 9.565 6.69 8.999 7C8.692 8.381 9.891 2 5.462 1.964C4.5337 1.98682 3.65012 2.36745 2.99585 3.02637C2.34158 3.6853 1.96722 4.57156 1.951 5.5C1.951 7.343 2.951 8.925 6 9C5.956 9 5.977 9 6 9L5 11C3.63443 10.8529 2.37054 10.2091 1.44867 9.19094C0.526795 8.17283 0.0112292 6.85142 0 5.478C0.0109325 4.03111 0.589538 2.64637 1.61127 1.62183C2.633 0.5973 4.01615 0.0148998 5.463 0C6.52993 0.0105767 7.56766 0.349927 8.43469 0.971794C9.30173 1.59366 9.95588 2.46778 10.308 3.475C10.338 3.546 10.361 3.625 10.388 3.7C11.4017 3.4129 12.4333 3.19341 13.476 3.043C13.6493 3.01529 13.8245 3.00091 14 3C15.2256 3.10347 16.4365 3.33814 17.612 3.7C17.639 3.625 17.662 3.545 17.692 3.475C18.0441 2.46778 18.6983 1.59366 19.5653 0.971794C20.4323 0.349927 21.4701 0.0105767 22.537 0C23.9838 0.0151564 25.3668 0.597637 26.3885 1.62212C27.4101 2.64659 27.9888 4.03119 28 5.478C27.9888 6.85142 27.4732 8.17283 26.5513 9.19094C25.6295 10.2091 24.3656 10.8529 23 11V11ZM22 9C21.978 9 21.952 9 22 9V9ZM6 9C6.048 9 6.022 9 6 9V9ZM9.318 9C9.61389 9.15362 9.842 9.41188 9.9579 9.72448C10.0738 10.0371 10.0692 10.3816 9.945 10.691C9.83006 10.8449 9.67579 10.965 9.49841 11.0386C9.32102 11.1122 9.12706 11.1367 8.93694 11.1095C8.74681 11.0823 8.56753 11.0043 8.41795 10.8838C8.26837 10.7633 8.15402 10.6048 8.08691 10.4248C8.0198 10.2449 8.00241 10.0501 8.03658 9.86114C8.07074 9.67214 8.1552 9.49583 8.28107 9.35075C8.40693 9.20568 8.56956 9.09719 8.75185 9.0367C8.93415 8.97621 9.12937 8.96595 9.317 9.007L9.318 9ZM14 8.995C15.1 8.995 16 10.565 16 12.5C16 14.435 15.1 16 14 16C12.924 16 12.048 14.508 12 12.645V12.345C12.045 10.484 12.921 8.995 14 8.995ZM18.686 9.008C19.0183 9.03056 19.3306 9.17481 19.5633 9.41316C19.7959 9.65152 19.9325 9.96725 19.947 10.3C20.0558 10.4434 20.1266 10.6119 20.1529 10.7899C20.1792 10.968 20.16 11.1498 20.0972 11.3184C20.0344 11.4871 19.93 11.6372 19.7937 11.7547C19.6574 11.8722 19.4936 11.9533 19.3175 11.9906C19.1414 12.0279 18.9588 12.02 18.7865 11.9678C18.6143 11.9156 18.458 11.8207 18.3323 11.692C18.2065 11.5632 18.1154 11.4048 18.0672 11.2313C18.0191 11.0579 18.0156 10.8751 18.057 10.7C17.9321 10.3905 17.9271 10.0456 18.0428 9.73253C18.1586 9.4195 18.3868 9.16083 18.683 9.007L18.686 9.008Z" fill="white"></path>
+									</svg>Made by Coalla Agency
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
@@ -730,14 +896,14 @@
 							</div>
 							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/><span class="form-wrap__input-title">Ваше Имя</span> 
+							</label> 
 						</div>
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn" type="submit"> 
 						</button>
-						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-							</label>
+						<div class="form-wrap__policy"> Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; я&nbsp;соглашаюсь с&nbsp;условиями  <a href="#">обработки персональных данных</a>
 						</div>
 					</form>
 				</div>
