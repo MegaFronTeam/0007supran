@@ -523,16 +523,7 @@ iframe {
 	--bs-btn-hover-color: #fff;
 }
 
-.tabs__line{
-	top: var(--line-y,0);
-	height: var(--line-h, 100px);
-	width: 1px;
-	right: 0;
-	background-color: $primary;
-	@include mt;
-	position: absolute;
 
-}
 
 .bg-dark{
 	background: $body-color;

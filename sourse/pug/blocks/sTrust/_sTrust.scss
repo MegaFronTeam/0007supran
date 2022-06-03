@@ -3,9 +3,14 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	.row{
+		@include media-breakpoint-up(lg) {
+
+			--bs-gutter-x: #{rem(48)};
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(16)};
 
 	}
 	.section-title{
@@ -17,6 +22,63 @@
 	&__item{
 
 	}
+
+	.tabs__caption{
+		margin-bottom: rem(48);
+	}
+	.tabs__btn{
+		// width: auto;
+		width: calc(100% / 4);
+		text-align: center;
+		padding: 1em;
+		@include rfs(24px);
+		@include mt;
+		border-top: 1px solid #FFFFFF;
+		&:not(.acitve) {
+			opacity: 0.3;
+		}
+		&:hover{
+			opacity: 1;
+		}
+		
+	}
+	&__img-wrap{
+		@include block(533, 315);
+		filter: saturate(0);
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(32);
+		}
+	}
+	h4{
+		margin-bottom: rem(32);
+		font-weight: 300;
+	}
+	&__count{
+		font-weight: 500;
+		@include rfs(24px);
+		margin-bottom: rem(6);
+	}
+	p{
+		font-weight: 300;
+		font-size: rem(13);
+		opacity: 0.6;
+	}
+
+
+
+	.tabs__caption::after{
+		content: '';
+		top: 0;
+		left: var(--line-x,0);
+		height: 1px;
+		width: var(--line-w, 100px);
+		right: 0;
+		background-color: $primary;
+		@include mt;
+		position: absolute;
+	
+	}
+
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

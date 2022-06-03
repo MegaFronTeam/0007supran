@@ -122,6 +122,18 @@
 
 
 
+	.tabs__caption::after{
+		content: '';
+		top: var(--line-y,0);
+		height: var(--line-h, 100px);
+		width: 1px;
+		right: 0;
+		background-color: $primary;
+		@include mt;
+		position: absolute;
+	
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
