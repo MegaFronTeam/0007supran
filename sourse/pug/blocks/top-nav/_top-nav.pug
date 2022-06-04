@@ -15,8 +15,9 @@ mixin top-nav()
 			.col-auto
 				+menu-toggle()
 			.col
-				a(href="/")
-					img(src="img/svg/logo.svg", alt="") 
+				+e.logo(href="/")
+					//- img(src="img/svg/logo.svg", alt="") 
+					include logo.svg
 			.col-auto
 				+e.lang Eng
 			.col-auto

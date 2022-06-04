@@ -167,10 +167,10 @@ const JSCCommon = {
 	
 			});
 	
-			$('.tabs__toggle').click(function () {
-				$(this).toggleClass("active").next().slideToggle();
-			})
 		}
+		$('.tabs__toggle').click(function () {
+			$(this).toggleClass("active").next().slideToggle();
+		})
 
 	},
 	// /tabs
@@ -333,8 +333,8 @@ function eventHandler() {
 	}
 
 
+	let topNav = document.querySelector('.top-nav  ');
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
 		if (!topNav) return;
 		window.scrollY > 0
 			? topNav.classList.add('fixed')
@@ -345,15 +345,116 @@ function eventHandler() {
 		setFixedNav();
 	}
 
+	gsap.registerPlugin(ScrollTrigger);
+
+	let scroller = document.body ,
+		tween;
+	
+	
+		gsap.utils.toArray(" .section").forEach(wow => {
+
+					if (!topNav) return;
+		let h = topNav.offsetHeight;
+		 
+			function myfunction() {
+				if (wow.classList.contains("bg-white")) {
+					$(".top-nav").addClass("top-nav--light")
+				}
+				else {
+					$(".top-nav").removeClass("top-nav--light")
+					
+				}
+			};
+			const rect = wow.getBoundingClientRect(); 
+			ScrollTrigger.create({
+				scroller: scroller,
+				trigger: wow,
+				start: `top  bottom - ${h}`,
+				end: `bottom   top`,
+				// markers: true,
+				// toggleActions: "play none play none",
+				onEnter: () => myfunction(),
+				// onLeave: () => myfunction(),
+				// onLeaveBack: () => myfunction(),
+				onEnterBack: () => myfunction(),
+				invalidateOnRefresh: true,
+			});
+		})
+
+
+	// Получаем нужный элемент
+// var element = document.querySelectorAll('.section');
+
+// 	var Visible = function (targets) {
+// 		if (!topNav) return;
+// 		let h = topNav.offsetHeight;
+// 	for (const target of targets) {
+		
+	
+// 		var targetPosition = {
+//       top: window.pageYOffset + target.getBoundingClientRect().top,
+//       // left: window.pageXOffset + target.getBoundingClientRect().left,
+//       // right: window.pageXOffset + target.getBoundingClientRect().right,
+//       bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+//     },
+//     // Получаем позиции окна
+//     windowPosition = {
+//       top: window.pageYOffset,
+//       // left: window.pageXOffset,
+//       // right: window.pageXOffset + document.documentElement.clientWidth,
+//       bottom: window.pageYOffset + document.documentElement.clientHeight
+//     };
+
+//   if ((targetPosition.top )  windowPosition.bottom && (targetPosition.bottom - h / 2) < (windowPosition.top ) &&  windowPosition.top > 0) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+//     // Если элемент полностью видно, то запускаем следующий код
+// 		if (target.classList.contains("bg-white")) {
+			
+// 			$(".top-nav").addClass("top-nav--light")
+// 			console.clear();
+// 			console.log(target);
+// 		}
+// 		else {
+// 			$(".top-nav").removeClass("top-nav--light")
+// 			// Если элемент не видно, то запускаем этот код
+// 			console.clear();
+// 			}; 
+//   } else {
+// 		// $(".top-nav").removeClass("top-nav--dark")
+//     // Если элемент не видно, то запускаем этот код
+//     console.clear();
+// 		};
+// 	}
+// };
+
+// Запускаем функцию при прокрутке страницы
+window.addEventListener('scroll', function() {
+
+}, { passive: true });
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+
+
+	function setTopNavBg() {
+		let bg = false;
+		let  section = document.querySelectorAll(".section");
+		window.addEventListener('scroll', () => { 
+				
+		}, { passive: true })
+
+	}
+
 	window.addEventListener('scroll', () => {
 		setFixedNav();
+		// Visible(element);
 
 	}, { passive: true })
 	window.addEventListener('resize', () => {
 		whenResize();
+		// Visible(element);
 	}, { passive: true });
 
 	whenResize();
+	// Visible(element);
 
 
 	let defaultSl = {

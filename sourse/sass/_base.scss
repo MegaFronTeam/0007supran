@@ -128,9 +128,12 @@ body {
 
 .section--vh{
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	@include media-breakpoint-up(md) {
+
+	}
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 }
 
 .section-title {

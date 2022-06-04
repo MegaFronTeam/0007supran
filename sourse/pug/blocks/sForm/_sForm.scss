@@ -4,11 +4,17 @@
 
 		--sTPB: #{rem(32)};
 		.form-wrap{
-			max-width: calc( 556 / 1114 * 100%);
+			@include media-breakpoint-up(md) {
+				
+				max-width: rem(556);
+			}
 			&__btn{
-				@extend .btn;
+				// @extend .btn;
 				color: #fff;
+				@include media-breakpoint-up(md) {
 				width: rem(185px);
+			}
+			width: 100%;
 			}
 			h2{
 				text-transform: none;
