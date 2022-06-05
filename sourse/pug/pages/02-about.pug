@@ -8,7 +8,7 @@ include ../blocks/headerBlock/_headerBlock.pug
  
 //- include ../blocks/sContact/_sContact.pug 
 include ../blocks/sAboutPerson/_sAboutPerson.pug
-include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sAboutCaption/_sAboutCaption.pug
 include ../blocks/sWays/_sWays.pug
 include ../blocks/sTrust/_sTrust.pug
 include ../blocks/sJoin/_sJoin.pug 
@@ -31,6 +31,7 @@ block pagecontent
 	+top-nav()
 	+headerBlockAbout.bg-dark.section--vh
 	+sAboutPerson.bg-white
+	+sAboutCaption.bg-white
 	//- +sNews.bg-white.section--vh
 	//- +sEvents.bg-dark.section--vh
 	//- +sWays.bg-white.section--vh
