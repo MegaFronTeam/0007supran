@@ -32,7 +32,21 @@
 		height: 100% !important;
 		z-index: -1;
 	}
-
+	&__bg{
+		img{
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+		&--mob{
+			display: block;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
