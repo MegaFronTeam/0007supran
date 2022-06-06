@@ -134,18 +134,26 @@
 				border-top: none;
 			}
 		}
-		&:nth-child(odd) {
-			border-right: 1px solid #e3e7ec;
-			border-top: 1px solid #e3e7ec;
-		}
-		&:nth-child(1) {
-			border-top: none;
-		}
-		&:nth-child(even) {
-			border-top: 1px solid #e3e7ec;
-		}
-		&:nth-child(2) {
-			border-top: none;
+		@include media-breakpoint-down(lg) {
+			border-bottom: 1px solid #e3e7ec;
+			&:nth-child(odd) {
+				border-right: 1px solid #e3e7ec;
+				// border-top: 1px solid #e3e7ec;
+			}
+			// &:nth-child(1),
+			// &:nth-child(2) {
+			// 	border-bottom: 1px solid #e3e7ec !important;
+			// }
+			// &:nth-child(even) {
+			// 	// border-top: 1px solid #e3e7ec;
+			// }
+			// &:nth-child(2) {
+			// 	border-top: none;
+			// }
+			&:last-child,
+			&:nth-last-child(-n + 2) {
+				border-bottom: none;
+			}
 		}
 	}
 	&__status-pic {

@@ -12,7 +12,7 @@ mixin headerBlock()
 
 mixin headerBlockAbout()
 	// start headerBlock
-	+b.headerBlock--about.bg-wrap.section#headerBlock&attributes(attributes)
+	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
 		.animate-blur.animate-blur--right
 			img(src="img/@2x/webp/animate-blur.webp", alt="")
 		+e.bg.picture-bg
@@ -23,4 +23,19 @@ mixin headerBlockAbout()
 			+e.inner
 				h1 О нас
 				p Группа компаний САПРАН специализируется на&nbsp;внедрении ИТ-решений для бизнеса на&nbsp;платформе SAP
+	// end headerBlock
+
+mixin headerBlockStatus()
+	// start headerBlock
+	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
+		.animate-blur
+			img(src="img/@2x/webp/animate-blur.webp", alt="")
+		+e.bg.picture-bg
+			img(src="img/headerBlockStatus-bg.jpg", alt="")
+		+e.bg--mob.picture-bg
+			img(src="img/headerBlockStatus-bg-mob.jpg", alt="")
+		.container
+			+e.inner
+				h1 Статусы и награды 
+				p Входим в&nbsp;TOP-10 крупнейших поставщиков BI-решений в&nbsp;России 2020, в&nbsp;TOP-5 аутсорсеров поддержки решений SAP в&nbsp;России по&nbsp;версии аналитического центра TAdviser
 	// end headerBlock
