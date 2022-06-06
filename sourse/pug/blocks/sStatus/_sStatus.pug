@@ -1,0 +1,16 @@
+mixin sStatus(data)
+	// start sStatus
+	+b.SECTION.sStatus.section#sStatus&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Статусы
+				h6 Более 13 лет мы работаем над тем, чтобы быть лучшей консалтинговой компанией в своем сегменте рынка по объему и качеству оказываемых услуг.
+			+b.status-block
+				+e.wrap
+					mixin item(img)
+						+e.item
+							+e.status-pic(href="#")
+								img(src=`img/svg/status-${img}.svg`, alt="")
+					- for(var x = 1;x<7;x++)
+						+item(x)
+	// end sStatus

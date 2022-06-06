@@ -13,10 +13,12 @@ mixin headerBlock()
 mixin headerBlockAbout()
 	// start headerBlock
 	+b.headerBlock--about.bg-wrap.section#headerBlock&attributes(attributes)
+		.animate-blur.animate-blur--right
+			img(src="img/@2x/webp/animate-blur.webp", alt="")
 		+e.bg.picture-bg
 			img(src="img/headerBlockAbout-bg.jpg", alt="")
 		+e.bg--mob.picture-bg
-			img(src="img/headerBlockAbout-bg.jpg", alt="")
+			img(src="img/headerBlockAbout-bg-mob.jpg", alt="")
 		.container
 			+e.inner
 				h1 О нас

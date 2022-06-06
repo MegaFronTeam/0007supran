@@ -1,14 +1,18 @@
 // start .sAboutCaption
 .sAboutCaption {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(28)};
+	--sPB: #{rem(24)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(52)};
+		--sPB: #{rem(56)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title {
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(60);
 		}
 		margin-bottom: rem(34);
