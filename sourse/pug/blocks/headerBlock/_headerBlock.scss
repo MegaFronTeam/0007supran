@@ -1,29 +1,28 @@
 // start .headerBlock
-.headerBlock { 
-	min-height: 100vh; 
-	// background-color: #000000; 
+.headerBlock {
+	min-height: 100vh;
+	// background-color: #000000;
 	position: relative;
 	z-index: 2;
 	display: flex;
 	@include media-breakpoint-up(md) {
-
 		align-items: center;
 	}
 	align-items: flex-end;
 	color: #fff;
-	h1{ 
-		span{
+	h1 {
+		span {
 			color: $primary;
 		}
 	}
-	p{
+	p {
 		opacity: 0.5;
 	}
-	&__inner{
+	&__inner {
 		margin-left: auto;
 		max-width: rem(510px);
 	}
-	video{
+	video {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -33,63 +32,78 @@
 		z-index: -1;
 	}
 	z-index: 2;
-	.animate-blur{
+	.animate-blur {
 		position: absolute;
 		z-index: -1;
 		width: 130%;
 		top: 30%;
 		right: 40%;
 	}
-	&__bg{
-		img{
+	&__bg {
+		img {
 			width: 100%;
 			height: 100%;
 			max-width: 100%;
 			max-height: 100%;
 			object-fit: cover;
 		}
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
-		&--mob{
+		&--mob {
 			display: block;
 		}
-	@include media-breakpoint-up(xl) {}
+	}
+	@include media-breakpoint-up(xl) {
+	}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+	}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-up(xs) {
+	}
 
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-between(md, xl) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-only(md) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-only(lg) {
+	}
 
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
 }
 
 // end.headerBlock
