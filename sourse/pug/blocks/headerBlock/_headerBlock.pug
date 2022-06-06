@@ -9,3 +9,16 @@ mixin headerBlock()
 				h1 Открываем для компаний #[span новые возможности] в&nbsp;проектах цифровой&nbsp;трансформации
 				p Разрабатываем и&nbsp;внедряем комплексные IT-решения  в&nbsp;области управления ресурсами предприятия
 	// end headerBlock
+
+mixin headerBlockAbout()
+	// start headerBlock
+	+b.headerBlock--about.bg-wrap.section#headerBlock&attributes(attributes)
+		+e.bg.picture-bg
+			img(src="img/headerBlockAbout-bg.jpg", alt="")
+		+e.bg--mob.picture-bg
+			img(src="img/headerBlockAbout-bg.jpg", alt="")
+		.container
+			+e.inner
+				h1 О нас
+				p Группа компаний САПРАН специализируется на&nbsp;внедрении ИТ-решений для бизнеса на&nbsp;платформе SAP
+	// end headerBlock
