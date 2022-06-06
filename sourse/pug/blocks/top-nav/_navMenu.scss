@@ -1,26 +1,50 @@
 .menu{
-	@include media-breakpoint-up(lg) {
-
-		display: flex;
-		text-align: center;
-		@include roww(20px);
-		flex-wrap: wrap;
-	}
-
-	list-style: none;
-	position: relative;
-	margin-bottom: 0;
-	max-width: 100%;
-	li{
-		
-		// margin-left: 0;
-		// margin-right: 0;
-		padding: 0;
-	}
+	left: 0; 
 	a{
+		padding: rem(8) rem(24);
+		padding-right: rem(40);
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		color: #fff;
 	}
+	ul{ 
+		border-left: 1px solid rgba(255, 255, 255, .2);
+		@include mt;
+		transform-origin: left;
+		// transform: scaleX(0);
+		ul{
+			left: calc(var(--menu-w) * 2);
+
+		}
+	}
+	.menu-item-has-children > a{
+		background-image: var(--chevron-r);
+		background-size: rem(16);
+		background-repeat: no-repeat;
+		background-position: calc(100% - #{rem(25)}) rem(14);
+	}
+	// @include media-breakpoint-up(lg) {
+	
+		
+	// 	display: flex;
+	// 	text-align: center;
+	// 	@include roww(20px);
+	// 	flex-wrap: wrap;
+	// }
+
+	// list-style: none;
+	// position: relative;
+	// margin-bottom: 0;
+	// max-width: 100%;
+	// li{
+		
+	// 	// margin-left: 0;
+	// 	// margin-right: 0;
+	// 	padding: 0;
+	// }
+	// a{
+	// 	display: block;
+	// 	padding: rem(20) calc(var(--bs-gutter-x) / 2);
+	// }
 }
 
 
@@ -84,16 +108,14 @@
 
 	.menu-mobile {
 		position: fixed !important;
-		z-index: 999;
-		max-width: 85%;
-		height: calc(var(--vh, 1vh) * 100);
-		width: 280px;
+		z-index: 999; 
+		
 		top: 0;
-		// left: 0;
-		right: 0;
-		background-color: $body-bg;
+		left: 0;
+		// right: 0;
+		
 		&:not(.active){
-			transform: translate3d(120%, 0,0);
+			transform: translate3d(-120%, 0,0);
 			--opacity: 0;
 			.toggle-menu-mobile{
 				opacity: 0;
@@ -117,7 +139,7 @@
 			}
 		}
 		&__inner {
-			padding: rem(20) 0;
+			// padding: rem(20) 0;
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
@@ -131,25 +153,24 @@
 			.toggle-menu-mobile {
 				opacity: 1;
 			}
-		}
+		} 
 
 
-		ul {
-			position: relative;
-		}
+		ul{
+			
+			height: calc(var(--vh, 1vh) * 100);
+			padding-top: rem(56);
+			list-style: none;
+			width: var(--menu-w);
+			&:not(.menu) {
 
-		li {
-			display: block;
-			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, .13);
-
-			a {
-				// font-size: 16px;
-
-				padding: 10px;
-				display: block;
-
+				position: fixed;
 			}
+			overflow-y: auto;
+			top: 0;
+			background: #0A0B0F;
+			min-height: 100%; 
+			left: var(--menu-w); 
 		}
 	}
 // }

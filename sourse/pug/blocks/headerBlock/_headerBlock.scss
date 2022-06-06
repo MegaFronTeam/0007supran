@@ -32,7 +32,14 @@
 		height: 100% !important;
 		z-index: -1;
 	}
-
+	z-index: 2;
+	.animate-blur{
+		position: absolute;
+		z-index: -1;
+		width: 130%;
+		top: 30%;
+		right: 40%;
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
