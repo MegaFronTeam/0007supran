@@ -1,0 +1,23 @@
+mixin sNumericalIndicators(data)
+	// start sNumericalIndicators
+	+b.SECTION.sNumericalIndicators.section#sNumericalIndicators&attributes(attributes)
+		.container
+			+e.wrap
+				+e.title-block
+					h2 SAPRUN
+					+e.caption Более 13&nbsp;лет работаем над тем, чтобы быть лучшей консалтинговой компанией в&nbsp;сфере внедрения ИТ-решений для бизнеса
+					+e.link(href="#")
+						span Открытые вакансии (hh)
+						+icon('arrrow-right')
+				+e.info-block
+					.row
+						.col-lg-6
+							+e.number 200+
+							+e.number-caption консультантов
+						.col-lg-6
+							+e.number 300+
+							+e.number-caption сотрудников 
+						.col-lg-6
+							+e.number 100+
+							+e.number-caption сотрудников работают более&nbsp;5&nbsp;лет
+	// end sNumericalIndicators

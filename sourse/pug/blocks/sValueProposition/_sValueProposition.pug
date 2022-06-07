@@ -1,0 +1,18 @@
+mixin sValueProposition(data)
+	// start sValueProposition
+	+b.SECTION.sValueProposition.section#sValueProposition&attributes(attributes)
+		.container
+			+b.section-title
+				h2 SAPRUN – это возможность реализовать себя
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide(pic,title,caption)
+						+e.slide.swiper-slide
+							+pic(`ValueProposition-${pic}.jpg`,'',0)
+							+e.slide-title!=title
+							+e.slide-caption!=caption
+					+slide(`1`,`Помогаем найти баланс`,`Мы&nbsp;стремимся найти для коллег оптимальный баланс между работой и&nbsp;личной жизнью. Наши сотрудники могут работать удаленно, оставаясь дома и&nbsp;реализуя свой потенциал из&nbsp;любой точки мира.`)
+					+slide(`2`,`Нам есть, чем гордиться`,`Золотой резерв SAPRUN&nbsp;&mdash; лучшие консультанты и&nbsp;руководители проектов, которые каждый день помогают компаниям в&nbsp;цифровой трансформации их&nbsp;бизнеса. Наши ключевые компетенции&nbsp;&mdash; ум, знания и&nbsp;способность системно мыслить.`)
+					+slide(`3`,`Создаем условия`,`В&nbsp;SAPRUN мы&nbsp;приветствуем как&nbsp;профессионалов, так и&nbsp;начинающих специалистов без опыта. Заботимся о&nbsp;личностном росте и&nbsp;развитии каждого сотрудника&nbsp;&mdash; создаем условия для комфортной работы, получения и&nbsp;совершенствования знаний, возможности самореализации и&nbsp;карьерного роста.`)
+				.swiper-scrollbar
+	// end sValueProposition

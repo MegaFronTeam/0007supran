@@ -558,6 +558,21 @@ window.addEventListener('scroll', function() {
 			}
 		}
 	});
+	const swiperValueProposition = new Swiper('.sValueProposition__slider--js', { 
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: { 
+			992: {
+				spaceBetween: 46,
+			}
+		}
+	});
 	const swipersNewsPressCenter = new Swiper('.sNews--PressCenter__slider--js', { 
 		slidesPerView: 'auto',
 		spaceBetween: 16,

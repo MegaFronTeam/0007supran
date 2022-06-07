@@ -1,0 +1,72 @@
+// start .sValueProposition
+.sValueProposition {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(60)};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	&__col {
+	}
+	&__item {
+	}
+	&__slide {
+		@include media-breakpoint-up(lg) {
+			max-width: calc(33.333% - 46px);
+			width: calc(33.333% - 46px);
+		}
+		width: 100%;
+		max-width: 100%;
+	}
+	picture {
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
+		margin-bottom: rem(16);
+	}
+	&__slide-title {
+		margin-bottom: rem(8);
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: calc(24 / 18);
+	}
+	&__slide-caption {
+		font-weight: 300;
+		font-size: rem(18);
+		line-height: calc(24 / 18);
+	}
+	.swiper-scrollbar{
+		position: relative;
+		@include media-breakpoint-up(lg){
+			display: none;
+		}
+		margin-top: rem(32);
+	}
+	&__slider{
+		@include media-breakpoint-down(lg){
+			overflow: visible;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sValueProposition
