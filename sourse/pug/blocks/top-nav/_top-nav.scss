@@ -30,7 +30,7 @@
 	}
 
 	&--light{
-		background-color: #fff;
+		background-color: rgba($color: #fff, $alpha: .8);
 		--top-nav-color: #020407;
 		// background-color: #000;
 	}
