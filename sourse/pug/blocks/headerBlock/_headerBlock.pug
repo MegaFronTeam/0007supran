@@ -54,3 +54,18 @@ mixin headerBlockPressCenter()
 				h1 Пресс-центр
 				p В&nbsp;этом разделе вы&nbsp;можете ознакомиться с&nbsp;новостями САПРАН, прочитать статьи и&nbsp;интервью, подготовленные нашими специалистами.
 	// end headerBlock
+
+mixin headerBlockWork()
+	// start headerBlock
+	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
+		.animate-blur.animate-blur--right
+			img(src="img/@2x/webp/animate-blur.webp", alt="")
+		+e.bg.picture-bg
+			img(src="img/headerBlockWork-bg.jpg", alt="")
+		+e.bg--mob.picture-bg
+			img(src="img/headerBlockWork-bg-mob.jpg", alt="")
+		.container
+			+e.inner
+				h1 Работа в SAPRUN
+				p В&nbsp;SAPRUN мы&nbsp;создаем успешный бизнес, в&nbsp;котором всем нам комфортно и&nbsp;интересно работать. Бизнес, в&nbsp;котором отношения строятся на&nbsp;доверии, взаимовыгодном, доброжелательном и&nbsp;долгосрочном сотрудничестве.<br>Наша цель&nbsp;&mdash; максимально реализовать потенциал клиентов и&nbsp;сотрудников.
+	// end headerBlock
