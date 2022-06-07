@@ -7,8 +7,6 @@ include ../blocks/headerBlock/_headerBlock.pug
 //- include ../blocks/sContent/_sContent.pug
  
 //- include ../blocks/sContact/_sContact.pug 
-include ../blocks/sAboutPerson/_sAboutPerson.pug
-include ../blocks/sAboutCaption/_sAboutCaption.pug
 include ../blocks/sStatus/_sStatus.pug
 include ../blocks/sTrust/_sTrust.pug
 include ../blocks/sJoin/_sJoin.pug 
@@ -20,7 +18,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'О нас'
+	- let  title= 'Статусы и награды'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -29,16 +27,14 @@ block pagecontent
 	//- 		source(src='video/video.mp4' type='video/mp4')
 	
 	+top-nav()
-	+headerBlockAbout.bg-dark.section--vh
-	+sAboutPerson.bg-white.section--vh
-	+sAboutCaption.bg-white.section--vh
-	+sStatus.bg-white.section--vh
+	+headerBlockStatus.bg-dark.section--vh
+	+sStatus2.bg-white.section--vh
 	//- +sNews.bg-white.section--vh
 	//- +sEvents.bg-dark.section--vh
 	//- +sWays.bg-white.section--vh
 	//- +sTrust.bg-dark.section--vh
 	//- +sJoin.bg-white
-	+sForm().bg-dark.section--vh
+	//- +sForm().bg-dark.section--vh
 	+footer().bg-dark
       
 
