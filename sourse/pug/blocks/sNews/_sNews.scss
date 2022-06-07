@@ -40,6 +40,26 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	&--PressCenter{
+		.swiper-button-prev,.swiper-button-next{
+			position: relative;
+			top: unset;
+			left: unset;
+			right: unset;
+			bottom: unset;
+			&::after{
+				display: none;
+			}
+		}
+	}
+	.swiper-button-prev,.swiper-button-next{
+		.icon{
+			font-size: 32px;
+		}
+	}
+	.arrow-wrapper{
+		display: flex;
+	}
 } // end.sNews
 
 

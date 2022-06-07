@@ -1,0 +1,41 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAboutPerson/_sAboutPerson.pug
+include ../blocks/sAboutCaption/_sAboutCaption.pug
+include ../blocks/sStatus/_sStatus.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sTrust/_sTrust.pug
+include ../blocks/sJoin/_sJoin.pug 
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Пресс Центр'
+	title= title
+block pagecontent
+	+mob-mnu()
+	//- video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp').bg-video
+	//- 		source(src='video/video.webm' type='video/webm')
+	//- 		source(src='video/video.mp4' type='video/mp4')
+	
+	+top-nav()
+	+headerBlockPressCenter.bg-dark.section--vh
+	+sNewsPressCenter.bg-white.section--vh
+	//- +sStatus.bg-white.section--vh
+
+	+footer().bg-dark
+      
+
+
+
