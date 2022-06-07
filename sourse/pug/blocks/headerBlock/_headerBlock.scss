@@ -5,6 +5,7 @@
 	position: relative;
 	z-index: 2;
 	display: flex;
+	overflow: hidden;
 	@include media-breakpoint-up(md) {
 		align-items: center;
 	}
@@ -36,8 +37,13 @@
 		pointer-events: none;
 		position: absolute;
 		z-index: -1;
-		width: 130%;
-		top: 30%;
+		@include media-breakpoint-up(md) {
+			width: rem(1940);
+			top: 30%;
+			bottom: auto;
+		}
+		bottom: 30%;
+		width: rem(900);
 		right: 40%;
 		&--right {
 			right: auto;

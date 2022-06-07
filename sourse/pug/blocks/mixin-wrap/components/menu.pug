@@ -5,13 +5,23 @@ mixin mnu()
 			if link.subnav
 				li.menu-item.menu-item-has-children
 					a(href="#" itemprop="url")!= link.name
-					ul.sub-menu
-						each sublink in link.subnav
-							li.menu-item.menu-item-has-children(itemprop="item" )
-								a(href="#" itemprop="url")!= sublink.name
-								ul.sub-menu 
-									li.menu-item
-										a(href="#" itemprop="url")!= sublink.name
+					.sub-menu-wrap
+						ul.sub-menu
+							li.menu-item.menu-item-back.d-lg-none(itemprop="item" ) 
+								+icon("chevron-left")
+								| Назад
+							li.menu-item.menu-item-title.d-lg-none(itemprop="item" )!=  link.name
+							each sublink in link.subnav
+								li.menu-item.menu-item-has-children(itemprop="item" )
+									a(href="#" itemprop="url")!= sublink.name
+									.sub-menu-wrap
+										ul.sub-menu 
+											li.menu-item
+												a(href="#" itemprop="url")!= sublink.name
+											li.menu-item
+												a(href="#" itemprop="url")!= sublink.name
+											li.menu-item
+												a(href="#" itemprop="url")!= sublink.name
 								
 			else
 				li.menu-item(itemprop="item" ): a(href="#" itemprop="url")!= link.name

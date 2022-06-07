@@ -75,7 +75,8 @@ const JSCCommon = {
 		if (menu.classList.contains("active")) {
 			toggle.forEach(element => element.classList.remove("on"));
 			menu.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+			[ document.body, document.querySelector('html') ].forEach(el => el.classList.remove("fixed"));
+			$(".menu-item-has-children.active").removeClass("active")
 		}
 
 	},
@@ -539,6 +540,34 @@ window.addEventListener('scroll', function() {
 	});
 
 	// modal window
+	$('.menu').on("click", '.menu-item-has-children>a', function(e) {
+		e.preventDefault();
+		let self = $(this);
+		self.parent().toggleClass('active')
+			.siblings().removeClass('active');
+
+	})
+	
+	$('.menu').on("click", '.menu-item-back', function() { 
+		let self = $(this);
+		self.parents('.menu-item-has-children').removeClass('active');
+
+	})
+
+	let mainPage = document.querySelector(".main-page");
+	if (mainPage) {
+		let sections = document.querySelectorAll(".section--vh");
+		let dots = document.createElement("div");
+		dots.classList.add("dots-wrap");
+		let count = 0;
+		for (const section of sections) {
+			section.setAttribute("data-section", `section-${count++}`);
+			let dot = document.createElement("div");
+			dot.classList.add("dots-wrap__item");
+			dots.appendChild(dot);
+		}
+		mainPage.appendChild(dots);
+	}
 
 };
 if (document.readyState !== 'loading') {
