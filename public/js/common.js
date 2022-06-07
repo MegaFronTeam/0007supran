@@ -525,6 +525,7 @@ window.addEventListener('scroll', function() {
 	});
 	const swiperValueProposition = new Swiper('.sValueProposition__slider--js', { 
 		slidesPerView: 'auto',
+		spaceBetween: 16,
 		scrollbar: {
 			el: '.swiper-scrollbar',
 			draggable: true,

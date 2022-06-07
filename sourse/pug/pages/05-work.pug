@@ -8,10 +8,9 @@ include ../blocks/headerBlock/_headerBlock.pug
  
 //- include ../blocks/sContact/_sContact.pug 
 include ../blocks/sValueProposition/_sValueProposition.pug
-include ../blocks/sAboutCaption/_sAboutCaption.pug
+include ../blocks/sNumericalIndicators/_sNumericalIndicators.pug
 include ../blocks/sStatus/_sStatus.pug
 include ../blocks/sNews/_sNews.pug
-include ../blocks/sEventsList/_sEventsList.pug
 include ../blocks/sJoin/_sJoin.pug 
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
@@ -32,7 +31,7 @@ block pagecontent
 	+top-nav()
 	+headerBlockWork.bg-dark.section--vh
 	+sValueProposition.bg-white.section--vh
-	+sEventsList.bg-dark.section--vh
+	+sNumericalIndicators.bg-dark.section--vh
 	//- +sStatus.bg-white.section--vh
 
 	+footer().bg-dark

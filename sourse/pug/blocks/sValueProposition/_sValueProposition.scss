@@ -50,6 +50,11 @@
 		}
 		margin-top: rem(32);
 	}
+	&__slider{
+		@include media-breakpoint-down(lg){
+			overflow: visible;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
