@@ -11,7 +11,7 @@ include ../blocks/sAboutPerson/_sAboutPerson.pug
 include ../blocks/sAboutCaption/_sAboutCaption.pug
 include ../blocks/sStatus/_sStatus.pug
 include ../blocks/sNews/_sNews.pug
-include ../blocks/sTrust/_sTrust.pug
+include ../blocks/sEventsList/_sEventsList.pug
 include ../blocks/sJoin/_sJoin.pug 
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
@@ -32,6 +32,7 @@ block pagecontent
 	+top-nav()
 	+headerBlockPressCenter.bg-dark.section--vh
 	+sNewsPressCenter.bg-white.section--vh
+	+sEventsList.bg-dark.section--vh
 	//- +sStatus.bg-white.section--vh
 
 	+footer().bg-dark

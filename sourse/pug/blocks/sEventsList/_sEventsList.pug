@@ -1,0 +1,42 @@
+mixin sEventsList(data)
+	// start sEventsList
+	+b.SECTION.sEventsList.section#sEventsList&attributes(attributes)
+		.container
+			h2 Мероприятия
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Offline
+					.tabs__btn Online
+				.tabs-content-wrap
+					.tabs__content.active
+						+event-item('03','Сентября 2022','Проект в&nbsp;&laquo;Сталепромышленной компании&raquo; получил Серебро в&nbsp;конкурсе SAP Quality Awards 2019','Проект в&nbsp;&laquo;Сталепромышленной компании&raquo; получил Серебро в&nbsp;конкурсе SAP Quality Awards 2019')
+						+event-item('12','Августа 2022','Завершено внедрение решения по&nbsp;управлению персоналом для Группы НЛМК','Компания SAPRUN Group завершила внедрение решения по&nbsp;управлению персоналом на&nbsp;базе SAP ERP Human Capital Management для Группы НЛМК')
+						+event-item('21','Июля 2022','Платформа S/4HANA запущена в&nbsp;Металлоинвест.','Проект реализовывался с&nbsp;участием SAPRUN Group. Впервые в&nbsp;России платформа S/4HANA внедрена в&nbsp;масштабе такой компании как Металлоинвест.')
+						+e.BUTTON.more
+							span Показать ещё
+							+icon('chevron-down')
+					.tabs__content
+						+event-item('03','Сентября 2022','Проект в&nbsp;&laquo;Сталепромышленной компании&raquo; получил Серебро в&nbsp;конкурсе SAP Quality Awards 2019','Проект в&nbsp;&laquo;Сталепромышленной компании&raquo; получил Серебро в&nbsp;конкурсе SAP Quality Awards 2019')
+						+event-item('12','Августа 2022','Завершено внедрение решения по&nbsp;управлению персоналом для Группы НЛМК','Компания SAPRUN Group завершила внедрение решения по&nbsp;управлению персоналом на&nbsp;базе SAP ERP Human Capital Management для Группы НЛМК')
+						+event-item('21','Июля 2022','Платформа S/4HANA запущена в&nbsp;Металлоинвест.','Проект реализовывался с&nbsp;участием SAPRUN Group. Впервые в&nbsp;России платформа S/4HANA внедрена в&nbsp;масштабе такой компании как Металлоинвест.')
+						+e.BUTTON.more
+							span Показать ещё
+							+icon('chevron-down')
+				
+	// end sEventsList
+
+mixin event-item(dateNumber,date,title,caption)
+	+b.event-item(href="#")
+		+e.pic
+			img(src="img/event-item.jpg", alt="")
+		+e.info-block
+			+e.date-block
+				+e.date-number!=dateNumber
+				+e.date-text!=date
+			+e.caption-wrap
+				+e.title!=title
+				+e.caption!=caption
+				+e.link
+					span Хочу пойти
+					+icon('chevron-right')
+
