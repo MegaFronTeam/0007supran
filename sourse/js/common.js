@@ -326,12 +326,41 @@ function eventHandler() {
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
+
+	
+	
 	var x = window.location.host;
 	let screenName;
 	screenName = document.body.dataset.bg;
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
+
+
+	
+	let mainPage = document.querySelector(".main-page");
+	if (mainPage) {
+		let sections = document.querySelectorAll(".section--vh");
+		let dots = document.createElement("div");
+		dots.classList.add("dots-wrap");
+		let count = 0;
+		for (const ell of sections) {
+			ell.setAttribute("data-section", `section-${count}`);
+			let dot = document.createElement("div");
+			dot.classList.add("dots-wrap__item");
+			dot.setAttribute("data-link", `section-${count}`);
+			dots.appendChild(dot);
+			count++;
+			
+			dot.addEventListener("click", function () {
+				let sec = this.dataset.link;
+				let destination = $(`[data-section="${sec}"]`).offset().top;
+				$('html, body').animate({ scrollTop: destination }, 0);
+			})
+		}
+		mainPage.appendChild(dots);
+	}
+
 
 
 	let topNav = document.querySelector('.top-nav  ');
@@ -356,6 +385,7 @@ function eventHandler() {
 
 					if (!topNav) return;
 		let h = topNav.offsetHeight;
+		let h2 = document.querySelector(".dots-wrap").offsetHeight;
 		 
 			function myfunction() {
 				if (wow.classList.contains("bg-white")) {
@@ -366,12 +396,26 @@ function eventHandler() {
 					
 				}
 			};
+			
+			function myfunction2() {
+				let sec = wow.dataset.section;
+				// console.log(sec);
+				$(`.dots-wrap__item.active`).removeClass('active');
+				$(`[data-link="${sec}"]`).addClass('active');
+				if (wow.classList.contains("bg-white")) {
+					$(".dots-wrap").addClass("dots-wrap--dark")
+				}
+				else {
+					$(".dots-wrap").removeClass("dots-wrap--dark")
+				}
+			};
+
 			const rect = wow.getBoundingClientRect(); 
 			ScrollTrigger.create({
 				scroller: scroller,
 				trigger: wow,
-				start: `top  bottom - ${h}`,
-				end: `bottom   top`,
+				start: `top top+=${h / 2}`,
+				end: `bottom-=${h / 2} top`,
 				// markers: true,
 				// toggleActions: "play none play none",
 				onEnter: () => myfunction(),
@@ -380,52 +424,23 @@ function eventHandler() {
 				onEnterBack: () => myfunction(),
 				invalidateOnRefresh: true,
 			});
-		})
-
-
-	// Получаем нужный элемент
-// var element = document.querySelectorAll('.section');
-
-// 	var Visible = function (targets) {
-// 		if (!topNav) return;
-// 		let h = topNav.offsetHeight;
-// 	for (const target of targets) {
-		
-	
-// 		var targetPosition = {
-//       top: window.pageYOffset + target.getBoundingClientRect().top,
-//       // left: window.pageXOffset + target.getBoundingClientRect().left,
-//       // right: window.pageXOffset + target.getBoundingClientRect().right,
-//       bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-//     },
-//     // Получаем позиции окна
-//     windowPosition = {
-//       top: window.pageYOffset,
-//       // left: window.pageXOffset,
-//       // right: window.pageXOffset + document.documentElement.clientWidth,
-//       bottom: window.pageYOffset + document.documentElement.clientHeight
-//     };
-
-//   if ((targetPosition.top )  windowPosition.bottom && (targetPosition.bottom - h / 2) < (windowPosition.top ) &&  windowPosition.top > 0) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-//     // Если элемент полностью видно, то запускаем следующий код
-// 		if (target.classList.contains("bg-white")) {
 			
-// 			$(".top-nav").addClass("top-nav--light")
-// 			console.clear();
-// 			console.log(target);
-// 		}
-// 		else {
-// 			$(".top-nav").removeClass("top-nav--light")
-// 			// Если элемент не видно, то запускаем этот код
-// 			console.clear();
-// 			}; 
-//   } else {
-// 		// $(".top-nav").removeClass("top-nav--dark")
-//     // Если элемент не видно, то запускаем этот код
-//     console.clear();
-// 		};
-// 	}
-// };
+			ScrollTrigger.create({
+				scroller: scroller,
+				trigger: wow,
+				start: `top center`,
+				end: `bottom center`,
+				// markers: true,
+				// toggleActions: "play none reverse none",
+				onEnter: () => myfunction2(),
+				// onLeave: () => myfunction2(),
+				// onLeaveBack: () => myfunction2(),
+				onEnterBack: () => myfunction2(),
+				invalidateOnRefresh: true,
+			});
+
+		})
+ 
 
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function() {
@@ -533,21 +548,6 @@ window.addEventListener('scroll', function() {
 		self.parents('.menu-item-has-children').removeClass('active');
 
 	})
-
-	let mainPage = document.querySelector(".main-page");
-	if (mainPage) {
-		let sections = document.querySelectorAll(".section--vh");
-		let dots = document.createElement("div");
-		dots.classList.add("dots-wrap");
-		let count = 0;
-		for (const section of sections) {
-			section.setAttribute("data-section", `section-${count++}`);
-			let dot = document.createElement("div");
-			dot.classList.add("dots-wrap__item");
-			dots.appendChild(dot);
-		}
-		mainPage.appendChild(dots);
-	}
 
 };
 if (document.readyState !== 'loading') {

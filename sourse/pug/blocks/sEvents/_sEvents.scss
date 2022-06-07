@@ -5,7 +5,20 @@
 	// --sTPB: #{rem()};
 	// background-color: $body-color;
 	position: relative;
-	z-index: 4;
+	z-index: 2;
+	overflow: hidden;
+	&::before{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		width: rem(624);
+		height: rem(624);
+		border-radius: 50%;
+		background: linear-gradient(143.15deg, #050507 8.37%, rgba(5, 5, 7, 0) 91.49%);
+		filter: blur(200px);
+		top: -5%;
+		left: 5%;
+	}
 	@include media-breakpoint-up(xl) {
 		--c-g: #{rem(188)};
 	}
