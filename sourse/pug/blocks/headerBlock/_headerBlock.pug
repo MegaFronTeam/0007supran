@@ -39,3 +39,18 @@ mixin headerBlockStatus()
 				h1 Статусы и награды 
 				p Входим в&nbsp;TOP-10 крупнейших поставщиков BI-решений в&nbsp;России 2020, в&nbsp;TOP-5 аутсорсеров поддержки решений SAP в&nbsp;России по&nbsp;версии аналитического центра TAdviser
 	// end headerBlock
+
+mixin headerBlockPressCenter()
+	// start headerBlock
+	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
+		.animate-blur.animate-blur--right
+			img(src="img/@2x/webp/animate-blur.webp", alt="")
+		+e.bg.picture-bg
+			img(src="img/headerBlockPressCenter-bg.jpg", alt="")
+		+e.bg--mob.picture-bg
+			img(src="img/headerBlockPressCenter-bg-mob.jpg", alt="")
+		.container
+			+e.inner
+				h1 Пресс-центр
+				p В&nbsp;этом разделе вы&nbsp;можете ознакомиться с&nbsp;новостями САПРАН, прочитать статьи и&nbsp;интервью, подготовленные нашими специалистами.
+	// end headerBlock

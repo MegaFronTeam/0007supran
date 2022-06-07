@@ -523,6 +523,26 @@ window.addEventListener('scroll', function() {
 			}
 		}
 	});
+	const swipersNewsPressCenter = new Swiper('.sNews--PressCenter__slider--js', { 
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: { 
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 47,
+			}
+		}
+	});
 	
 	const swiperstabs = new Swiper('.tabs-slider--js', { 
 		slidesPerView: 'auto',

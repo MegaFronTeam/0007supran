@@ -28,3 +28,39 @@ mixin sNews(data)
 							+newItem(`3`,`Онлайн-конференция «Инновационный день фармацевтических компаний 2021»`,`Организаторами мероприятия 9 декабря выступили компании SAP, SAPRUN и DSM Group (ведущее маркетинговое агентство в сфере исследований фармацевтического рынка).`)
 				.swiper-scrollbar
 	// end sNews
+
+mixin sNewsPressCenter(data)
+	// start sNews
+	+b.SECTION.sNews--PressCenter.section#sNews&attributes(attributes)
+		.container
+			+e.slider--js.swiper.sNews--PressCenter__slider--js
+				+b.section-title
+					.row
+						.col
+							h2 Новости
+						.col-auto 
+							//- +b.link-more(href="#") Все новости и публикации
+							//- 	+icon("arrrow-right")
+							.arrow-wrapper
+								.swiper-button-prev
+									+icon('chevron-left')
+								.swiper-button-next
+									+icon('chevron-right')
+				.swiper-wrapper
+					- for (var x = 0; x < 6; x++)
+						+e.slide.swiper-slide
+							+newItem(`1`,`Сотрудники ИНВИТРО ставят цели  и планируют развитие с помощью SAP SuccessFactors`,`Москва, Россия – 10 февраля, 2022 года— Группа компаний «Инвитро», одна из крупнейших медицинских групп РФ, продолжает масштабную трансформацию своей HR-функции`)
+						+e.slide.swiper-slide
+							+newItem(`2`,`«Узпромстройбанк» первым внедрит механизмы определения себестоимости продуктов`,`Команда SAPRUN не только внедряет новые системы SAP, но и оперативно сопровождает тысячи пользователей в компаниях по всей стране.`)
+						+e.slide.swiper-slide
+							+newItem(`3`,`Онлайн-конференция «Инновационный день фармацевтических компаний 2021»`,`Организаторами мероприятия 9 декабря выступили компании SAP, SAPRUN и DSM Group (ведущее маркетинговое агентство в сфере исследований фармацевтического рынка).`)
+					+e.slide.swiper-slide
+							+newItem(`1`,`Сотрудники ИНВИТРО ставят цели  и планируют развитие с помощью SAP SuccessFactors`,`Москва, Россия – 10 февраля, 2022 года— Группа компаний «Инвитро», одна из крупнейших медицинских групп РФ, продолжает масштабную трансформацию своей HR-функции`)
+					+e.slide.swiper-slide
+						+newItem(`2`,`«Узпромстройбанк» первым внедрит механизмы определения себестоимости продуктов`,`Команда SAPRUN не только внедряет новые системы SAP, но и оперативно сопровождает тысячи пользователей в компаниях по всей стране.`)
+					+e.slide.swiper-slide
+						+b.end-news-card
+							+e.title Перейти в раздел новости
+							+icon('arrrow-right')
+				.swiper-scrollbar
+	// end sNews
