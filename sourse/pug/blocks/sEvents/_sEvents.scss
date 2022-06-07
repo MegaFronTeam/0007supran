@@ -7,17 +7,17 @@
 	position: relative;
 	z-index: 2;
 	overflow: hidden;
+	&::after,
 	&::before{
-		content: '';
+		content: url(../img/@2x/webp/event-before.webp);
 		position: absolute;
-		z-index: -1;
-		width: rem(624);
-		height: rem(624);
-		border-radius: 50%;
-		background: linear-gradient(143.15deg, #050507 8.37%, rgba(5, 5, 7, 0) 91.49%);
-		filter: blur(200px);
-		top: -5%;
-		left: 5%;
+		z-index: -1; 
+		top: -15%;
+		left: -15%;
+	}
+	&::before{
+		left: 40%;
+		top: 0;
 	}
 	@include media-breakpoint-up(xl) {
 		--c-g: #{rem(188)};

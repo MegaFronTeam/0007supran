@@ -15,7 +15,7 @@ mixin sNews(data)
 						h2 Новости
 					.col-auto 
 						+b.link-more(href="#") Все новости и публикации
-							+icon("arrrow-right")
+							+icon("arrow-right-link")
 				
 			+e.slider--js.swiper
 				.swiper-wrapper
@@ -40,7 +40,7 @@ mixin sNewsPressCenter(data)
 							h2 Новости
 						.col-auto 
 							//- +b.link-more(href="#") Все новости и публикации
-							//- 	+icon("arrrow-right")
+							//- 	+icon("arrow-right-link")
 							.arrow-wrapper
 								.swiper-button-prev
 									+icon('chevron-left')
@@ -61,6 +61,6 @@ mixin sNewsPressCenter(data)
 					+e.slide.swiper-slide
 						+b.end-news-card
 							+e.title Перейти в раздел новости
-							+icon('arrrow-right')
+							+icon('arrow-right-link')
 				.swiper-scrollbar
 	// end sNews

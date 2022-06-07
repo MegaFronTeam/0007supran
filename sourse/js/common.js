@@ -1,4 +1,27 @@
 "use strict";
+
+let scroller = document.body ,
+	tween;
+		
+let gsapSet = (el, start = '50% bottom', end = 'top top', scrub = .8, pin, markers) => {
+	return gsap.timeline({ 
+		scrollTrigger: {
+			trigger: el,
+			scroller,
+			start,
+			end,
+			scrub,
+			pin,
+			markers,
+			// invalidateOnRefresh: true,
+			defaults: {
+				// ease: "power3",
+				// overwrite: true
+			}
+		} 
+	}) 
+}
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -377,8 +400,20 @@ function eventHandler() {
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	let scroller = document.body ,
-		tween;
+	var t1 = gsapSet('.sJoin', 'top  top',  '+=400%', .5,  true, true);
+	t1
+		// .to(".sJoin svg", { scale: 1.5 })
+		.to(".sJoin .color-fill", { opacity: 0 })
+		.to(".sJoin .sJoin__head", { scale: 2 },">-.5")
+		.to(".sJoin .img-animate", { opacity: 1 },">-.5")
+		.to(".sJoin .border-fill", { opacity: 0 },">-.5")
+		.to(".sJoin .sJoin__head", { scale: 5})
+		.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
+		.to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
+		// .to(".sJoin .sJoin__head", { opacity: 0 })
+
+
+	
 	
 	
 		gsap.utils.toArray(" .section").forEach(wow => {
@@ -568,6 +603,15 @@ window.addEventListener('scroll', function() {
 		self.parents('.menu-item-has-children').removeClass('active');
 
 	})
+
+
+
+
+
+	
+
+
+
 
 };
 if (document.readyState !== 'loading') {

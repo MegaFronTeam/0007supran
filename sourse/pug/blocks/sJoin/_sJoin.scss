@@ -1,5 +1,58 @@
 // start .sJoin
 .sJoin {
+	padding: 0;
+	// position: relative;
+	// overflow: hidden;
+	// min-height: 500vh;
+	&__inner{
+		position: relative;
+		min-height: 100vh;
+	}
+	&__head{
+		// background: #000;
+		overflow: hidden;
+		text-align: center;
+		// min-height: 100vh;
+		svg{
+			width: 120%;
+			height: 120%;
+			// @include a-cent;
+			position: absolute;
+			top: -10%;
+			left: -10%;
+			pointer-events: none;
+		}
+		[fill="#E1501D"],
+		[fill="#EB8A03"]{
+			// fill: transparent !important;
+		}
+	}
+	&__img-wrap,
+	&__head{
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		svg{
+
+		}
+	}
+	&__head{
+		z-index: 3;
+	}
+	&__img-wrap{
+		background-color: #fff;
+		img{
+			opacity: 0;
+
+		}
+	}
+	.img-animate{
+			filter: saturate(0);
+	}
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
