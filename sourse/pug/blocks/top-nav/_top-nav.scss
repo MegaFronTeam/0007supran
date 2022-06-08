@@ -14,7 +14,7 @@
 
 		top: 0;
 	}
-	z-index: 1000;
+	z-index: 100;
 	color: var(--top-nav-color, #fff);
 	&__logo{
 		[fill="white"]{
@@ -29,11 +29,24 @@
 		--bs-gutter-x: #{rem(17)};
 	}
 
-	&--light{
-		background-color: rgba($color: #fff, $alpha: .8);
-		--top-nav-color: #020407;
+	&--light.fixed{
+		@include media-breakpoint-up(md) {
+
+			background-color: rgba($color: #fff, $alpha: .8);
+			--top-nav-color: #020407;
+		}
 		// background-color: #000;
 	}
+	
+	&--light-mob.fixed{
+		@include media-breakpoint-down(md) {
+
+			background-color: rgba($color: #fff, $alpha: .8);
+			--top-nav-color: #020407;
+		}
+		// background-color: #000;
+	}
+
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}

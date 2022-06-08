@@ -3,14 +3,20 @@ mixin menu-toggle()
 		span
 mixin mob-mnu() 
 	+b.menu-mobile--js
-		+b.toggle-menu-mobile--js.d-lg-none
-			span
+		+b.top-nav 
+			.row 
+				.col-auto
+					+menu-toggle()
+				.col.d-none.d-lg-block
+					+e.logo(href="/")
+						//- img(src="img/svg/logo.svg", alt="") 
+						include logo.svg
 		+e.inner
 			+mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav 
+	+b.top-nav.fixed
 		.row
 			.col-auto
 				+menu-toggle()

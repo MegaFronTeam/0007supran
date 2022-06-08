@@ -1,8 +1,17 @@
 
 	// start .sForm
 	.sForm {
-
+		position: relative;
+		// overflow: hidden;
+		z-index: 2;
 		--sTPB: #{rem(32)};
+		.animate-blur{
+			width: rem(900);
+			height: rem(800);
+			right: rem(-500);
+			top: rem(-400);
+			z-index: -1;
+		}
 		.form-wrap{
 			@include media-breakpoint-up(md) {
 				

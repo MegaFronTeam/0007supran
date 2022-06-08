@@ -5,7 +5,7 @@
 	position: relative;
 	z-index: 2;
 	display: flex;
-	overflow: hidden;
+	// overflow: hidden;
 	@include media-breakpoint-up(md) {
 		align-items: center;
 	}
@@ -114,6 +114,8 @@
 	}
 
 	@include media-breakpoint-down(lg) {
+		--sPT: #{rem(100)};
+		--sPB: #{rem(100)};
 	}
 
 	@include media-breakpoint-down(md) {

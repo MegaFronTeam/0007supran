@@ -2,8 +2,7 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		
-		.animate-blur
-			img(src="img/@2x/webp/animate-blur.webp", alt="")
+		+blur()
 		.container
 			+e.inner
 				h1 Открываем для компаний #[span новые возможности] в&nbsp;проектах цифровой&nbsp;трансформации
@@ -13,8 +12,7 @@ mixin headerBlock()
 mixin headerBlockAbout()
 	// start headerBlock
 	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
-		.animate-blur.animate-blur--right
-			img(src="img/@2x/webp/animate-blur.webp", alt="")
+		+blur().animate-blur--right 
 		+e.bg.picture-bg
 			img(src="img/headerBlockAbout-bg.jpg", alt="")
 		+e.bg--mob.picture-bg
@@ -28,8 +26,7 @@ mixin headerBlockAbout()
 mixin headerBlockStatus()
 	// start headerBlock
 	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
-		.animate-blur
-			img(src="img/@2x/webp/animate-blur.webp", alt="")
+		+blur()
 		+e.bg.picture-bg
 			img(src="img/headerBlockStatus-bg.jpg", alt="")
 		+e.bg--mob.picture-bg

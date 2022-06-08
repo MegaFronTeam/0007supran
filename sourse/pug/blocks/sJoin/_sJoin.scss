@@ -1,50 +1,71 @@
 // start .sJoin
 .sJoin {
-	padding: 0;
-	// position: relative;
-	// overflow: hidden;
-	// min-height: 500vh;
+	padding: 0; 
+	display: block !important;
 	&__inner{
 		position: relative;
-		min-height: 100vh;
-	}
-	&__head{
-		// background: #000;
 		overflow: hidden;
+		@include media-breakpoint-up(lg){
+
+			min-height: 100vh;
+		}
+		min-height: 75vh;
+	}
+	&__head{ 
+		// overflow: hidden;
 		text-align: center;
-		// min-height: 100vh;
-		svg{
-			width: 120%;
-			height: 120%;
-			// @include a-cent;
+		&::after
+		&::before{
+			content: '';
 			position: absolute;
-			top: -10%;
-			left: -10%;
+			@include a-cent(x);
+			height: 20%;
+			background-color: #fff;
+			width: 100%;
+		}
+		&::after{
+			top: 0;
+		}
+		&::before{
+			bottom: 0;
+		} 
+		svg{ 
+			position: absolute; 
+			@include a-cent1;
+			min-width: 120vw;
+			min-height: 120vh;
 			pointer-events: none;
 		}
 		[fill="#E1501D"],
 		[fill="#EB8A03"]{
 			// fill: transparent !important;
 		}
-	}
-	&__img-wrap,
+	} 
 	&__head{
-		position: absolute;
+		position: absolute; 
+		z-index: 3;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none; 
+	} 
+	&__img-wrap{
+		background-color: #fff;
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			
+		}
+		@include media-breakpoint-down(lg) {
+			transform: none !important;
+		}
+		position: relative;
 		z-index: 2;
 		left: 0;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		pointer-events: none;
-		svg{
-
-		}
-	}
-	&__head{
-		z-index: 3;
-	}
-	&__img-wrap{
-		background-color: #fff;
 		img{
 			opacity: 0;
 
@@ -65,12 +86,16 @@
 		
 	}
 	&__col{
+		opacity: 0;
+		@include media-breakpoint-up(lg) {
+
 			margin-left: auto;
 			min-height: 100vh;
 			display: flex;
 			flex-direction: column;
 			// align-items: center;
-		justify-content: center;
+			justify-content: center;
+		}
 	}
 	&__item{
 
@@ -83,6 +108,23 @@
 		color: #08080B;
 	}
 
+
+
+	&__img-wrap-mob{
+		filter: saturate(0);
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 25%;
+			width: 100%;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 1.47%, #FFFDFD 96.28%);
+		}
+		img{
+			// z-index: -1;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

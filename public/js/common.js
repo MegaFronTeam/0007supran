@@ -387,36 +387,51 @@ function eventHandler() {
 
 
 	let topNav = document.querySelector('.top-nav  ');
-	function setFixedNav() {
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
-	}
+	// function setFixedNav() {
+	// 	if (!topNav) return;
+	// 	window.scrollY > 0
+	// 		? topNav.classList.add('fixed')
+	// 		: topNav.classList.remove('fixed');
+	// }
 
 	function whenResize() {
-		setFixedNav();
+	// 	setFixedNav();
 	}
-
+	
 	gsap.registerPlugin(ScrollTrigger);
-
-	var t1 = gsapSet('.sJoin', 'top  top',  '+=400%', .5,  true, true);
+	
+	var t1 = gsapSet('.sJoin', 'top  top',  '+=400%', .5,  '.sJoin__inner');
 	t1
-		// .to(".sJoin svg", { scale: 1.5 })
-		.to(".sJoin .color-fill", { opacity: 0 })
-		.to(".sJoin .sJoin__head", { scale: 2 },">-.5")
-		.to(".sJoin .img-animate", { opacity: 1 },">-.5")
-		.to(".sJoin .border-fill", { opacity: 0 },">-.5")
-		.to(".sJoin .sJoin__head", { scale: 5})
-		.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
-		.to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
-		// .to(".sJoin .sJoin__head", { opacity: 0 })
+	// .to(".sJoin svg", { scale: 1.5 })
+	.to(".sJoin .color-fill", { opacity: 0 })
+	.to(".sJoin .sJoin__head", { scale: 2 },">-.5")
+	.to(".sJoin .img-animate, .sJoin__col", { opacity: 1 },">-.5")
+	.to(".sJoin .border-fill", { opacity: 0 },">-.5")
+	.to(".sJoin .sJoin__head", { scale: 5})
+	.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
+	.from(".sJoin .section", { opacity: 0, y: '100%' },">-.5")
+	// .to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
+	// .to(".sJoin .sJoin__head", { opacity: 0 })
+	
+	let upY = '200';
+		gsap.utils.toArray(".section--up").forEach(wow => {
 
-
+			gsap.from(wow,{
+        y: upY,
+        scrollTrigger:{
+            trigger:wow,
+            start:"top bottom",
+            end:"bottom bottom",
+            scrub:1,
+            markers:true
+        }
+    }) 
+		})
+	
+ 
 	
 	
-	
-		gsap.utils.toArray(" .section").forEach(wow => {
+		gsap.utils.toArray(".section--vh").forEach(wow => {
 
 					if (!topNav) return;
 		let h = topNav.offsetHeight;
@@ -432,9 +447,22 @@ function eventHandler() {
 				}
 			};
 			
+		 
+			function myfunction3() {
+				if (wow.classList.contains("bg-white")) {
+					$(".top-nav").addClass("top-nav--light-mob")
+				}
+				else {
+					$(".top-nav").removeClass("top-nav--light-mob")
+					
+				}
+			};
+
+			
 			function myfunction2() {
 				let sec = wow.dataset.section;
-				// console.log(sec);
+				// console.log(wow);
+				console.log(sec);
 				$(`.dots-wrap__item.active`).removeClass('active');
 				$(`[data-link="${sec}"]`).addClass('active');
 				if (wow.classList.contains("bg-white")) {
@@ -458,6 +486,19 @@ function eventHandler() {
 				// onLeaveBack: () => myfunction(),
 				onEnterBack: () => myfunction(),
 				invalidateOnRefresh: true,
+			}); 
+			ScrollTrigger.create({
+				scroller: scroller,
+				trigger: wow,
+				start: `top bottom`,
+				end: `bottom top`,
+				// markers: true,
+				// toggleActions: "play none play none",
+				onEnter: () => myfunction3(),
+				// onLeave: () => myfunction(),
+				// onLeaveBack: () => myfunction(),
+				onEnterBack: () => myfunction3(),
+				invalidateOnRefresh: true,
 			});
 			
 			ScrollTrigger.create({
@@ -475,7 +516,8 @@ function eventHandler() {
 			});
 
 		})
- 
+	
+
 
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function() {
@@ -495,7 +537,7 @@ window.addEventListener('scroll', function() {
 	}
 
 	window.addEventListener('scroll', () => {
-		setFixedNav();
+		// setFixedNav();
 		// Visible(element);
 
 	}, { passive: true })
