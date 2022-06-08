@@ -612,7 +612,7 @@ function eventHandler() {
 			snapOnRelease: true,
 		},
 		breakpoints: {
-			992: {
+			768: {
 				spaceBetween: 46,
 			}
 		}
@@ -627,7 +627,7 @@ function eventHandler() {
 			snapOnRelease: true,
 		},
 		breakpoints: {
-			992: {
+			768: {
 				spaceBetween: 40,
 			},
 			1400: {

@@ -5,9 +5,9 @@
 	// --sTPB: #{rem()};
 	display: flex;
 	flex-direction: column;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(md) {
 		--sPB: #{rem(52)};
-		flex-direction: row;
+		flex-direction: row !important;
 	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
@@ -21,7 +21,7 @@
 	}
 	&__img,
 	&__text-block {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			width: 50%;
 		}
 		width: 100%;
@@ -30,7 +30,7 @@
 		img {
 			width: 100%;
 			max-width: 100%;
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				height: 100%;
 				object-fit: cover;
 			}
@@ -40,13 +40,13 @@
 		text-transform: uppercase;
 		font-size: rem(30);
 		line-height: calc(36 / 30);
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			margin-bottom: rem(40);
 		}
 		margin-bottom: rem(60);
 	}
 	&__text-block {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			padding-top: rem(72);
 			padding-bottom: rem(40);
 			padding-left: rem(82);
@@ -65,14 +65,14 @@
 		font-style: italic;
 		font-size: rem(30);
 		line-height: calc(32 / 30);
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			margin-bottom: rem(32);
 			max-width: rem(475);
 		}
 		&::before {
 			content: "";
 			position: absolute;
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				top: 0;
 				left: rem(-48);
 			}
@@ -87,7 +87,7 @@
 		margin-bottom: rem(16);
 	}
 	&__sign {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			margin-bottom: rem(68);
 		}
 		margin-bottom: rem(24);

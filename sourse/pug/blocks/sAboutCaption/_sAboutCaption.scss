@@ -3,7 +3,7 @@
 	--sPT: #{rem(28)};
 	--sPB: #{rem(24)};
 	// --sTPB: #{rem()};
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(md) {
 		--sPT: #{rem(52)};
 		--sPB: #{rem(56)};
 	}
@@ -12,7 +12,7 @@
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			margin-bottom: rem(60);
 		}
 		margin-bottom: rem(34);
@@ -36,7 +36,7 @@
 	}
 
 	.row {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			--bs-gutter-x: #{rem(48)};
 			--bs-gutter-y: #{rem(40)};
 		}

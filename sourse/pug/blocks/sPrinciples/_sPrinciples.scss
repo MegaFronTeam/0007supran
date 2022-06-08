@@ -2,7 +2,7 @@
 .sPrinciples {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(md) {
 		--sTPB: #{rem(52)};
 	}
 	--sTPB: #{rem(24)};
@@ -25,15 +25,19 @@
 			width: calc(33.333% - 70px);
 			max-width: calc(33.333% - 70px);
 		}
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			width: calc(33.333% - 40px);
 			max-width: calc(33.333% - 40px);
 		}
+		display: flex; //временно
+		flex-direction: column; //временно
+		justify-content: space-between; //временно
+		height: auto; //временно
 		width: 100%;
 	}
 	.sAboutCaptionItem {
 		&:first-child {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				margin-bottom: rem(64);
 			}
 			margin-bottom: rem(24);
@@ -42,7 +46,7 @@
 
 	.swiper-scrollbar {
 		position: relative;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			display: none;
 		}
 		margin-top: rem(32);

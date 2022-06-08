@@ -18,7 +18,7 @@
 	&__item {
 	}
 	&__slide {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			max-width: calc(33.333% - 46px);
 			width: calc(33.333% - 46px);
 		}
@@ -46,7 +46,7 @@
 	}
 	.swiper-scrollbar{
 		position: relative;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(md){
 			display: none;
 		}
 		margin-top: rem(32);
