@@ -10,13 +10,13 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sValueProposition/_sValueProposition.pug
 include ../blocks/sNumericalIndicators/_sNumericalIndicators.pug
 include ../blocks/sStatus/_sStatus.pug
-include ../blocks/sNews/_sNews.pug
+include ../blocks/sPrinciples/_sPrinciples.pug
 include ../blocks/sJoin/_sJoin.pug 
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= '' 
 	- let  bg= null
 
 block title
@@ -29,9 +29,10 @@ block pagecontent
 	//- 		source(src='video/video.mp4' type='video/mp4')
 	
 	+top-nav()
-	+headerBlockWork.bg-dark.section--vh
+	+headerBlockBody('Work',`Работа в SAPRUN`,`В&nbsp;SAPRUN мы&nbsp;создаем успешный бизнес, в&nbsp;котором всем нам комфортно и&nbsp;интересно работать. Бизнес, в&nbsp;котором отношения строятся на&nbsp;доверии, взаимовыгодном, доброжелательном и&nbsp;долгосрочном сотрудничестве.<br>Наша цель&nbsp;&mdash; максимально реализовать потенциал клиентов и&nbsp;сотрудников.`,'right').bg-dark.section--vh
 	+sValueProposition.bg-white.section--vh
 	+sNumericalIndicators.bg-dark.section--vh
+	+sPrinciples.bg-white.section--vh
 	//- +sStatus.bg-white.section--vh
 
 	+footer().bg-dark

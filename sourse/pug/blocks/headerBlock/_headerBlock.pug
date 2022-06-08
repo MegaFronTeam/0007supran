@@ -9,60 +9,21 @@ mixin headerBlock()
 				p Разрабатываем и&nbsp;внедряем комплексные IT-решения  в&nbsp;области управления ресурсами предприятия
 	// end headerBlock
 
-mixin headerBlockAbout()
+
+mixin headerBlockBody(name,title,caption,right)
 	// start headerBlock
 	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
-		+blur().animate-blur--right 
+		if right
+			+blur().animate-blur--right 
+		else
+			+blur()
 		+e.bg.picture-bg
-			img(src="img/headerBlockAbout-bg.jpg", alt="")
+			img(src=`img/headerBlock${name}-bg.jpg`, alt="")
 		+e.bg--mob.picture-bg
-			img(src="img/headerBlockAbout-bg-mob.jpg", alt="")
+			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
 		.container
 			+e.inner
-				h1 О нас
-				p Группа компаний САПРАН специализируется на&nbsp;внедрении ИТ-решений для бизнеса на&nbsp;платформе SAP
+				h1!=title
+				p!=caption
 	// end headerBlock
 
-mixin headerBlockStatus()
-	// start headerBlock
-	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
-		+blur()
-		+e.bg.picture-bg
-			img(src="img/headerBlockStatus-bg.jpg", alt="")
-		+e.bg--mob.picture-bg
-			img(src="img/headerBlockStatus-bg-mob.jpg", alt="")
-		.container
-			+e.inner
-				h1 Статусы и награды 
-				p Входим в&nbsp;TOP-10 крупнейших поставщиков BI-решений в&nbsp;России 2020, в&nbsp;TOP-5 аутсорсеров поддержки решений SAP в&nbsp;России по&nbsp;версии аналитического центра TAdviser
-	// end headerBlock
-
-mixin headerBlockPressCenter()
-	// start headerBlock
-	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
-		.animate-blur.animate-blur--right
-			img(src="img/@2x/webp/animate-blur.webp", alt="")
-		+e.bg.picture-bg
-			img(src="img/headerBlockPressCenter-bg.jpg", alt="")
-		+e.bg--mob.picture-bg
-			img(src="img/headerBlockPressCenter-bg-mob.jpg", alt="")
-		.container
-			+e.inner
-				h1 Пресс-центр
-				p В&nbsp;этом разделе вы&nbsp;можете ознакомиться с&nbsp;новостями САПРАН, прочитать статьи и&nbsp;интервью, подготовленные нашими специалистами.
-	// end headerBlock
-
-mixin headerBlockWork()
-	// start headerBlock
-	+b.headerBlock.bg-wrap.section#headerBlock&attributes(attributes)
-		.animate-blur.animate-blur--right
-			img(src="img/@2x/webp/animate-blur.webp", alt="")
-		+e.bg.picture-bg
-			img(src="img/headerBlockWork-bg.jpg", alt="")
-		+e.bg--mob.picture-bg
-			img(src="img/headerBlockWork-bg-mob.jpg", alt="")
-		.container
-			+e.inner
-				h1 Работа в SAPRUN
-				p В&nbsp;SAPRUN мы&nbsp;создаем успешный бизнес, в&nbsp;котором всем нам комфортно и&nbsp;интересно работать. Бизнес, в&nbsp;котором отношения строятся на&nbsp;доверии, взаимовыгодном, доброжелательном и&nbsp;долгосрочном сотрудничестве.<br>Наша цель&nbsp;&mdash; максимально реализовать потенциал клиентов и&nbsp;сотрудников.
-	// end headerBlock
