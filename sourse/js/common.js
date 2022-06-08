@@ -1,10 +1,10 @@
 "use strict";
 
-let scroller = document.body ,
+let scroller = document.body,
 	tween;
-		
+
 let gsapSet = (el, start = '50% bottom', end = 'top top', scrub = .8, pin, markers) => {
-	return gsap.timeline({ 
+	return gsap.timeline({
 		scrollTrigger: {
 			trigger: el,
 			scroller,
@@ -18,11 +18,11 @@ let gsapSet = (el, start = '50% bottom', end = 'top top', scrub = .8, pin, marke
 				// ease: "power3",
 				// overwrite: true
 			}
-		} 
-	}) 
+		}
+	})
 }
 
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -46,8 +46,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -98,12 +98,12 @@ const JSCCommon = {
 		if (menu.classList.contains("active")) {
 			toggle.forEach(element => element.classList.remove("on"));
 			menu.classList.remove("active");
-			[ document.body, document.querySelector('html') ].forEach(el => el.classList.remove("fixed"));
+			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
 			$(".menu-item-has-children.active").removeClass("active")
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -163,8 +163,8 @@ const JSCCommon = {
 		// })
 		let tabs = document.querySelectorAll('.' + tab);
 		for (const item of tabs) {
-			
-			function setLine(el , ) {
+
+			function setLine(el,) {
 				let line = item.querySelector('.tabs__caption');
 				if (line) {
 					let w = el.offsetWidth;
@@ -177,20 +177,20 @@ const JSCCommon = {
 					line.style.setProperty('--line-x', `${x}px`);
 				}
 			}
-			window.addEventListener('resize', () => { 
+			window.addEventListener('resize', () => {
 				setLine(item.querySelector(` .${tab}__btn.active`));
 			}, { passive: true });
 			setLine(item.querySelector(` .${tab}__btn.active`));
-			
+
 			$(item.querySelector('.' + tab + '__caption')).on('click', '.' + tab + '__btn:not(.active)', function (e) {
 				setLine(this);
 				$(this)
 					.addClass('active').siblings().removeClass('active')
 					.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 					.eq($(this).index()).fadeIn().addClass('active');
-	
+
 			});
-	
+
 		}
 		$('.tabs__toggle').click(function () {
 			$(this).toggleClass("active").next().slideToggle();
@@ -203,7 +203,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -347,11 +347,11 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 
-	
-	
+
+
 	var x = window.location.host;
 	let screenName;
 	screenName = document.body.dataset.bg;
@@ -369,24 +369,24 @@ function eventHandler() {
 	// }
 
 	function whenResize() {
-	// 	setFixedNav();
+		// 	setFixedNav();
 	}
 
 	gsap.registerPlugin(ScrollTrigger);
-	
-	var t1 = gsapSet('.sJoin', 'top  top',  '+=400%', .5,  '.sJoin__inner');
+
+	var t1 = gsapSet('.sJoin', 'top  top', '+=400%', .5, '.sJoin__inner');
 	t1
-	// .to(".sJoin svg", { scale: 1.5 })
-	.to(".sJoin .color-fill", { opacity: 0 })
-	.to(".sJoin .sJoin__head", { scale: 2 },">-.5")
-	.to(".sJoin .img-animate, .sJoin__col", { opacity: 1 },">-.5")
-	.to(".sJoin .border-fill", { opacity: 0 },">-.5")
-	.to(".sJoin .sJoin__head", { scale: 5})
-	.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
-	.from(".sJoin .section", { opacity: 0, y: '100%' },">-.5")
+		// .to(".sJoin svg", { scale: 1.5 })
+		.to(".sJoin .color-fill", { opacity: 0 })
+		.to(".sJoin .sJoin__head", { scale: 2 }, ">-.5")
+		.to(".sJoin .img-animate, .sJoin__col", { opacity: 1 }, ">-.5")
+		.to(".sJoin .border-fill", { opacity: 0 }, ">-.5")
+		.to(".sJoin .sJoin__head", { scale: 5 })
+		.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
+		.from(".sJoin .section", { opacity: 0, y: '100%' }, ">-.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 })
-	
+
 	let mainPage = document.querySelector(".main-page");
 	if (mainPage) {
 		let sections = document.querySelectorAll(".section--vh");
@@ -400,7 +400,7 @@ function eventHandler() {
 			dot.setAttribute("data-link", `section-${count}`);
 			dots.appendChild(dot);
 			count++;
-			
+
 			dot.addEventListener("click", function () {
 				let sec = this.dataset.link;
 				let destination = $(`[data-section="${sec}"]`).offset().top;
@@ -412,55 +412,55 @@ function eventHandler() {
 
 
 
-	
 
-	
-	let upY = '200';
+
+
+		let upY = '200';
 		gsap.utils.toArray(".section--up").forEach(wow => {
 
-			gsap.from(wow,{
-        y: upY,
-        scrollTrigger:{
-            trigger:wow,
-            start:"top bottom",
-            end:"bottom bottom",
-            scrub:1,
-            markers:true
-        }
-    }) 
+			gsap.from(wow, {
+				y: upY,
+				scrollTrigger: {
+					trigger: wow,
+					start: "top bottom",
+					end: "bottom bottom",
+					scrub: 1,
+					markers: true
+				}
+			})
 		})
-	
- 
-	
-	
+
+
+
+
 		gsap.utils.toArray(".section--vh").forEach(wow => {
 
-					if (!topNav) return;
-		let h = topNav.offsetHeight;
-		let h2 = document.querySelector(".dots-wrap").offsetHeight;
-		 
+			if (!topNav) return;
+			let h = topNav.offsetHeight;
+			let h2 = document.querySelector(".dots-wrap").offsetHeight;
+
 			function myfunction() {
 				if (wow.classList.contains("bg-white")) {
 					$(".top-nav").addClass("top-nav--light")
 				}
 				else {
 					$(".top-nav").removeClass("top-nav--light")
-					
+
 				}
 			};
-			
-		 
+
+
 			function myfunction3() {
 				if (wow.classList.contains("bg-white")) {
 					$(".top-nav").addClass("top-nav--light-mob")
 				}
 				else {
 					$(".top-nav").removeClass("top-nav--light-mob")
-					
+
 				}
 			};
 
-			
+
 			function myfunction2() {
 				let sec = wow.dataset.section;
 				// console.log(wow);
@@ -475,7 +475,7 @@ function eventHandler() {
 				}
 			};
 
-			const rect = wow.getBoundingClientRect(); 
+			const rect = wow.getBoundingClientRect();
 			ScrollTrigger.create({
 				scroller: scroller,
 				trigger: wow,
@@ -488,7 +488,7 @@ function eventHandler() {
 				// onLeaveBack: () => myfunction(),
 				onEnterBack: () => myfunction(),
 				invalidateOnRefresh: true,
-			}); 
+			});
 			ScrollTrigger.create({
 				scroller: scroller,
 				trigger: wow,
@@ -502,7 +502,7 @@ function eventHandler() {
 				onEnterBack: () => myfunction3(),
 				invalidateOnRefresh: true,
 			});
-			
+
 			ScrollTrigger.create({
 				scroller: scroller,
 				trigger: wow,
@@ -521,19 +521,19 @@ function eventHandler() {
 	}
 
 
-// Запускаем функцию при прокрутке страницы
-window.addEventListener('scroll', function() {
+	// Запускаем функцию при прокрутке страницы
+	window.addEventListener('scroll', function () {
 
-}, { passive: true });
+	}, { passive: true });
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+	// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 
 
 	function setTopNavBg() {
 		let bg = false;
-		let  section = document.querySelectorAll(".section");
-		window.addEventListener('scroll', () => { 
-				
+		let section = document.querySelectorAll(".section");
+		window.addEventListener('scroll', () => {
+
 		}, { passive: true })
 
 	}
@@ -585,8 +585,8 @@ window.addEventListener('scroll', function() {
 		freeModeMomentum: true,
 
 	});
-	
-	const swipersNews = new Swiper('.sNews__slider--js', { 
+
+	const swipersNews = new Swiper('.sNews__slider--js', {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		scrollbar: {
@@ -595,14 +595,14 @@ window.addEventListener('scroll', function() {
 			hide: false,
 			snapOnRelease: true,
 		},
-		breakpoints: { 
+		breakpoints: {
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 47,
 			}
 		}
 	});
-	const swiperValueProposition = new Swiper('.sValueProposition__slider--js', { 
+	const swiperValueProposition = new Swiper('.sValueProposition__slider--js', {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		scrollbar: {
@@ -611,13 +611,50 @@ window.addEventListener('scroll', function() {
 			hide: false,
 			snapOnRelease: true,
 		},
-		breakpoints: { 
+		breakpoints: {
 			992: {
 				spaceBetween: 46,
 			}
 		}
 	});
-	const swipersNewsPressCenter = new Swiper('.sNews--PressCenter__slider--js', { 
+	const swiperPrinciples = new Swiper('.sPrinciples__slider--js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: {
+			992: {
+				spaceBetween: 40,
+			},
+			1400: {
+				spaceBetween: 70,
+			}
+		}
+	});
+	// const swiperPrinciples = new Swiper('.sPrinciples__slider--js', {
+	// 	slidesPerView: 1,
+	// 	grid: {
+	// 		rows: 2,
+	// 	},
+	// 	// spaceBetween: 16,
+	// 	scrollbar: {
+	// 		el: '.swiper-scrollbar',
+	// 		draggable: true,
+	// 		hide: false,
+	// 		snapOnRelease: true,
+	// 	},
+	// 	breakpoints: {
+	// 		992: {
+	// 			slidesPerView: 3,
+	// 			spaceBetween: 77,
+	// 		}
+	// 	}
+	// });
+	const swipersNewsPressCenter = new Swiper('.sNews--PressCenter__slider--js', {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		scrollbar: {
@@ -630,18 +667,18 @@ window.addEventListener('scroll', function() {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		breakpoints: { 
+		breakpoints: {
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 47,
 			}
 		}
 	});
-	
-	const swiperstabs = new Swiper('.tabs-slider--js', { 
+
+	const swiperstabs = new Swiper('.tabs-slider--js', {
 		slidesPerView: 'auto',
-		spaceBetween: 0, 
-		breakpoints: { 
+		spaceBetween: 0,
+		breakpoints: {
 			992: {
 				slidesPerView: 4
 			}
@@ -649,15 +686,15 @@ window.addEventListener('scroll', function() {
 	});
 
 	// modal window
-	$('.menu').on("click", '.menu-item-has-children>a', function(e) {
+	$('.menu').on("click", '.menu-item-has-children>a', function (e) {
 		e.preventDefault();
 		let self = $(this);
 		self.parent().toggleClass('active')
 			.siblings().removeClass('active');
 
 	})
-	
-	$('.menu').on("click", '.menu-item-back', function() { 
+
+	$('.menu').on("click", '.menu-item-back', function () {
 		let self = $(this);
 		self.parents('.menu-item-has-children').removeClass('active');
 
@@ -667,7 +704,7 @@ window.addEventListener('scroll', function() {
 
 
 
-	
+
 
 
 
