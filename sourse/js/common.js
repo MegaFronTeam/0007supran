@@ -360,6 +360,32 @@ function eventHandler() {
 	}
 
 
+	let topNav = document.querySelector('.top-nav  ');
+	// function setFixedNav() {
+	// 	if (!topNav) return;
+	// 	window.scrollY > 0
+	// 		? topNav.classList.add('fixed')
+	// 		: topNav.classList.remove('fixed');
+	// }
+
+	function whenResize() {
+	// 	setFixedNav();
+	}
+
+	gsap.registerPlugin(ScrollTrigger);
+	
+	var t1 = gsapSet('.sJoin', 'top  top',  '+=400%', .5,  '.sJoin__inner');
+	t1
+	// .to(".sJoin svg", { scale: 1.5 })
+	.to(".sJoin .color-fill", { opacity: 0 })
+	.to(".sJoin .sJoin__head", { scale: 2 },">-.5")
+	.to(".sJoin .img-animate, .sJoin__col", { opacity: 1 },">-.5")
+	.to(".sJoin .border-fill", { opacity: 0 },">-.5")
+	.to(".sJoin .sJoin__head", { scale: 5})
+	.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
+	.from(".sJoin .section", { opacity: 0, y: '100%' },">-.5")
+	// .to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
+	// .to(".sJoin .sJoin__head", { opacity: 0 })
 	
 	let mainPage = document.querySelector(".main-page");
 	if (mainPage) {
@@ -382,36 +408,12 @@ function eventHandler() {
 			})
 		}
 		mainPage.appendChild(dots);
-	}
 
 
 
-	let topNav = document.querySelector('.top-nav  ');
-	// function setFixedNav() {
-	// 	if (!topNav) return;
-	// 	window.scrollY > 0
-	// 		? topNav.classList.add('fixed')
-	// 		: topNav.classList.remove('fixed');
-	// }
 
-	function whenResize() {
-	// 	setFixedNav();
-	}
 	
-	gsap.registerPlugin(ScrollTrigger);
-	
-	var t1 = gsapSet('.sJoin', 'top  top',  '+=400%', .5,  '.sJoin__inner');
-	t1
-	// .to(".sJoin svg", { scale: 1.5 })
-	.to(".sJoin .color-fill", { opacity: 0 })
-	.to(".sJoin .sJoin__head", { scale: 2 },">-.5")
-	.to(".sJoin .img-animate, .sJoin__col", { opacity: 1 },">-.5")
-	.to(".sJoin .border-fill", { opacity: 0 },">-.5")
-	.to(".sJoin .sJoin__head", { scale: 5})
-	.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
-	.from(".sJoin .section", { opacity: 0, y: '100%' },">-.5")
-	// .to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
-	// .to(".sJoin .sJoin__head", { opacity: 0 })
+
 	
 	let upY = '200';
 		gsap.utils.toArray(".section--up").forEach(wow => {
@@ -516,7 +518,7 @@ function eventHandler() {
 			});
 
 		})
-	
+	}
 
 
 // Запускаем функцию при прокрутке страницы
