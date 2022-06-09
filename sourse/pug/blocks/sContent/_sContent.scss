@@ -1,7 +1,142 @@
 
 	// start .sContent
-	.sContent {
-		 
+.sContent {
+	--sPT: #{rem(16)};
+	--sPB: #{rem(40)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(64)};
+		--sPB: #{rem(66)};
+	}
+	&__back {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(13);
+		color: #08080B;
+		font-weight: 300;
+		.icon {
+			font-size: rem(16);
+			color: #000;
+			flex: 0 0 auto;
+			margin-right: 8px;
+		}
+	}
+	&__date {
+		font-size: rem(16);
+		font-weight: 600;
+		color: #08080B;
+		margin-bottom: 24px;
+	}
+	h1 {
+		margin-bottom: 27px;
+		line-height: 1.25em;
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 16px 8px;
+		a {
+			font-size: 10px;
+			font-weight: 300;
+			padding: 1px 7.5px;
+			border: 0.5px solid $primary;
+			border-radius: 35px;
+			
+			// &:not(:last-child) {
+			// 	margin-right: 8px;
+			// }
+		}
+	}
+	&__mediaContent {
+		@include block(1018, 602);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	ul {
+		font-weight: 300;
+		li {
+			margin-left: rem(15);
+			&:not(:first-of-type) {
+				padding-top: rem(16);
+			}
+		}
+		ul {
+			li {
+				margin-left: rem(21);
+				padding-top: rem(8);
+			}
+		}
+	}
+	span {
+		color: #ACB4C0;
+    display: inline-block;
+    font-size: rem(13);
+    margin-left: 0.25rem;
+	}
+	&__tableWrap {
+		overflow-x: auto;
+		position: relative;
+		margin-bottom: rem(49);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(93);
+		}
+		table {
+			min-width: rem(762);
+		}
+	}
+	table {
+		width: 100%;
+		thead {
+			th {
+				color: #08080B;
+				padding-bottom: rem(7);
+				padding-top: rem(7);
+				padding-left: rem(7);
+				font-size: rem(13);
+				background-color: rgba($color: #E3E7EC, $alpha: .3);
+				border-right: 1px solid  rgba($color:#E3E7EC, $alpha: .5);
+				&:first-child {
+					border-left: 1px solid  rgba($color:#E3E7EC, $alpha: .5);
+				}
+			}
+		}
+		tbody {
+			border-top: none!important;
+			& > tr {
+				&:nth-child(2n) {
+					background-color: rgba($color: #EFEAE7, $alpha: 0.5);
+				}
+			}
+		}
+		th {
+			border-bottom: 1px solid #E3E7EC;
+			padding-top: rem(16);
+			padding-bottom: rem(16);
+			font-weight: 400;
+			color: $black;
+			padding-left: rem(7);
+			border-right:  rgba($color: #E3E7EC, $alpha: 0.5);
+		}
+		td {
+			color: $black;
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+			padding-left: rem(7);
+			font-size: rem(18);
+			font-weight: 600;
+			border-bottom: 1px solid #E3E7EC;
+			border-right: 1px solid  rgba($color:#E3E7EC, $alpha: .5);
+			&:first-child {
+				border-left: 1px solid  rgba($color:#E3E7EC, $alpha: .5);
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -1,9 +1,63 @@
 mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			.row
+		.container.container--small.text-center.mb-56
+			+e.back(href="#").mb-32
+				+icon('chevron-left')
+				| Вернуться в пресс-центр
+			+e.date 12 сентября 2022
+			h1 SAPRUN вошёл в&nbsp;TOP-5 крупнейших российских аутсорсеров поддержки решений SAP-2020
+			+e.wrap
+				a(href="#") #жизнь компании
+				a(href="#") #новости команды
+				a(href="#") #жизнь компании
+				a(href="#") #новости команды
+		.container.container--small.mb-56
+			p.h4.mb-32 Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est.
+			p.fw-light Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--large.mb-56
+			+e.mediaContent
+				+img('img/article-img-1.jpg', 'bg')
+		.container.container--small.mb-56
+			h2 Fusce sed auctor nibh
+			p.fw-light.mb-0 Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--small.mb-56
+			ul
+				li Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla
+				li In posuere, augue eget ornare congue, eros ex bibendum
+					ul
+						li In finibus vitae lorem nec scelerisque
+						li Phasellus eu aliquam ex. Integer facilisis velit lacus, vel venenatis est aliquam sit amet
+				li Proin suscipit placerat turpis
+		.container.container--large.mb-56
+			.mediaContent
+				+img('img/article-img-2.jpg', 'bg')
+			span Description
+		.container.container--small.mb-56
+			mixin articleTable(th1, th2, th3, th4)
+				+e.tableWrap
+					table
+						thead
+							tr
+								th(scope='col')!= th1
+								th(scope='col')!= th2
+								th(scope='col')!= th3
+								th(scope='col')!= th4
+						tbody
+							block
+			mixin articleTableContent(thead, td1, td2, td3)
+				tr
+					td(scope='row')!= thead
+					td!= td1
+					td!= td2
+					td!= td3
+			h6.mb-32 H6 Header two line words description
+			+articleTable('Maecenas', 'Phasellus', 'Gravida', 'Integer')
+				+articleTableContent('Nullam', 'Tincidunt', 'Tincidunt', 'Dapibus')
+				+articleTableContent('Luctus', 'Mauris', 'Felis', 'Aenean')
+				+articleTableContent('Dignissim', 'Vestibulum', 'Fusce', 'Donec')
+		.container.container--small.mb-56
+			h3.mb-32 H3 Header two line words description
+			p.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--small.mb-56
 	// end sContent
