@@ -617,6 +617,21 @@ function eventHandler() {
 			}
 		}
 	});
+	const swiperServiceSupport = new Swiper('.sServiceSupport__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 24,
+			}
+		}
+	});
 	const swiperPrinciples = new Swiper('.sPrinciples__slider--js', {
 		slidesPerView: 'auto',
 		// spaceBetween: 16,
