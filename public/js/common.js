@@ -409,7 +409,7 @@ function eventHandler() {
 		}
 		mainPage.appendChild(dots);
 
-
+	}
 
 
 	
@@ -437,10 +437,10 @@ function eventHandler() {
 
 					if (!topNav) return;
 		let h = topNav.offsetHeight;
-		let h2 = document.querySelector(".dots-wrap").offsetHeight;
+		// let h2 = document.querySelector(".dots-wrap").offsetHeight;
 		 
 			function myfunction() {
-				if (wow.classList.contains("bg-white")) {
+				if (!wow.classList.contains("bg-dark")) {
 					$(".top-nav").addClass("top-nav--light")
 				}
 				else {
@@ -451,7 +451,7 @@ function eventHandler() {
 			
 		 
 			function myfunction3() {
-				if (wow.classList.contains("bg-white")) {
+				if (!wow.classList.contains("bg-dark")) {
 					$(".top-nav").addClass("top-nav--light-mob")
 				}
 				else {
@@ -518,7 +518,7 @@ function eventHandler() {
 			});
 
 		})
-	}
+
 
 
 // Запускаем функцию при прокрутке страницы
