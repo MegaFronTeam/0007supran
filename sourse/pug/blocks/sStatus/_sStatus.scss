@@ -64,7 +64,7 @@
 		position: relative;
 		&::before {
 			content: "";
-			width: 1px;
+			width: 2px;
 			background-color: #e3e7ec;
 			position: absolute;
 			@include media-breakpoint-up(lg) {
@@ -78,7 +78,7 @@
 		}
 		&::after {
 			content: "";
-			width: 1px;
+			width: 2px;
 			background-color: #e3e7ec;
 			position: absolute;
 			@include media-breakpoint-up(lg) {
@@ -110,51 +110,34 @@
 		@include media-breakpoint-up(lg) {
 			&:nth-child(1),
 			&:nth-child(3n + 1) {
-				border-right: 1px solid #e3e7ec;
-			}
-			&:nth-child(3n + 1) {
-				border-top: 1px solid #e3e7ec;
+				border-left: none;
 			}
 			// &:nth-child(2),
 			// &::nth-child(3n + 2) {
 			// }
-			&:nth-child(3n + 2) {
-				border-top: 1px solid #e3e7ec;
-			}
 			&:nth-child(3),
 			&:nth-child(3n + 3) {
-				border-left: 1px solid #e3e7ec;
-			}
-			&:nth-child(3n + 3) {
-				border-top: 1px solid #e3e7ec;
-			}
-			&:nth-child(1),
-			&:nth-child(2),
-			&:nth-child(3) {
-				border-top: none;
+				border-right: none;
 			}
 		}
 		@include media-breakpoint-down(lg) {
-			border-bottom: 1px solid #e3e7ec;
 			&:nth-child(odd) {
-				border-right: 1px solid #e3e7ec;
+				border-left: none;
 				// border-top: 1px solid #e3e7ec;
 			}
 			// &:nth-child(1),
 			// &:nth-child(2) {
 			// 	border-bottom: 1px solid #e3e7ec !important;
 			// }
-			// &:nth-child(even) {
-			// 	// border-top: 1px solid #e3e7ec;
-			// }
+			&:nth-child(even) {
+				border-right: none;
+				// border-top: 1px solid #e3e7ec;
+			}
 			// &:nth-child(2) {
 			// 	border-top: none;
 			// }
-			&:last-child,
-			&:nth-last-child(-n + 2) {
-				border-bottom: none;
-			}
 		}
+		border: 1px solid #e3e7ec;
 	}
 	&__status-pic {
 		width: 100%;
