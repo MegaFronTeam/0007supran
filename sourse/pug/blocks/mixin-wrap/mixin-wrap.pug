@@ -32,3 +32,10 @@ mixin addblock()
 mixin blur()
 	.animate-blur&attributes(attributes)
 			img(src="img/@2x/webp/animate-blur.webp", alt="")
+
+mixin sAboutCaptionItem(pic,title,text)
+	+b.sAboutCaptionItem
+		+e.pic
+			img(src=`img/svg/${pic}.svg`, alt="")
+		+e.title!=title
+		+e.text!=text

@@ -18,7 +18,7 @@
 	&__item {
 	}
 	&__slide {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			max-width: calc(33.333% - 46px);
 			width: calc(33.333% - 46px);
 		}
@@ -30,6 +30,7 @@
 			width: 100%;
 			max-width: 100%;
 		}
+		filter:saturate(0);
 		margin-bottom: rem(16);
 	}
 	&__slide-title {
@@ -45,7 +46,7 @@
 	}
 	.swiper-scrollbar{
 		position: relative;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(md){
 			display: none;
 		}
 		margin-top: rem(32);
@@ -55,6 +56,7 @@
 			overflow: visible;
 		}
 	}
+	
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

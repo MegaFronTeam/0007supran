@@ -1,0 +1,19 @@
+mixin sPrinciples(data)
+	// start sPrinciples
+	+b.SECTION.sPrinciples.section#sPrinciples&attributes(attributes)
+		.container
+			+b.section-title
+				h2 наши принципы
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+sAboutCaptionItem(`sAboutCaption-2`,`Мы команда`,`Уважаем, ценим и&nbsp;помогаем друг другу. У&nbsp;нас принято говорить &laquo;Спасибо&raquo;`)
+						+sAboutCaptionItem(`sPrinciples-1`,`Мы поощряем инициативу`,`Поддерживаем сотрудников, которые не&nbsp;боятся брать на&nbsp;себя&nbsp;ответственность`)
+					+e.slide.swiper-slide
+						+sAboutCaptionItem(`sPrinciples-2`,`Мы не ищем виноватых и правых`,`Находим цель и&nbsp;стараемся достичь ее&nbsp;максимально простыми и&nbsp;быстрыми&nbsp;путями`)
+						+sAboutCaptionItem(`sPrinciples-3`,`Мы профессионалы и эксперты`,`Не&nbsp;просто внедряем технологии, мы&nbsp;ищем&nbsp;и&nbsp;реализуем сценарии их&nbsp;лучшего&nbsp;использования`)
+					+e.slide.swiper-slide
+						+sAboutCaptionItem(`sAboutCaption-3`,`Мы предлагаем возможности `,`Возможности для карьерного роста, профессионального развития и&nbsp;самореализации`)
+						+sAboutCaptionItem(`sPrinciples-4`,`Мы проявляем заботу `,`Вас всегда поддержит и&nbsp;воодушевит талантливая и&nbsp;неравнодушная команда&nbsp;HR`)
+				.swiper-scrollbar
+	// end sPrinciples
