@@ -722,7 +722,15 @@ function eventHandler() {
 
 
 
-
+	const sContentSwiper = new Swiper('.sContent__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 40,
+		// loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
 
 };
 if (document.readyState !== 'loading') {
