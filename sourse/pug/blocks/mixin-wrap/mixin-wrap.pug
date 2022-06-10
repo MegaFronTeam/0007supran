@@ -39,3 +39,12 @@ mixin sAboutCaptionItem(pic,title,text)
 			img(src=`img/svg/${pic}.svg`, alt="")
 		+e.title!=title
 		+e.text!=text
+
+mixin share()
+	+b.share-block
+		p Поделиться
+		+soc()
+			+item-sos('vk2')
+			+item-sos('in2')
+			+item-sos('whatsapp2')
+			+item-sos('telegram2')

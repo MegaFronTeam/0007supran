@@ -14,7 +14,7 @@ mixin sContent()
 				a(href="#") #новости команды
 		.container.container--small.mb-56
 			p.h4.mb-32 Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est.
-			p.fw-light Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			p.fw-light.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
 		.container.container--large.mb-56
 			+e.mediaContent
 				+img('img/article-img-1.jpg', 'bg')
@@ -22,7 +22,7 @@ mixin sContent()
 			h2 Fusce sed auctor nibh
 			p.fw-light.mb-0 Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
 		.container.container--small.mb-56
-			ul
+			+e.UL.default-list
 				li Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla
 				li In posuere, augue eget ornare congue, eros ex bibendum
 					ul
@@ -56,8 +56,40 @@ mixin sContent()
 				+articleTableContent('Nullam', 'Tincidunt', 'Tincidunt', 'Dapibus')
 				+articleTableContent('Luctus', 'Mauris', 'Felis', 'Aenean')
 				+articleTableContent('Dignissim', 'Vestibulum', 'Fusce', 'Donec')
-		.container.container--small.mb-56
+		.container.container--large.mb-32
+			blockquote
+				h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat.
+				cite Алексей Литвин
+					span Директор
+		.container.container--small.mb-32
 			h3.mb-32 H3 Header two line words description
 			p.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
 		.container.container--small.mb-56
+			+e.OL.num-list
+				li Nam luctus orci non suscipit mollis
+				li Proin suscipit placerat turpis, vitae fermentum turpis auctor vel
+					ol
+						li Donec scelerisque massa nec sapien tempus consectetur
+						li Morbi vehicula mauris neque
+				li Quisque aliquet nibh nec egestas faucibus
+		.container.container--small.mb-56
+			mixin slide()
+				+e.slide.swiper-slide
+					+e.item
+						+img(`img/article-img-3.jpg`, `bg`, 0)
+					
+			+e.sliderContainer
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide()
+						+slide()
+						+slide()
+				+e.arrow-wrap
+					+arrow
+		.container.container--small.mb-56
+			h4.mb-32 H4 Header two line words description
+			h5 H5 Header two line words description
+			p.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--small.mb-32
+			+share()
 	// end sContent

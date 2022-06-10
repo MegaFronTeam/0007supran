@@ -113,3 +113,26 @@
 		color: #7e7d85;
 	}
 }
+
+.share-block {
+	text-align: center;
+	p {
+		color: $secondary;
+		font-size: rem(13);
+		font-weight: 300;
+		margin-bottom: rem(10);
+	}
+	.soc {
+		max-width: none;
+		justify-content: center;
+		margin-top: 0;
+		--bs-gutter-x: #{rem(16)};
+		&__item {
+			margin-top: 0;
+			color: #08080B;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
