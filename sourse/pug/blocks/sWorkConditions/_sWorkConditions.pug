@@ -26,3 +26,28 @@ mixin sWorkConditions(data)
 				+item('8','Корпоративные традиции и вдохновляющие мероприятия')
 				+item('9','Дополнительный день отпуска после первого года работы')
 	// end sWorkConditions
+
+mixin sWorkConditions2(data)
+	// start sWorkConditions
+	+b.SECTION.sWorkConditions--service.section#sWorkConditions&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Преимущества единого центра разработки клиента
+			.row
+				mixin item(icon,caption)
+					.col-lg-4
+						+e.item
+							+e.item-icon
+								img(src=`img/svg/sWorkConditions-${icon}.svg`, alt="")
+							+e.item-caption!=caption
+				+item('1','Lorem ipsum dolor sit amet, consectetur adipisicing elit.')
+				+item('2','Lorem ipsum dolor sit amet.')
+				+item('3','Lorem ipsum dolor sit amet consectetur.')
+				+item('4','Lorem ipsum dolor sit.')
+				+item('5','Lorem ipsum dolor sit amet, consectetur adipisicing elit.')
+				+item('6','Lorem ipsum dolor sit amet.')
+				+item('7','Lorem ipsum dolor sit amet consectetur.')
+				+item('8','Lorem ipsum dolor sit.')
+				+item('9','Lorem ipsum dolor sit.')
+	// end sWorkConditions
+

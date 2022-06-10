@@ -1,0 +1,86 @@
+// start .sTechnology
+.sTechnology {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(24)};
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(50)};
+	}
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	&__tr {
+		display: flex;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
+		flex-direction: column;
+		padding-bottom: rem(16);
+		padding-top: rem(16);
+		border-bottom: 1px solid #e3e7ec;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__title {
+		@include media-breakpoint-up(md) {
+			width: 25%;
+			min-width: 25%;
+			padding-right: rem(16);
+			padding-bottom: rem(0);
+			font-weight: 300;
+			font-size: rem(13);
+			line-height: calc(16 / 13);
+		}
+		padding-bottom: rem(16);
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		@include media-breakpoint-up(lg){
+			max-width: 75%;
+			width: 75%;
+		}
+	}
+	&__list-item {
+		font-size: rem(14);
+		line-height: calc(20 / 14);
+		position: relative;
+		padding-right: 8px;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 4px;
+			width: 0px;
+			height: 100%;
+			border-right: 1px solid #acb4c0;
+		}
+		&:last-child{
+			&::after{
+				display: none;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sTechnology

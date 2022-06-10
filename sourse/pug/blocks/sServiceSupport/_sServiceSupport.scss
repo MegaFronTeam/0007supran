@@ -17,10 +17,10 @@
 	&__item {
 	}
 	h2 {
-		margin-bottom: rem(8);
 		text-transform: uppercase;
 	}
 	h6 {
+		margin-top: rem(8);
 		margin-bottom: 0;
 		color: #7e7d85;
 		font-size: rem(18);
@@ -70,10 +70,10 @@
 		align-items: center;
 		height: auto;
 		filter: saturate(0);
-		&:hover{
+		&:hover {
 			filter: saturate(1);
 		}
-		img{
+		img {
 			max-width: 100%;
 			max-height: 100%;
 		}

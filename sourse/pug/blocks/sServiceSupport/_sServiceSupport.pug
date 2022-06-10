@@ -29,3 +29,34 @@ mixin sServiceSupport(data)
 						+e.status
 							img(src="img/svg/status-2.svg", alt="")
 	// end sServiceSupport
+
+mixin sServiceSupport2(data)
+	// start sServiceSupport
+	+b.SECTION.sServiceSupport.section#sServiceSupport&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Разработка
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+sAboutCaptionItem('sPrinciples-3','Высококачественное<br>обслуживание','Мы&nbsp;предлагаем Вашей компании передать сопровождение решений SAP на&nbsp;аутсорсинг. Это позволит не&nbsp;только сократить издержки, но&nbsp;и&nbsp;получить высококачественные услуги по&nbsp;поддержке в&nbsp;рамках SLA.')
+					+e.slide.swiper-slide
+						+sAboutCaptionItem('sAboutCaption-2','Проверенные специалисты','SAPRUN обладает глубокой и&nbsp;обширной экспертизой в&nbsp;области поддержки SAP-решений, а&nbsp;также большим штатом специалистов, имеющих сертификат SAP по&nbsp;своему направлению.')
+					+e.slide.swiper-slide
+						+sAboutCaptionItem('sAboutCaption-1','Обширный опыт','Собственный Центр разработки и&nbsp;экспертный опыт развития систем позволяет выполнять оптимизацию текущих и&nbsp;реализацию новых бизнес-процессов в&nbsp;короткие сроки.')
+				.swiper-scrollbar
+			//- +e.status-wrap
+			//- 	.row
+			//- 		.col-md-3.col-6
+			//- 			+e.status
+			//- 				img(src="img/svg/status-1.svg", alt="")
+			//- 		.col-md-3.col-6
+			//- 			+e.status
+			//- 				img(src="img/svg/status-2.svg", alt="")
+			//- 		.col-md-3.col-6
+			//- 			+e.status
+			//- 				img(src="img/svg/status-1.svg", alt="")
+			//- 		.col-md-3.col-6
+			//- 			+e.status
+			//- 				img(src="img/svg/status-2.svg", alt="")
+	// end sServiceSupport
