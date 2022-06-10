@@ -129,22 +129,10 @@
 		--bs-gutter-x: #{rem(16)};
 		&__item {
 			margin-top: 0;
-			border: 1px solid #08080B;
-			border-radius: 4px;
 			color: #08080B;
-			// padding: 3px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: rem(32);
-			height: rem(32);
-			&:not(:last-child) {
-				// margin-right: rem(16);
-			}
-			.icon {
-				font-size: rem(24);
-				flex: 0 0 auto;
-			}
 		}
 	}
 }
