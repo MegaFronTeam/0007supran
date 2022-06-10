@@ -1,0 +1,20 @@
+mixin sService(data)
+	// start sService
+	+b.SECTION.sService.section#sService&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Услуги
+			.row
+				mixin item(title,caption)
+					.col-md
+						+e.item
+							+e.title!=title
+							+e.caption!=caption
+							+e.link(href="#")
+								span Подробнее
+								+icon('arrow-right-link')
+				+item('Заказная разработка для систем SAP','Автоматизация процессов регистрации, квалификации, сегментации, а&nbsp;также контроль эффективности поставщиков. Управление данными о&nbsp;поставщиках, их&nbsp;KPI, финансовой документацией, сертификатами и&nbsp;прочей информацией.')
+				+item('Прикладная разработка','Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aliquam tenetur accusamus! Illum quod eius praesentium quisquam quis totam corporis necessitatibus unde dolorum? Commodi, dolore!')
+				//- +item('Прикладная и мобильная разработка','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima molestiae necessitatibus esse recusandae omnis odio nobis maxime eos nemo fugit mollitia beatae magnam enim expedita iusto repellendus non blanditiis, ullam et laudantium!')
+	// end sService
+	
