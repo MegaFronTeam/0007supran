@@ -92,6 +92,39 @@
 		--bs-gutter-x: #{rem(32)};
 		--bs-gutter-y: #{rem(56)};
 	}
+	&--2 {
+		position: relative;
+		.row {
+			--bs-gutter-y: #{rem(33)};
+		}
+		.sService {
+			&__item {
+				display: block;
+				color: #08080B;
+			}
+			&__caption {
+				font-size: rem(18);
+			}
+			&__link {
+				color: $primary;
+				@include media-breakpoint-up(lg) {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					margin-top: 0;
+					&--right {
+						right: -85px;
+					}
+					&--left {
+						left: -85px;
+					}
+				}
+				.icon {
+					font-size: rem(7);
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

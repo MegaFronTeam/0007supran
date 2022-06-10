@@ -2,10 +2,10 @@
 	// start .sContent
 .sContent {
 	--sPT: #{rem(16)};
-	--sPB: #{rem(40)};
+	--sPB: #{rem(0)};
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(64)};
-		--sPB: #{rem(66)};
+		--sPB: #{rem(0)};
 	}
 	&__back {
 		display: flex;
