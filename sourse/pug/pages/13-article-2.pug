@@ -26,9 +26,9 @@ block title
 	title= title
 block pagecontent
 	+mob-mnu()
-	video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp').bg-video
-			source(src='video/video.webm' type='video/webm')
-			source(src='video/video.mp4' type='video/mp4')
+	//- video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp').bg-video
+	//- 		source(src='video/video.webm' type='video/webm')
+	//- 		source(src='video/video.mp4' type='video/mp4')
 	
 	+top-nav()
 	//- +headerBlockBody('Work',`Работа в SAPRUN`,`В&nbsp;SAPRUN мы&nbsp;создаем успешный бизнес, в&nbsp;котором всем нам комфортно и&nbsp;интересно работать. Бизнес, в&nbsp;котором отношения строятся на&nbsp;доверии, взаимовыгодном, доброжелательном и&nbsp;долгосрочном сотрудничестве.<br>Наша цель&nbsp;&mdash; максимально реализовать потенциал клиентов и&nbsp;сотрудников.`,'right').bg-dark.section--vh
@@ -37,6 +37,7 @@ block pagecontent
 	//- +sPrinciples.bg-white.section--vh
 	//- +sWorkConditions.bg-dark.section--vh
 	//- +sStatus.bg-white.section--vh
+	+headerArtical().bg-dark
 	+sContent2().bg-white.section--vh
 	+sService2().bg-white
 	+footer().bg-dark

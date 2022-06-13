@@ -74,6 +74,134 @@
 			z-index: 0;
 		}
 	}
+	&--artical {
+		padding-top: rem(48);
+		padding-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			margin: 0 rem(16);
+		}
+		@include media-breakpoint-up(md) {
+			padding-top: 48px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: 47px;
+			padding-bottom: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-top: 57px;
+		}
+		@include media-breakpoint-down(md) {
+			min-height: auto;
+		}
+	}
+	&__row {
+		--bs-gutter-x: 0;
+		min-height: calc(100vh - 48px);
+		@include media-breakpoint-up(xl) {
+			min-height: calc(100vh - 56px);
+		}
+		@include media-breakpoint-down(md) {
+			min-height: auto;
+		}
+	}
+	&__col {
+		padding: rem(24) rem(48);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@include media-breakpoint-down(md) {
+			padding-right: rem(16);
+			padding-left: rem(16);
+		}
+	}
+	&__img-wrap {
+		@include media-breakpoint-down(md) {
+			margin: rem(16);
+			@include block(328, 151);
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			--ratio: 328/328;
+		}
+		@include media-breakpoint-up(md) {
+			height: 100%;
+		}
+	}
+	&__back {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(13);
+		color: #fff;
+		font-weight: 300;
+		.icon {
+			font-size: rem(16);
+			color: #fff;
+			flex: 0 0 auto;
+			margin-right: 8px;
+		}
+		@include media-breakpoint-down(md) {
+			position: absolute;
+			width: 100%;
+			height: rem(48);
+			background-color: #fff;
+			color: #08080B;
+			top: rem(-48);
+			left: 0;
+			.icon {
+				color: #08080B;
+
+			}
+		}
+	}
+	&__content {
+		.h6 {
+			margin-bottom: rem(16);
+		}
+		h1 {
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(40);
+			}
+		}
+		p {
+			margin-bottom: rem(16);
+			color: #fff;
+		}
+		a {
+			width: 100%;
+			@include media-breakpoint-up(md) {
+				max-width: rem(219);
+			}
+		}
+	}
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px 8px;
+		margin-left: rem(16);
+		@include media-breakpoint-up(md) {
+			justify-content: center;
+			margin-left: 0;
+		}
+		a {
+			font-size: rem(10);
+			font-weight: 300;
+			padding: 1px 7.5px;
+			border: 0.5px solid $primary;
+			border-radius: 35px;
+			
+			// &:not(:last-child) {
+			// 	margin-right: 8px;
+			// }
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 
