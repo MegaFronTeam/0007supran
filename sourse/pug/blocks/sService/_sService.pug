@@ -18,12 +18,16 @@ mixin sService(data)
 				//- +item('Прикладная и мобильная разработка','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima molestiae necessitatibus esse recusandae omnis odio nobis maxime eos nemo fugit mollitia beatae magnam enim expedita iusto repellendus non blanditiis, ullam et laudantium!')
 	// end sService
 
-mixin sService2Item(title,caption, right, img, subtext)
+mixin sService2Item(title,caption, right, img, subtext, single)
 	.col-md
-		+e.item(href="#")
+		+e.item(href="#")&attributes(attributes)
 			if right
-				+e.link--right
-					+icon('arrow-right-link')
+				if single
+					+e.link--single
+						+icon('arrow-right-link')
+				else
+					+e.link--right
+						+icon('arrow-right-link')
 			else
 				+e.link--left.d-none.d-md-inline-block
 					+icon('arrow-left-link')

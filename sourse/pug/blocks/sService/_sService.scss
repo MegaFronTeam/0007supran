@@ -104,6 +104,11 @@
 				&:hover {
 					color: $primary;
 				}
+				&--single {
+					@include media-breakpoint-down(lg) {
+						padding-bottom: 38px;
+					}
+				}
 			}
 			&__caption {
 				font-size: rem(18);
@@ -120,6 +125,13 @@
 					}
 					&--left {
 						left: -85px;
+					}
+				}
+				&--single {
+					@include media-breakpoint-down(lg) {
+						position: absolute;
+						bottom: 0;
+						left: 0;
 					}
 				}
 				.icon {
