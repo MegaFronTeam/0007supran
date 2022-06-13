@@ -5,4 +5,5 @@
 1. <https://megafronteam.github.io/0007supran/public/05-work.html>
 1. <https://megafronteam.github.io/0007supran/public/06-service.html>
 1. <https://megafronteam.github.io/0007supran/public/13-article.html>
+1. <https://megafronteam.github.io/0007supran/public/13-article-2.html>
 2. <https://megafronteam.github.io/0007supran/public/00-modal.html>

@@ -7,6 +7,14 @@
 		--sPT: #{rem(64)};
 		--sPB: #{rem(0)};
 	}
+	.container {
+		&--indent {
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(110);
+			}
+		}
+	}
 	&__back {
 		display: flex;
 		justify-content: center;
@@ -63,6 +71,7 @@
 	}
 	&__default-list {
 		font-weight: 300;
+		margin-left: rem(23);
 		& > li {
 			margin-left: rem(15);
 			padding-top: rem(16);
@@ -181,6 +190,7 @@
 		padding-left: 0;
 		margin-bottom: 0;
 		counter-reset: num;
+		margin-left: rem(23);
 		& > li {
 			padding-left: rem(20);
 			margin-top: rem(16);
