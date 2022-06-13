@@ -38,9 +38,16 @@ mixin headerArtical-content(first, second)
 		+e.content--2
 			h1 Управление поставщиками
 			p Автоматизация процессов регистрации, квалификации, сегментации, а&nbsp;также контроль эффективности поставщиков. Управление данными о&nbsp;поставщиках, их&nbsp;KPI, финансовой документацией, сертификатами и&nbsp;прочей информацией.
+	else
+		+e.content--3
+			+img('img/svg/Infinbank.svg')
+			.h6 банки
+			h1 Программа проектов «Реновация» цифровой трансформации банка InfinBank
+			a(href="#").btn.btn-outline-primary Запросить детали проекта
 
 
-mixin headerArtical(link, img, ...tags)
+
+mixin headerArtical(link, img, desc, ...tags)
 	// start headerBlock
 	+b.headerBlock--artical.bg-wrap.section#headerBlock&attributes(attributes)
 		+e.row.row
@@ -58,6 +65,8 @@ mixin headerArtical(link, img, ...tags)
 					+icon('chevron-left')
 					!= link
 				block
+				if desc
+					+e.desc Управление цепочками поставок, Взаимоотношения с клиентами и клиентский опыт
 				+e.tags.d-none.d-md-flex
 					each tag in tags
 						a(href="#")!= tag

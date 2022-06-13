@@ -105,9 +105,7 @@
 					color: $primary;
 				}
 				&--single {
-					@include media-breakpoint-down(lg) {
-						padding-bottom: 38px;
-					}
+					padding-bottom: 38px;
 				}
 			}
 			&__caption {
@@ -116,23 +114,25 @@
 			&__link {
 				color: $primary;
 				@include media-breakpoint-up(lg) {
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%);
-					margin-top: 0;
 					&--right {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						margin-top: 0;
 						right: -85px;
 					}
 					&--left {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						margin-top: 0;
 						left: -85px;
 					}
 				}
 				&--single {
-					@include media-breakpoint-down(lg) {
-						position: absolute;
-						bottom: 0;
-						left: 0;
-					}
+					position: absolute;
+					bottom: 0;
+					left: 0;
 				}
 				.icon {
 					font-size: rem(7);
