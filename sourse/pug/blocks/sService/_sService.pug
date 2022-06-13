@@ -18,26 +18,33 @@ mixin sService(data)
 				//- +item('Прикладная и мобильная разработка','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima molestiae necessitatibus esse recusandae omnis odio nobis maxime eos nemo fugit mollitia beatae magnam enim expedita iusto repellendus non blanditiis, ullam et laudantium!')
 	// end sService
 
+mixin sService2Item(title,caption, right, img, subtext)
+	.col-md
+		+e.item(href="#")
+			if right
+				+e.link--right
+					+icon('arrow-right-link')
+			else
+				+e.link--left.d-none.d-md-inline-block
+					+icon('arrow-left-link')
+				+e.link--left.d-inline-block.d-md-none
+					+icon('arrow-right-link')
+			if img
+				+img(`img/svg/${img}`)
+			if title
+				+e.title!=title
+			if caption
+				+e.caption!=caption
+			if subtext
+				+e.subtext!= subtext
 mixin sService2(data)
 	// start sService
 	+b.SECTION.sService--2.section#sService&attributes(attributes)
 		.container.container--small
 			.row
-				mixin item(title,caption, right)
-					.col-md
-						+e.item(href="#")
-							if right
-								+e.link--right
-									+icon('arrow-right-link')
-							else
-								+e.link--left.d-none.d-md-inline-block
-									+icon('arrow-left-link')
-								+e.link--left.d-inline-block.d-md-none
-									+icon('arrow-right-link')
-							+e.title!=title
-							+e.caption!=caption
-				+item('12 сентября 2022','Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo.')
-				+item('6 сентября 2022','Nam non aliquam magna. Etiam et consectetur purus posuere tempor massa. Vestibulum viverra luctus posuere.', 'true')
+				block
+				//- +item('12 сентября 2022','Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo.', '')
+				//- +item('6 сентября 2022','Nam non aliquam magna. Etiam et consectetur purus posuere tempor massa. Vestibulum viverra luctus posuere.', 'true')
 				//- +item('Прикладная и мобильная разработка','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima molestiae necessitatibus esse recusandae omnis odio nobis maxime eos nemo fugit mollitia beatae magnam enim expedita iusto repellendus non blanditiis, ullam et laudantium!')
 	// end sService
 	

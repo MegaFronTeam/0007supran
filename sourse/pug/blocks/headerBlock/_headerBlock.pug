@@ -27,28 +27,37 @@ mixin headerBlockBody(name,title,caption,right)
 				p!=caption
 	// end headerBlock
 
-mixin headerArtical()
+mixin headerArtical-content(first, second)
+	if first
+		+e.content
+			.h6 12 сентября 2022
+			h1 SAPRUN вошёл в TOP-5 крупнейших российских аутсорсеров поддержки решений SAP-2020.
+			p online
+			a(href="#").btn.btn-outline-primary Хочу пойти
+	else if second
+		+e.content--2
+			h1 Управление поставщиками
+			p Автоматизация процессов регистрации, квалификации, сегментации, а&nbsp;также контроль эффективности поставщиков. Управление данными о&nbsp;поставщиках, их&nbsp;KPI, финансовой документацией, сертификатами и&nbsp;прочей информацией.
+
+
+mixin headerArtical(link, img, ...tags)
 	// start headerBlock
 	+b.headerBlock--artical.bg-wrap.section#headerBlock&attributes(attributes)
 		+e.row.row
 			.col-md-6.order-2.order-md-1
 				+e.img-wrap
-					+img('img/article-img-1.jpg', 'bg')
+					+img(`img/${img}`, 'bg')
 				+e.tags.d-flex.d-md-none
-					a(href="#") #жизнь компании
-					a(href="#") #новости команды
+					each tag in tags
+						a(href="#")!= tag
 			+e.col.col-md-6.text-center.bg-wrap.order-1.order-md-2
 				video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp').bg-video
 					source(src='video/video.webm' type='video/webm')
 					source(src='video/video.mp4' type='video/mp4')
 				+e.back(href="#").mb-32
 					+icon('chevron-left')
-					| Вернуться в пресс-центр
-				+e.content
-					.h6 12 сентября 2022
-					h1 SAPRUN вошёл в TOP-5 крупнейших российских аутсорсеров поддержки решений SAP-2020.
-					p online
-					a(href="#").btn.btn-outline-primary Хочу пойти
+					!= link
+				block
 				+e.tags.d-none.d-md-flex
-					a(href="#") #жизнь компании
-					a(href="#") #новости команды
+					each tag in tags
+						a(href="#")!= tag

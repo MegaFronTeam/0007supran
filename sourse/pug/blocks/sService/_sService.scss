@@ -101,6 +101,9 @@
 			&__item {
 				display: block;
 				color: #08080B;
+				&:hover {
+					color: $primary;
+				}
 			}
 			&__caption {
 				font-size: rem(18);
@@ -123,6 +126,15 @@
 					font-size: rem(7);
 				}
 			}
+			&__subtext {
+				font-size: rem(13);
+				font-weight: 300;
+				color: #7E7D85;
+				padding-top: rem(8);
+			}
+		}
+		img {
+			display: block;
 		}
 	}
 	@include media-breakpoint-up(xl) {
