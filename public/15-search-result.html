@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Статусы и награды</title>
+		<title>Результаты поиска</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -197,70 +197,93 @@
 			</div>
 			<!-- end top-nav-->
 			<!-- start headerBlock-->
-			<div class="headerBlock bg-wrap section bg-dark section section--vh" id="headerBlock">
-				<div class="animate-blur"><img src="img/@2x/webp/animate-blur.webp" alt=""/></div>
-				<div class="headerBlock__bg picture-bg"><img src="img/headerBlockStatus-bg.jpg" alt=""/>
+			<div class="headerBlock headerBlock--search bg-wrap section bg-dark" id="headerBlock">
+				<div class="animate-blur animate-blur--right"><img src="img/@2x/webp/animate-blur.webp" alt=""/></div>
+				<div class="headerBlock__bg picture-bg"><img src="img/headerBlockSearch-bg.jpg" alt=""/>
 				</div>
-				<div class="headerBlock__bg headerBlock__bg--mob picture-bg"><img src="img/headerBlockStatus-bg-mob.jpg" alt=""/>
+				<div class="headerBlock__bg headerBlock__bg--mob picture-bg"><img src="img/headerBlockSearch-bg-mob.jpg" alt=""/>
 				</div>
 				<div class="container">
-					<div class="headerBlock__inner">
-						<h1>Статусы и награды</h1>
-						<p>Входим в&nbsp;TOP-10 крупнейших поставщиков BI-решений в&nbsp;России 2020, в&nbsp;TOP-5 аутсорсеров поддержки решений SAP в&nbsp;России по&nbsp;версии аналитического центра TAdviser</p>
+					<div class="headerBlock__input-wrap form-group"><input class="headerBlock__input form-control" name="text" type="text" placeholder="Поиск"/><span class="headerBlock__input-title"></span>
+						<svg class="icon icon-search ">
+							<use xlink:href="img/svg/sprite.svg#search"></use>
+						</svg>
+						<p>Найдено 27 результатов</p>
 					</div>
+					<!-- +e.input-wrap-->
 				</div>
 			</div>
-			<!-- end headerBlock-->
-			<!-- start sStatus-->
-			<section class="sStatus section bg-white section section--vh" id="sStatus">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>Статусы</h2>
-						<h6>Более 13 лет мы работаем над тем, чтобы быть лучшей консалтинговой компанией в своем сегменте рынка по объему и качеству оказываемых услуг.</h6>
-					</div>
-					<div class="status-block">
-						<div class="status-block__wrap">
-							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-1.svg" alt=""/>
-								</a>
+			<!-- start sSearchResult-->
+			<section class="sSearchResult section bg-white section section--vh" id="sSearchResult">
+				<div class="container tabs">
+					<div class="sSearchResult__slider sSearchResult__slider--js swiper">
+						<div class="swiper-wrapper tabs__caption">
+							<div class="sSearchResult__slide swiper-slide tabs__btn active">
+								<div class="sSearchResult__item">По тегу
+								</div>
 							</div>
-							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-2.svg" alt=""/>
-								</a>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Услуги
+								</div>
 							</div>
-							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-3.svg" alt=""/>
-								</a>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Направления
+								</div>
+							</div>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Технологии
+								</div>
+							</div>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Подходы
+								</div>
+							</div>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Новости
+								</div>
+							</div>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Публикации
+								</div>
+							</div>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Мероприятия
+								</div>
+							</div>
+							<div class="sSearchResult__slide swiper-slide tabs__btn">
+								<div class="sSearchResult__item">Проекты
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="tabs__content active"> 
+						<a class="sSearchResult__link" href="#">
+							<div class="sSearchResult__row row">
+								<div class="sSearchResult__col col-auto order-2 order-md-1">
+									<h4>Управление поставщиками</h4>
+									<p>Эффективное управление бизнес-процессами невозможно без быстрого и удобного доступа к данным о деятельности компании. Современные инструменты позволяют оптимизировать ключевые процессы: от производства, логистики и сбыта до закупок, управления персоналом, управления финансами и проектами.</p>
+									<div class="sSearchResult__wrap">
+										<div class="sSearchResult__tag">#жизнь компании
+										</div>
+										<div class="sSearchResult__tag">#новости команды
+										</div>
+										<div class="sSearchResult__tag">#жизнь компании
+										</div>
+										<div class="sSearchResult__tag">#новости команды
+										</div>
+									</div>
+								</div>
+								<div class="col order-1 order-md-2">
+									<div class="sSearchResult__img-wrap"><img class="object-fit-js" src="img/article-img-1.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="tabs__content">2</div>
 				</div>
 			</section>
-			<!-- end sStatus-->
-			<!-- start sCaptionBlock-->
-			<section class="sCaptionBlock bg-white" id="sCaptionBlock">
-				<!-- picture-->
-				<picture> 
-					<source type="image/webp" srcset="img/@2x/webp/caption-block-about.webp"/><img src="img/@2x/caption-block-about.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
-				<div class="sCaptionBlock__wrap">
-					<h2>Рейтинги</h2>
-					<div class="sCaptionBlock__item">
-						<div class="sCaptionBlock__item-title">TOP 10
-						</div>
-						<div class="sCaptionBlock__item-caption">Крупнейших поставщиков BI-систем в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
-						</div>
-					</div>
-					<div class="sCaptionBlock__item">
-						<div class="sCaptionBlock__item-title">TOP 5
-						</div>
-						<div class="sCaptionBlock__item-caption">Крупнейших аутсорсеров поддержки систем SAP в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end sCaptionBlock-->
+			<!-- end sSearchResult-->
 			<footer class="footer">
 				<div class="footer__block container">
 					<div class="row">

@@ -732,6 +732,10 @@ function eventHandler() {
 		},
 	});
 
+
+	const sSearchResultSwiper = new Swiper('.sSearchResult__slider--js', {
+		slidesPerView: 'auto',
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

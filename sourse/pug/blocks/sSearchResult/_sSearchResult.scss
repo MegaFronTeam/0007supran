@@ -1,0 +1,128 @@
+// start .sSearchResult
+.sSearchResult {
+	--sPT: #{rem(24)};
+	--sPB: #{rem(45)};
+	// --sTPB: #{rem()};
+	position: relative;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(70)};
+		--sPB: #{rem(70)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	&__slide{
+		width: max-content;
+		&.active {
+			.sSearchResult__item {
+				color: $primary;
+				&:after {
+					background-color: $primary;
+				}
+			}
+		}
+	}
+	&__slider {
+		overflow: visible;
+		top: -36px;
+    height: 36px;
+		left: 0;
+		position: absolute;
+		@include media-breakpoint-up(md) {
+			left: 36px;
+		}
+	}
+	&__item {
+		width: max-content;
+		@include mt;
+		padding: 0 21px;
+		position: relative;
+		height: 100%;
+		color: #fff;
+		font-weight: 300;
+		&:after {
+			@include mt;
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: transparent;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: center;
+		gap: 16px 8px;
+	}
+	&__tag {
+		font-size: 10px;
+		font-weight: 300;
+		padding: 1px 7.5px;
+		border: 0.5px solid $primary;
+		border-radius: 35px;
+		color: $primary;
+		// &:not(:last-child) {
+		// 	margin-right: 8px;
+		// }
+	}
+	&__link {
+		color: #08080B;
+		padding: rem(24) 0;
+		border-bottom: 1px solid #E3E7EC;
+		display: block;
+		h4, p {
+			margin-bottom: rem(16);
+		}
+		p {
+			font-size: rem(13);
+			font-weight: 300;
+			color: $secondary;
+		}
+		&:hover {
+			img {
+				filter: grayscale(0);
+			}
+		}
+	}
+	&__row {
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+		}
+	}
+	&__col {
+		max-width: rem(773);
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			width: 65%;
+		}
+	}
+	&__img-wrap {
+		@include block(317, 187);
+		margin-bottom: rem(23);
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+		img {
+			@include mt;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			filter: grayscale(1);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSearchResult

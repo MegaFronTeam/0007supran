@@ -1,0 +1,47 @@
+mixin sSearchResultItem()
+	+e.link(href="#")
+		+e.row.row
+			+e.col.col-auto.order-2.order-md-1
+				h4 Управление поставщиками
+				p Эффективное управление бизнес-процессами невозможно без быстрого и удобного доступа к данным о деятельности компании. Современные инструменты позволяют оптимизировать ключевые процессы: от производства, логистики и сбыта до закупок, управления персоналом, управления финансами и проектами.
+				+e.wrap
+					+e.tag #жизнь компании
+					+e.tag #новости команды
+					+e.tag #жизнь компании
+					+e.tag #новости команды
+			.col.order-1.order-md-2
+				+e.img-wrap
+					+img('img/article-img-1.jpg', 'bg')
+mixin sSearchResult(data)
+	// start sSearchResult
+	+b.SECTION.sSearchResult.section#sSearchResult&attributes(attributes)
+		.container.tabs
+			+e.slider--js.swiper
+				.swiper-wrapper.tabs__caption
+					+e.slide.swiper-slide.tabs__btn.active
+						+e.item По тегу
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Услуги
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Направления
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Технологии
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Подходы
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Новости
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Публикации
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Мероприятия
+					+e.slide.swiper-slide.tabs__btn
+						+e.item Проекты
+			.tabs__content.active 
+				+sSearchResultItem()
+			.tabs__content 2
+	// end sSearchResult
+
+	//- +e.slider--js.swiper
+	//- 				.swiper-wrapper
+	//- 			+e.slide.swiper-slide
+	//- 				+e.item
