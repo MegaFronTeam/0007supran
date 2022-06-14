@@ -667,3 +667,10 @@ iframe {
 		padding-bottom: rem(56);
 	}
 }
+
+.mb-72 {
+	margin-bottom: rem(40);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(72);
+	}
+}

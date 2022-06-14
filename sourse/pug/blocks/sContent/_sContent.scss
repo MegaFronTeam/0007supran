@@ -7,6 +7,12 @@
 		--sPT: #{rem(64)};
 		--sPB: #{rem(0)};
 	}
+	&--4 {
+		--sPB: #{rem(40)};
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(131)};
+		}
+	}
 	.container {
 		&--indent {
 			margin-bottom: rem(32);
@@ -68,6 +74,9 @@
 			width: 100%;
 			height: 100%;
 		}
+	}
+	h6 {
+		font-weight: 600;
 	}
 	// ul {
 	// 	list-style-type: none;
@@ -280,6 +289,8 @@
 		display: flex;
 		gap: 24px;
 	}
+
+	// content 3
 	&__list-title {
 		margin-bottom: rem(22);
 	}
@@ -301,8 +312,32 @@
 			}
 		}
 	}
+
+	// content 4
+	&__row {
+		--bs-gutter-x: #{rem(25)};
+		--bs-gutter-y: #{rem(23)};
+	}
+	&__row-second {
+		--bs-gutter-x: #{rem(48)};
+		--bs-gutter-y: #{rem(23)};
+	}
+	&__item {
+		h2 {
+			color: $primary;
+			margin-bottom: rem(4);
+		}
+		p {
+			color: #08080B;
+			font-weight: 300;
+			margin-bottom: 0;
+			opacity: 0.6;
+			@include media-breakpoint-up(lg) {
+				opacity: 1;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-up(xs) {}
