@@ -11,7 +11,7 @@ include ../blocks/sAboutPerson/_sAboutPerson.pug
 include ../blocks/sAboutCaption/_sAboutCaption.pug
 include ../blocks/sStatus/_sStatus.pug
 include ../blocks/sTrust/_sTrust.pug
-include ../blocks/sJoin/_sJoin.pug 
+include ../blocks/sCaptionBlock/_sCaptionBlock.pug 
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
@@ -33,12 +33,13 @@ block pagecontent
 	+sAboutPerson.bg-white.section--vh
 	+sAboutCaption.bg-white.section--vh
 	+sStatus.bg-white.section--vh
+	+sCaptionBlock.bg-white
 	//- +sNews.bg-white.section--vh
 	//- +sEvents.bg-dark.section--vh
 	//- +sWays.bg-white.section--vh
 	//- +sTrust.bg-dark.section--vh
 	//- +sJoin.bg-white
-	+sForm().bg-dark.section--vh
+	+sForm().bg-dark 
 	+footer().bg-dark
       
 

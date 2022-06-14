@@ -1,0 +1,128 @@
+// start .sCaptionBlock
+.sCaptionBlock {
+	display: flex;
+	@include media-breakpoint-up(md) {
+		flex-direction: row !important;
+		justify-content: space-between !important;
+		align-items: center;
+	}
+	flex-direction: column !important;
+	--sPT: 0;
+	--sPB: 0;
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	picture {
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			width: 50%;
+			min-width: 50%;
+			height: 100%;
+			min-height: 100%;
+		}
+		position: relative;
+		&::after {
+			content: "";
+			z-index: 2;
+			position: absolute;
+			@include media-breakpoint-up(md) {
+				// height: 35%;
+				// width: 100%;
+				// bottom: 0;
+				// left: 0;
+				// background: linear-gradient(172deg, rgba(0,0,0,1) 0%, rgba(239,137,47,0.5) 31%, rgba(239,137,47,1) 100%);
+				width: 100vw;
+				aspect-ratio: 1443/934;
+				background: #ef892f;
+				filter: blur(500px);
+				top: 70%;
+				left: rem(-56);
+				border-radius: 100%;
+			}
+			@include media-breakpoint-down(md) {
+				width: 100vw;
+				aspect-ratio: 360/506;
+				background: linear-gradient(180deg, rgba(255, 255, 255, 0) 19.47%, #fffdfd 46.28%);
+				top: 36%;
+				left: 0;
+				z-index: 3;
+			}
+		}
+		&::before{
+			@include media-breakpoint-down(md){
+				position: absolute;
+				content:'';
+				height: 100%;
+				width: 100%;
+				left: 0;
+				top: 0;
+				background: linear-gradient(180deg, rgba(239,137,47,0.1) 0%, rgba(239,137,47,0.5) 100%);
+				z-index: 2;
+			}
+		}
+		img {
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__wrap {
+		@include media-breakpoint-up(xxl) {
+			padding-left: rem(132);
+			padding-right: rem(132);
+		}
+		@include media-breakpoint-up(md) {
+			padding-right: rem(60);
+			padding-left: rem(60);
+		}
+		padding-left: rem(16);
+		padding-right: rem(16);
+		padding-top: rem(32);
+		padding-bottom: rem(32);
+	}
+	h2 {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-size: rem(30);
+		line-height: calc(36 / 30);
+	}
+	&__item {
+		margin-top: rem(40);
+	}
+	&__item-title {
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $primary;
+		font-size: rem(16);
+		line-height: calc(24 / 16);
+	}
+	&__item-caption {
+		margin-top: rem(8);
+		font-weight: 300;
+		font-size: rem(18);
+		line-height: calc(24 / 18);
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCaptionBlock
