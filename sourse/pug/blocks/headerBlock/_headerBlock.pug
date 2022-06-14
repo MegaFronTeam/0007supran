@@ -70,3 +70,16 @@ mixin headerArtical(link, img, desc, ...tags)
 				+e.tags.d-none.d-md-flex
 					each tag in tags
 						a(href="#")!= tag
+
+mixin headerSearch(name)
+	// start headerBlock
+	+b.headerBlock--search.bg-wrap.section#headerBlock&attributes(attributes)
+		+blur().animate-blur--right 
+		+e.bg.picture-bg
+			img(src=`img/headerBlock${name}-bg.jpg`, alt="")
+		+e.bg--mob.picture-bg
+			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
+		.container
+			+input('Поиск', 'text', '')
+				+icon('search')
+				p Найдено 27 результатов

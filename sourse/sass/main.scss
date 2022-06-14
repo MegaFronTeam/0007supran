@@ -135,6 +135,7 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sWays/_sWays';
 @import '../pug/blocks/sTrust/_sTrust';
 @import '../pug/blocks/sJoin/_sJoin'; 
+@import '../pug/blocks/sSearchResult/_sSearchResult'; 
 
 @import "media"; // Всегда в конце
 
