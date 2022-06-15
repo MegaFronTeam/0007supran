@@ -33,7 +33,7 @@ mixin sSearchResultItem2(img, category, title, text, subTextImg, tagWrap, ...tag
 				if tagWrap
 					+e.wrap
 						each tag in tags
-							+e.tag!= tag
+							a(href="#")!= tag
 			.col.order-1.order-md-2
 				+e.img-wrap
 					+img(`img/${img}`, 'bg')
