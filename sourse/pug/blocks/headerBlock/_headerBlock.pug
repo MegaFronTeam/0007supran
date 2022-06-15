@@ -5,8 +5,10 @@ mixin headerBlock()
 		+blur()
 		.container
 			+e.inner
-				h1 Открываем для компаний #[span новые возможности] в&nbsp;проектах цифровой&nbsp;трансформации
-				p Разрабатываем и&nbsp;внедряем комплексные IT-решения  в&nbsp;области управления ресурсами предприятия
+				+e.title-block(data-aos="fade-up" data-aos-delay="300")
+					h1 Открываем для компаний #[span новые возможности] в&nbsp;проектах цифровой&nbsp;трансформации
+				+e.text-block(data-aos="fade-up" data-aos-delay="500")
+					p Разрабатываем и&nbsp;внедряем комплексные IT-решения  в&nbsp;области управления ресурсами предприятия
 	// end headerBlock
 
 
@@ -23,8 +25,10 @@ mixin headerBlockBody(name,title,caption,right)
 			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
 		.container
 			+e.inner
-				h1!=title
-				p!=caption
+				+e.title-block(data-aos="fade-up" data-aos-delay="300")
+					h1!=title
+				+e.text-block(data-aos="fade-up" data-aos-delay="500")
+					p!=caption
 	// end headerBlock
 
 mixin headerArtical-content(first, second)

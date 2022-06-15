@@ -21,7 +21,7 @@ let gsapSet = (el, start = '50% bottom', end = 'top top', scrub = .8, pin, marke
 		}
 	})
 }
-
+AOS.init()
 const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
