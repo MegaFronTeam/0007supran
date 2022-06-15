@@ -254,6 +254,7 @@
 	// Search
 	&--search {
 		min-height: rem(280);
+		z-index: unset;
 		.headerBlock {
 			&__input-wrap {
 				position: relative;
@@ -282,11 +283,45 @@
 				margin-bottom: rem(8);
 				padding-right: rem(25);
 			}
+			&__found {
+				@include mt;
+				position: absolute;
+				top: calc(100% - 20px);
+				left: 0;
+				width: 100%;
+				max-height: rem(224px);
+				// max-height: rem(224px);
+				background-color: #fff;
+				z-index: 10;
+				overflow-y: auto;
+				opacity: 0;
+				pointer-events: none;
+				&.active {
+					opacity: 1;
+					pointer-events: all;
+				}
+				a {
+					padding: rem(14) rem(16);
+					display: block;
+					color: #08080B;
+					&:hover {
+						background-color: rgba(227, 231, 236, 0.2);
+					}
+				}
+			}
+		}
+		.animate-blur {
+			// top: -20%;
+			bottom: -170%;
+			@include media-breakpoint-up(md) {
+				top: -40%;
+				bottom: auto;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {
 	}
-
+	
 	@include media-breakpoint-up(lg) {
 	}
 

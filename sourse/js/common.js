@@ -735,6 +735,7 @@ function eventHandler() {
 
 	const sSearchResultSwiper = new Swiper('.sSearchResult__slider--js', {
 		slidesPerView: 'auto',
+		freeMode: true,
 	});
 };
 if (document.readyState !== 'loading') {
