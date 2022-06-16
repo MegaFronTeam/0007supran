@@ -12,7 +12,9 @@
 
 	}
 	.section-title{
-		
+		@include media-breakpoint-up(md){
+			max-width: rem(617);
+		}
 	}
 	&__col{
 
@@ -22,6 +24,50 @@
 	}
 	h2{
 		margin-bottom: 0;
+	}
+	&__item{
+		display: flex;
+		align-items: flex-start;
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(72);
+			flex-direction: row;
+		}
+		flex-direction: column;
+		margin-bottom: rem(24);
+	}
+	&__number{
+		font-weight: 100;
+		font-size: rem(88);
+		line-height: 100%;
+		color:$primary;
+		margin-right: rem(24);
+	}
+	&__item-info{
+		padding-top: rem(8);
+	}
+	&__item-title{
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: calc(24/18);
+	}
+	&__text{
+		margin-top: rem(16);
+		font-size: rem(13);
+		line-height: calc(16/13);
+		color: #7E7D85;
+	}
+	ul{
+		margin-bottom: 0;
+	}
+	&__list{
+		@include media-breakpoint-up(md){
+			column-width: auto;
+			column-count: 2;
+			column-gap: rem(50);
+		}
+		@include media-breakpoint-up(xxl){
+			column-gap: rem(106);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
