@@ -747,6 +747,15 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 	});
+
+	$('.category-filter__wrap').on('click', function () {
+		$(this).hide;
+		$('.category-filter__content').addClass('active');
+	});
+	$('.icon-close').on('click', function() {
+		$('.category-filter__wrap').show;
+		$('.category-filter__content').removeClass('active');
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
