@@ -5,7 +5,7 @@
 	// --sTPB: #{rem()};
 	position: relative;
   z-index: 2;
-	background-color: #08080B;
+	// background-color: #08080B;
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -127,6 +127,7 @@
 		}
 	}
 	&__showMore {
+		background-color: #08080B;
 		position: relative;
 		display: flex;
 		justify-content: center;
@@ -188,7 +189,7 @@
 		}
 		p {
 			cursor: pointer;
-			@include mt;
+			@include mt(.1s);
 			margin-bottom: 0;
 			font-weight: 300;
 			opacity: 0;
@@ -206,7 +207,7 @@
 	}
 	&__icon-wrap {
 		cursor: pointer;
-		@include mt;
+		@include mt(.1s);
 		padding: 12px;
 		border-radius: 49px;
 		background-color: $primary;
@@ -287,17 +288,29 @@
 		width: 100%;
 		// max-width: max-content;
 		position: relative;
-		border-bottom: 0.5px solid $secondary;
-		&:not(:last-child) {
-			margin-bottom: rem(20);
+		// border-bottom: 0.5px solid $secondary;
+		margin-bottom: rem(15);
+		// &:not(:last-child) {
+		// }
+		// .icon {
+		// 	@include mt;
+		// 	position: absolute;
+		// 	font-size: rem(16);
+		// 	right: 0;
+		// 	top: 50%;
+		// 	transform: translateY(-50%);
+		// }
+		label {
+			width: 100%;
+			// margin-bottom: 0;
 		}
-		.icon {
-			@include mt;
-			position: absolute;
-			font-size: rem(16);
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
+		.choices {
+			&__inner {
+				border: none;
+				border-bottom: 0.5px solid $secondary;
+				background-color: #fff;
+				border-radius: 0px;
+			}
 		}
 	}
 	&__input {

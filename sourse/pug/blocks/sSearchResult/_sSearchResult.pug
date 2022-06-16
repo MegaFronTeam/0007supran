@@ -1,5 +1,5 @@
 mixin sSearchResultItem(img, title, text, date, dateUp, dateBetween, btn, tagWrap, ...tags)
-	+e.link
+	+e.link&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
 		+e.row.row
 			+e.col.col-auto.order-2.order-md-1
 				if dateUp 
@@ -21,7 +21,7 @@ mixin sSearchResultItem(img, title, text, date, dateUp, dateBetween, btn, tagWra
 					+img(`img/${img}`, 'bg')
 
 mixin sSearchResultItem2(img, category, title, text, subTextImg, tagWrap, ...tags)
-	+e.link--2
+	+e.link--2(data-aos="fade-up" data-aos-delay="300")
 		+e.row.row
 			+e.col.col-auto.order-2.order-md-1
 				if category
@@ -41,7 +41,7 @@ mixin sSearchResult(data)
 	// start sSearchResult
 	+b.SECTION.sSearchResult.section#sSearchResult&attributes(attributes)
 		.container.tabs
-			+e.slider--js.swiper
+			+e.slider--js.swiper(data-aos="fade-up" data-aos-delay="300")
 				.swiper-wrapper.tabs__caption
 					+e.slide.swiper-slide.tabs__btn.active
 						+e.item По тегу
