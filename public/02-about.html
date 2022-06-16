@@ -300,91 +300,129 @@
 					<div class="sTeam__bar d-md-none">
 					</div>
 				</div>
+				<script src="libs/chart.js/chart.min.js"> </script>
 				<script>
-					let size = (100 / 8);
+					let size = (100 / 8); 
+								let charData = [
+									{ name: 'Департамент BI', percent: size, color: '#84552D' },
+									{ name: 'Центр прикладной разработки', percent: size, color: '#7D7D85' },
+									{ name: 'Департамент ERP', percent: size, color: '#5A3B21' },
+									{ name: 'Технический консалтинг 	и поддержка', percent: size, color: '#D68843' },
+									{ name: 'Налоговый мониторинг', percent: size, color: '#7D7D85' },
+									{ name: 'Предиктивная аналитика', percent: size, color: '#312216' },
+									{ name: 'Направление 8', percent: size, color: '#7D7D85' },
+									{ name: 'Департамент СХ', percent: size, color: '#312216' }
+								];
 					
-					let charData = [
-						{ name: 'Департамент BI', percent: size, color: '#84552D' },
-						{ name: 'Центр прикладной разработки', percent: size, color: '#7D7D85' },
-						{ name: 'Департамент ERP', percent: size, color: '#5A3B21' },
-						{ name: 'Технический консалтинг 	и поддержка', percent: size, color: '#D68843' },
-						{ name: 'Налоговый мониторинг', percent: size, color: '#7D7D85' },
-						{ name: 'Предиктивная аналитика', percent: size, color: '#312216' },
-						{ name: 'Направление 8', percent: size, color: '#7D7D85' },
-						{ name: 'Департамент СХ', percent: size, color: '#312216' }
-					];
+								let charNames = [], charPercent = [], charColors = [], charColorsGray = [], myChart;
 					
-					let charNames = [], charPercent = [], charColors = [], charColorsGray = [], myChart;
+								let charContent = document.querySelector(".sTeam__list");
+								for (var i = 0; i < charData.length; i++) {
+									let name = charData[ i ][ 'name' ];
+									let color = charData[ i ][ 'color' ];
+									
+									charNames.push(name)
+									charPercent.push(charData[i]['percent'])
+									charColors.push(color);
+									charColorsGray.push('rgba(255,255,255, .1)');
+								}
+								const data ={
+									labels: charNames,
+									datasets: [{
+											// label: '# of Votes',
+											data:charPercent,
+											backgroundColor: charColors,
+											hoverOffset: 20,
+										}]
+									};
+									
+									
+									const config = {
+										type: 'doughnut',
+										data: data,
+										options: {
+											spacing: 40,
+												borderWidth: 0,  
+												hoverBackgroundColor:  '#D68843',
+												cutout: '94%',
+												layout: {
+													padding: 20
+											},
+											plugins: {
+												tooltip: {
+													// Disable the on-canvas tooltip
+													enabled: false,  
+											},
+												legend: {
+													display: false,
+													position: 'right'
+												}, 
+											}, 
+											onHover: function(event,elements) {
+												$("#myChart").css("cursor", elements[ 0 ] ? "pointer" : "default"); 
+												
+												if (elements[ 0 ]) { 
+													let index = elements[ 0 ].index;
+													let bar = document.querySelector(".sTeam__bar"); 
+													if (bar) {
+														bar.style.setProperty('--el-index', index);
+													}
+													console.log(`.sTeam__list-item:nth-child(${index + 2}) .sTeam__list-item-inner`);
+													$(`.sTeam__list-item-inner`).removeClass("hover")
+													$(`.sTeam__list-item:nth-child(${index + 2}) .sTeam__list-item-inner`).addClass("hover")
+													myChart.data.datasets[ 0 ].backgroundColor = charColorsGray; 
+												}
+												else { 
+													myChart.data.datasets[ 0 ].backgroundColor =    charColors; 
+												}
+												myChart.update();
+											},
 					
-					let charContent = document.querySelector(".sTeam__list");
-					for (var i = 0; i < charData.length; i++) {
-						let name = charData[ i ][ 'name' ];
-						let color = charData[ i ][ 'color' ];
-						
-						charNames.push(name)
-						charPercent.push(charData[i]['percent'])
-						charColors.push(color);
-						charColorsGray.push('rgba(255,255,255, .1)');
-					}
+										},
+									// tooltip
+								};
 					
 					
+									const ctx = document.getElementById('myChart').getContext('2d');
 					
+									myChart = new Chart(ctx, config);
+									for (var i = 0; i < charData.length; i++) {
+										let el = i;
+										let name = charData[ i ][ 'name' ];
+										let color = charData[ i ][ 'color' ];
+										let charContentItem = document.createElement("div");
+										charContentItem.classList.add('sTeam__list-item');
+										charContentItem.style.setProperty('--bg', color);
+										charContentItem.setAttribute('data-chart', i);
+										charContentItem.innerHTML = `<div class="sTeam__list-item-inner">${name}</div>`;
+										charContent.appendChild(charContentItem);
+										
+										let bar = document.querySelector(".sTeam__bar"); 
+										if (bar) {
+											bar.style.setProperty('--el-count', charData.length);
+										}
+										
+										charContentItem.addEventListener("mouseover", function () {  
+											myChart.setActiveElements([
+												{datasetIndex: 0, index: el},
+											]); 
 					
-					const data ={
-						labels: charNames,
-						datasets: [{
-								// label: '# of Votes',
-								data:charPercent,
-								backgroundColor: charColors,
-								hoverOffset: 20,
-							}]
-						};
-						
-						
-						const config = {
-							type: 'doughnut',
-							data: data,
-							options: {
-								spacing: 40,
-									borderWidth: 0,  
-									hoverBackgroundColor:  '#D68843',
-									cutout: '94%',
-									layout: {
-										padding: 20
-								},
-								plugins: {
-									tooltip: {
-										// Disable the on-canvas tooltip
-										enabled: false,  
-								},
-									legend: {
-										display: false,
-										position: 'right'
-									}, 
-								}, 
-								onHover: function(event,elements) {
-									$("#myChart").css("cursor", elements[ 0 ] ? "pointer" : "default"); 
-									let index = elements[ 0 ].index;
+											// charColorsGray[ el ] = '#D68843';
+											myChart.data.datasets[0].backgroundColor= charColorsGray;
+											myChart.update();
+										})
+										
+										charContentItem.addEventListener("mouseleave", function () { 
+											// charColorsGray[ el ] = charColors[el];
+											myChart.data.datasets[ 0 ].backgroundColor = charColors; 
+											// console.log(	myChart.data.datasets[ 0 ].backgroundColor);
+											myChart.setActiveElements([
+												{datasetIndex: 1 },
+											]);
+											myChart.update();
+										})
 					
-									let bar = document.querySelector(".sTeam__bar"); 
-									if (bar) {
-										bar.style.setProperty('--el-index', index);
-									}
-									console.log(`.sTeam__list-item:nth-child(${index + 2}) .sTeam__list-item-inner`);
-									$(`.sTeam__list-item-inner`).removeClass("hover")
-									$(`.sTeam__list-item:nth-child(${index + 2}) .sTeam__list-item-inner`).addClass("hover")
-									if (elements[ 0 ]) { 
-										myChart.data.datasets[ 0 ].backgroundColor = charColorsGray; 
-									}
-									else { 
-										myChart.data.datasets[ 0 ].backgroundColor =    charColors; 
-									}
-									myChart.update();
-								},
-					
-							},
-						// tooltip
-					};
+									} 
 				</script>
 			</section>
 			<!-- end sTeam-->
@@ -662,7 +700,6 @@
 		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
 		<script src="libs/gsap/gsap.min.js"> </script>
 		<script src="libs/aos/aos.js"> </script>
-		<script src="libs/chart.js/chart.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
