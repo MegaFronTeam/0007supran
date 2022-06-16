@@ -460,8 +460,6 @@ function eventHandler() {
 			}
 		};
 
-<<<<<<< HEAD
-=======
 			function myfunction2() {
 				let sec = wow.dataset.section;
 				// console.log(wow);
@@ -475,7 +473,6 @@ function eventHandler() {
 					$(".dots-wrap").removeClass("dots-wrap--dark")
 				}
 			};
->>>>>>> e0ec02e1fe78b55b659e8ae0efac769b25c4902f
 
 		function myfunction2() {
 			let sec = wow.dataset.section;
