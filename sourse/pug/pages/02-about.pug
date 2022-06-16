@@ -14,6 +14,7 @@ include ../blocks/sTrust/_sTrust.pug
 include ../blocks/sCaptionBlock/_sCaptionBlock.pug 
 include ../blocks/sExpert/_sExpert.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sTeam/_sTeam.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -33,6 +34,7 @@ block pagecontent
 	+headerBlockBody('About',`О нас`,`Группа компаний САПРАН специализируется на&nbsp;внедрении ИТ-решений для бизнеса на&nbsp;платформе SAP`,'right').bg-dark.section--vh
 	+sAboutPerson.bg-white.section--vh
 	+sAboutCaption.bg-white.section--vh
+	+sTeam.bg-dark.section--vh
 	+sStatus.bg-white.section--vh
 	+sExpert.bg-dark.section--vh
 	+sCaptionBlock.bg-white

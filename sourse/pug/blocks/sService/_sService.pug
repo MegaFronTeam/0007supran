@@ -19,7 +19,7 @@ mixin sService(data)
 	// end sService
 
 mixin sService2Item(title,caption, right, img, subtext, single)
-	.col-md
+	.col-md(data-aos="fade-up" data-aos-delay="300")
 		+e.item(href="#")&attributes(attributes)
 			if right
 				if single

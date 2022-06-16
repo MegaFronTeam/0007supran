@@ -33,17 +33,17 @@ mixin headerBlockBody(name,title,caption,right)
 
 mixin headerArtical-content(first, second)
 	if first
-		+e.content
+		+e.content(data-aos="fade-up" data-aos-delay="300")
 			.h6 12 сентября 2022
 			h1 SAPRUN вошёл в TOP-5 крупнейших российских аутсорсеров поддержки решений SAP-2020.
 			p online
 			a(href="#").btn.btn-outline-primary Хочу пойти
 	else if second
-		+e.content--2
+		+e.content--2(data-aos="fade-up" data-aos-delay="300")
 			h1 Управление поставщиками
 			p Автоматизация процессов регистрации, квалификации, сегментации, а&nbsp;также контроль эффективности поставщиков. Управление данными о&nbsp;поставщиках, их&nbsp;KPI, финансовой документацией, сертификатами и&nbsp;прочей информацией.
 	else
-		+e.content--3
+		+e.content--3(data-aos="fade-up" data-aos-delay="300")
 			+img('img/svg/Infinbank.svg')
 			.h6 банки
 			h1 Программа проектов «Реновация» цифровой трансформации банка InfinBank
@@ -71,7 +71,7 @@ mixin headerArtical(link, img, desc, ...tags)
 				block
 				if desc
 					+e.desc Управление цепочками поставок, Взаимоотношения с клиентами и клиентский опыт
-				+e.tags.d-none.d-md-flex
+				+e.tags.d-none.d-md-flex(data-aos="fade-up" data-aos-delay="300")
 					each tag in tags
 						a(href="#")!= tag
 
@@ -83,7 +83,7 @@ mixin headerSearch(name)
 			img(src=`img/headerBlock${name}-bg.jpg`, alt="")
 		+e.bg--mob.picture-bg
 			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
-		.container
+		.container(data-aos="fade-up" data-aos-delay="300")
 			+input('Поиск', 'text', '')
 				+icon('search')
 				p Найдено 27 результатов

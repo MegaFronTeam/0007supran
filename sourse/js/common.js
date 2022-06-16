@@ -460,6 +460,22 @@ function eventHandler() {
 			}
 		};
 
+<<<<<<< HEAD
+=======
+			function myfunction2() {
+				let sec = wow.dataset.section;
+				// console.log(wow);
+				// console.log(sec);
+				$(`.dots-wrap__item.active`).removeClass('active');
+				$(`[data-link="${sec}"]`).addClass('active');
+				if (wow.classList.contains("bg-white")) {
+					$(".dots-wrap").addClass("dots-wrap--dark")
+				}
+				else {
+					$(".dots-wrap").removeClass("dots-wrap--dark")
+				}
+			};
+>>>>>>> e0ec02e1fe78b55b659e8ae0efac769b25c4902f
 
 		function myfunction2() {
 			let sec = wow.dataset.section;
@@ -759,9 +775,28 @@ function eventHandler() {
 	});
 
 
+
+
+
+	
+	
+
+ 
+
+	
+
 	const sSearchResultSwiper = new Swiper('.sSearchResult__slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
+	});
+
+	$('.category-filter__wrap').on('click', function () {
+		$(this).hide;
+		$('.category-filter__content').addClass('active');
+	});
+	$('.icon-close').on('click', function() {
+		$('.category-filter__wrap').show;
+		$('.category-filter__content').removeClass('active');
 	});
 };
 if (document.readyState !== 'loading') {

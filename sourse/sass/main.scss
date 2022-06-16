@@ -138,7 +138,10 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sWays/_sWays';
 @import '../pug/blocks/sTrust/_sTrust';
 @import '../pug/blocks/sJoin/_sJoin'; 
+@import '../pug/blocks/sTeam/_sTeam'; 
 @import '../pug/blocks/sSearchResult/_sSearchResult'; 
+@import '../pug/blocks/s404/_s404'; 
+@import '../pug/blocks/sExperience/_sExperience'; 
 
 @import "media"; // Всегда в конце
 
