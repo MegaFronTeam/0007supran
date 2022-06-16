@@ -464,7 +464,7 @@ function eventHandler() {
 			function myfunction2() {
 				let sec = wow.dataset.section;
 				// console.log(wow);
-				console.log(sec);
+				// console.log(sec);
 				$(`.dots-wrap__item.active`).removeClass('active');
 				$(`[data-link="${sec}"]`).addClass('active');
 				if (wow.classList.contains("bg-white")) {
@@ -731,6 +731,55 @@ function eventHandler() {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+
+	
+	
+	if (data) {
+		const ctx = document.getElementById('myChart').getContext('2d');
+
+		myChart = new Chart(ctx, config);
+		for (var i = 0; i < charData.length; i++) {
+			let el = i;
+			let name = charData[ i ][ 'name' ];
+			let color = charData[ i ][ 'color' ];
+			let charContentItem = document.createElement("div");
+			charContentItem.classList.add('sTeam__list-item');
+			charContentItem.style.setProperty('--bg', color);
+			charContentItem.setAttribute('data-chart', i);
+			charContentItem.innerHTML = `<div class="sTeam__list-item-inner">${name}</div>`;
+			charContent.appendChild(charContentItem);
+			
+			let bar = document.querySelector(".sTeam__bar"); 
+			if (bar) {
+				bar.style.setProperty('--el-count', charData.length);
+			}
+			
+			charContentItem.addEventListener("mouseover", function () {  
+				myChart.setActiveElements([
+					{datasetIndex: 0, index: el},
+				]); 
+
+				// charColorsGray[ el ] = '#D68843';
+				myChart.data.datasets[0].backgroundColor= charColorsGray;
+				myChart.update();
+			})
+			
+			charContentItem.addEventListener("mouseleave", function () { 
+				// charColorsGray[ el ] = charColors[el];
+				myChart.data.datasets[ 0 ].backgroundColor = charColors; 
+				// console.log(	myChart.data.datasets[ 0 ].backgroundColor);
+				myChart.setActiveElements([
+					{datasetIndex: 1 },
+				]);
+				myChart.update();
+			})
+
+		}
+	}
+
+
+
+	
 
 };
 if (document.readyState !== 'loading') {
