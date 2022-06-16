@@ -1,0 +1,64 @@
+mixin sExperienceListItem(listTitle, listText)
+	.col-6(data-aos="fade-up" data-aos-delay="300")
+		+e.list-title!= listTitle
+		+e.text!= listText
+
+mixin sExperienceItem(imgBg, bankImg, upTitle, title, subText)
+	+e.item&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
+		+e.wrap
+			+img(`img/svg/${bankImg}`)
+			+e.uptitle!= upTitle
+			h3!= title
+			+e.sub-text!= subText
+			+e.row.row
+				block
+				.col-6
+					+e.read(href="#" data-aos="fade-up" data-aos-delay="300")
+						+icon('arrow-right-link')
+						p Подробнее о проекте
+		+e.img-wrap
+			+img(`img/${imgBg}`, 'bg')
+
+mixin sExperience(data)
+	// start sExperience
+	+b.category-filter 
+		+e.wrap
+			+e.icon-wrap
+				+icon('filter')
+			p Фильтр
+		+e.content
+			+icon('close')
+			p Фильтр
+			+select('', 'Выберите отрасль', 'Финансы', 'Сеть и управление расходами', 'Управление цепочками поставок', 'Взаимоотношение с клиентами и клиентский опыт')
+				+icon('chevron-down')
+			+select('', 'Выберите отрасль', 'Финансы', 'Сеть и управление расходами', 'Управление цепочками поставок', 'Взаимоотношение с клиентами и клиентский опыт')
+				+icon('chevron-down')
+			+e.confrim(href="#").btn.btn-primary Применить
+	+b.SECTION.sExperience.section#sExperience&attributes(attributes)
+		+sExperienceItem('sExperience-bg-1.jpg', 'Infinbank.svg', 'Банки', 'Программа проектов &laquo;Реновация&raquo; цифровой трансформации банка InfinBank', 'Управление цепочками поставок, Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт')
+			+sExperienceListItem('№1', 'Первое внедрение SAP в&nbsp;банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017')
+			+sExperienceListItem('220+', 'Источников информации из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД')
+			+sExperienceListItem('400', 'Количество пользователей единой системы')
+		+sExperienceItem('sExperience-bg-2.jpg', 'transBlack.svg', 'Нефть и газ', 'Управление программой IT-деятельности компании на&nbsp;базе SAP BPC&nbsp;NW', 'Взаимоотношения с клиентами и клиентский опыт').--white.--ordered
+			+sExperienceListItem('400', 'Пользователей системы на&nbsp;базе SAP BPC&nbsp;NW')
+			+sExperienceListItem('97', 'Отчетных форм унифицировано')
+		+sExperienceItem('sExperience-bg-3.jpg', 'pulkovo-white.svg', 'Транспорт и логистика', 'Автоматизированная система управления ресурсами SAP ERP', 'Управление цепочками поставок, Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт')
+			+sExperienceListItem('2500', 'Пользователей системы всех юридических лиц и&nbsp;филиалов &laquo;BBCC&raquo;')
+			+sExperienceListItem('17', 'Подмодулей SAP ERP')
+		+sExperienceItem('sExperience-bg-4.jpg', 'sberbank.svg', 'Банки', 'Построение автоматизированной системы распределения операционных расходов', 'Сеть и&nbsp;управление расходами').--white.--ordered
+			+sExperienceListItem('800', 'Территориальных подразделений используют систему')
+			+sExperienceListItem('2000', 'МВЗ-источников данных')
+		+sExperienceItem('sExperience-bg-5.jpg', 'gazprom-white.svg', 'Нефть и газ', 'Корпоративное хранилище данных блока экономики и&nbsp;финансов', 'Финансы, Управление цепочками поставок')
+			+sExperienceListItem('91', 'Компания переведена на&nbsp;автоматическую загрузку данных через КХД')
+			+sExperienceListItem('5', 'Уровней сбора и&nbsp;подготовки данных для подготовки финансовой отчетности')
+			+sExperienceListItem('№1', 'Проект-победитель SAP Value Award 2018')
+		+sExperienceItem('sExperience-bg-6.jpg', 'aapoca-white.svg', 'Энергетика и добыча', 'Ааналитическая система &laquo;Информационные панели для руководителей&raquo;', 'Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт').--white.--ordered
+			+sExperienceListItem('100', 'Пользователей системы')
+			+sExperienceListItem('57', 'Отчетов Web Intelligence')
+			+sExperienceListItem('№1', 'Проект-победитель SAP Value Award 2018')
+		+e.showMore(href="#")
+			| Показать ещё проекты
+			+icon('chevron-down')
+	// end sExperience
+
+	//- sExperience-bg-1.jpg
