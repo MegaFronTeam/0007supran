@@ -1,0 +1,227 @@
+// start .sExpert
+.sExpert {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	&__slide-global {
+		width: auto;
+	}
+	&__slider {
+		overflow: visible;
+		@include media-breakpoint-up(md) {
+			width: calc(rem(348) + 24px);
+			padding-bottom: rem(105);
+		}
+	}
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	h6 {
+		color: #7e7d85;
+		font-size: rem(16);
+		line-height: calc(24 / 18);
+		font-weight: 300;
+		margin-top: rem(18);
+		margin-bottom: 0;
+	}
+	&__slide {
+		@include media-breakpoint-up(md) {
+			width: rem(348);
+			transform: translateY(rem(105)) !important;
+		}
+		position: relative;
+		transition-duration: 0.4s;
+		width: 100%;
+		background-color: #141317;
+		padding: rem(24);
+		height: rem(392);
+		display: flex;
+		flex-direction: column;
+		&--title {
+			// width: calc(var(--c-g) + rem(388)) !important;
+			width: rem(388) !important;
+			background-color: transparent;
+			padding: 0;
+			// padding-left: var(--c-g);
+			height: auto;
+			@include media-breakpoint-up(xxl) {
+				margin-right: rem(120) !important;
+			}
+			@include media-breakpoint-up(md) {
+				transform: translateY(0) !important;
+			}
+			margin-right: rem(60) !important;
+		}
+	}
+	.swiper-slide-active {
+		@include media-breakpoint-up(md) {
+			transform: translateY(0) !important;
+		}
+	}
+	&__year {
+		color: #acb4c0;
+		font-weight: 300;
+		font-size: rem(18);
+		line-height: calc(24 / 18);
+		margin-bottom: rem(8);
+	}
+	&__logo {
+		height: rem(64);
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+		margin-bottom: rem(8);
+	}
+	&__type {
+		.icon {
+			font-size: rem(24);
+			margin-right: rem(8);
+			color: transparent;
+			stroke: var(--color);
+		}
+		font-weight: 300;
+		font-size: rem(18);
+		line-height: calc(24 / 18);
+		margin-bottom: rem(8);
+		&--winner {
+			color: #47a180;
+			--color: #47a180;
+		}
+		&--gold {
+			color: #d3a244;
+			--color: #d3a244;
+		}
+		&--silver {
+			color: #a5a4a9;
+			--color: #a5a4a9;
+		}
+		&--bronze {
+			color: #5a513b;
+			--color: #5a513b;
+		}
+	}
+	&__title-project {
+		margin-top: auto;
+		font-weight: 300;
+		font-size: rem(13);
+		line-height: calc(16 / 13);
+		margin-bottom: rem(8);
+	}
+	&__project-name {
+		font-weight: 300;
+		font-size: rem(18);
+		line-height: calc(24 / 18);
+		max-height: rem(120);
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-ms-box-orient: vertical;
+		box-orient: vertical;
+		-webkit-line-clamp: 5;
+		-moz-line-clamp: 5;
+		-ms-line-clamp: 5;
+		line-clamp: 5;
+		overflow: hidden;
+		margin-bottom: rem(24);
+	}
+	&__link {
+		font-weight: 300;
+		font-size: rem(13);
+		line-height: calc(16 / 13);
+		span {
+			margin-right: rem(8);
+		}
+		.icon {
+			font-size: rem(13);
+		}
+	}
+	&__slider-pagination {
+		.swiper-wrapper {
+			@include media-breakpoint-up(md) {
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+		}
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			// border-top: 1px dotted $white;
+			@include media-breakpoint-up(xxl) {
+				top: calc(100% - 7px);
+			}
+			top: calc(100% - 4px);
+			left: rem(32);
+			width: calc(100% - rem(64));
+			height: 1px;
+			background-image: url("../img/svg/border-bg.svg");
+			background-repeat: repeat-x;
+		}
+	}
+	&__slider-pagination {
+		margin-top: rem(60);
+		padding-bottom: rem(20);
+	}
+	&__pagination-item {
+		cursor: pointer;
+		width: auto;
+		--color: #7e7d85;
+		position: relative;
+		&:hover {
+			--color:#{$primary};
+			&::before {
+				background-color: $primary;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			width: rem(64);
+		}
+		width: rem(210);
+		&::before {
+			content: "";
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			background-color: $white;
+			border-radius: 50%;
+			top: calc(100% + rem(11));
+			transition-duration: 0.4s;
+			@include media-breakpoint-up(md) {
+				left: 50%;
+				transform: translateX(-100%);
+			}
+			left: rem(20);
+		}
+	}
+	&__pagination-title {
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: calc(24 / 18);
+		color: var(--color);
+		transition-duration: 0.4s;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sExpert

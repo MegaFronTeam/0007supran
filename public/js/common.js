@@ -415,109 +415,109 @@ function eventHandler() {
 
 
 
-		let upY = '200';
-		gsap.utils.toArray(".section--up").forEach(wow => {
+	let upY = '200';
+	gsap.utils.toArray(".section--up").forEach(wow => {
 
-			gsap.from(wow, {
-				y: upY,
-				scrollTrigger: {
-					trigger: wow,
-					start: "top bottom",
-					end: "bottom bottom",
-					scrub: 1,
-					markers: true
-				}
-			})
+		gsap.from(wow, {
+			y: upY,
+			scrollTrigger: {
+				trigger: wow,
+				start: "top bottom",
+				end: "bottom bottom",
+				scrub: 1,
+				markers: true
+			}
 		})
+	})
 
 
 
 
-		gsap.utils.toArray(".section--vh").forEach(wow => {
+	gsap.utils.toArray(".section--vh").forEach(wow => {
 
-			if (!topNav) return;
-			let h = topNav.offsetHeight;
-			// let h2 = document.querySelector(".dots-wrap").offsetHeight;
-		 
-			function myfunction() {
-				if (!wow.classList.contains("bg-dark")) {
-					$(".top-nav").addClass("top-nav--light")
-				}
-				else {
-					$(".top-nav").removeClass("top-nav--light")
+		if (!topNav) return;
+		let h = topNav.offsetHeight;
+		// let h2 = document.querySelector(".dots-wrap").offsetHeight;
 
-				}
-			};
+		function myfunction() {
+			if (!wow.classList.contains("bg-dark")) {
+				$(".top-nav").addClass("top-nav--light")
+			}
+			else {
+				$(".top-nav").removeClass("top-nav--light")
 
-
-			function myfunction3() {
-				if (!wow.classList.contains("bg-dark")) {
-					$(".top-nav").addClass("top-nav--light-mob")
-				}
-				else {
-					$(".top-nav").removeClass("top-nav--light-mob")
-
-				}
-			};
+			}
+		};
 
 
-			function myfunction2() {
-				let sec = wow.dataset.section;
-				// console.log(wow);
-				console.log(sec);
-				$(`.dots-wrap__item.active`).removeClass('active');
-				$(`[data-link="${sec}"]`).addClass('active');
-				if (wow.classList.contains("bg-white")) {
-					$(".dots-wrap").addClass("dots-wrap--dark")
-				}
-				else {
-					$(".dots-wrap").removeClass("dots-wrap--dark")
-				}
-			};
+		function myfunction3() {
+			if (!wow.classList.contains("bg-dark")) {
+				$(".top-nav").addClass("top-nav--light-mob")
+			}
+			else {
+				$(".top-nav").removeClass("top-nav--light-mob")
 
-			const rect = wow.getBoundingClientRect();
-			ScrollTrigger.create({
-				scroller: scroller,
-				trigger: wow,
-				start: `top top+=${h / 2}`,
-				end: `bottom-=${h / 2} top`,
-				// markers: true,
-				// toggleActions: "play none play none",
-				onEnter: () => myfunction(),
-				// onLeave: () => myfunction(),
-				// onLeaveBack: () => myfunction(),
-				onEnterBack: () => myfunction(),
-				invalidateOnRefresh: true,
-			});
-			ScrollTrigger.create({
-				scroller: scroller,
-				trigger: wow,
-				start: `top bottom`,
-				end: `bottom top`,
-				// markers: true,
-				// toggleActions: "play none play none",
-				onEnter: () => myfunction3(),
-				// onLeave: () => myfunction(),
-				// onLeaveBack: () => myfunction(),
-				onEnterBack: () => myfunction3(),
-				invalidateOnRefresh: true,
-			});
+			}
+		};
 
-			ScrollTrigger.create({
-				scroller: scroller,
-				trigger: wow,
-				start: `top center`,
-				end: `bottom center`,
-				// markers: true,
-				// toggleActions: "play none reverse none",
-				onEnter: () => myfunction2(),
-				// onLeave: () => myfunction2(),
-				// onLeaveBack: () => myfunction2(),
-				onEnterBack: () => myfunction2(),
-				invalidateOnRefresh: true,
-			});
 
-		})
+		function myfunction2() {
+			let sec = wow.dataset.section;
+			// console.log(wow);
+			console.log(sec);
+			$(`.dots-wrap__item.active`).removeClass('active');
+			$(`[data-link="${sec}"]`).addClass('active');
+			if (wow.classList.contains("bg-white")) {
+				$(".dots-wrap").addClass("dots-wrap--dark")
+			}
+			else {
+				$(".dots-wrap").removeClass("dots-wrap--dark")
+			}
+		};
+
+		const rect = wow.getBoundingClientRect();
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: wow,
+			start: `top top+=${h / 2}`,
+			end: `bottom-=${h / 2} top`,
+			// markers: true,
+			// toggleActions: "play none play none",
+			onEnter: () => myfunction(),
+			// onLeave: () => myfunction(),
+			// onLeaveBack: () => myfunction(),
+			onEnterBack: () => myfunction(),
+			invalidateOnRefresh: true,
+		});
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: wow,
+			start: `top bottom`,
+			end: `bottom top`,
+			// markers: true,
+			// toggleActions: "play none play none",
+			onEnter: () => myfunction3(),
+			// onLeave: () => myfunction(),
+			// onLeaveBack: () => myfunction(),
+			onEnterBack: () => myfunction3(),
+			invalidateOnRefresh: true,
+		});
+
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: wow,
+			start: `top center`,
+			end: `bottom center`,
+			// markers: true,
+			// toggleActions: "play none reverse none",
+			onEnter: () => myfunction2(),
+			// onLeave: () => myfunction2(),
+			// onLeaveBack: () => myfunction2(),
+			onEnterBack: () => myfunction2(),
+			invalidateOnRefresh: true,
+		});
+
+	})
 
 
 
@@ -699,6 +699,32 @@ function eventHandler() {
 			}
 		}
 	});
+	// const swiperExpertGlobal = new Swiper('.sExpert__slider-global--js', {
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 0,
+
+	// });
+	const swiperExpert = new Swiper('.sExpert__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		initialSlide: 1,
+		breakpoints: {
+			768: {
+				spaceBetween: 24,
+			}
+		}
+	});
+	const swiperExpertPagination = new Swiper('.sExpert__slider-pagination--js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 8,
+		// initialSlide: 1,
+		// breakpoints: {
+		// 	768: {
+		// 		spaceBetween: 24,
+		// 	}
+		// }
+	});
+
 
 	// modal window
 	$('.menu').on("click", '.menu-item-has-children>a', function (e) {
