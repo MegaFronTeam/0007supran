@@ -796,15 +796,6 @@ function eventHandler() {
 		$('.category-filter__content').removeClass('active');
 	});
 
-	const choices = new Choices('.js-choice', {
-		searchChoices: false,
-		searchEnabled: false,
-	});
-	const choices2 = new Choices('.js-choice2', {
-		searchChoices: false,
-		searchEnabled: false,
-	});
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

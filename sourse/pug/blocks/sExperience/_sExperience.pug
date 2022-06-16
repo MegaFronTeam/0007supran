@@ -58,5 +58,14 @@ mixin sExperience(data)
 			| Показать ещё проекты
 			+icon('chevron-down')
 	// end sExperience
-
 	//- sExperience-bg-1.jpg
+	script(src="libs/choices.js/public/assets/scripts/choices.min.js") 
+	script.
+		const choices = new Choices('.js-choice', {
+			searchChoices: false,
+			searchEnabled: false,
+		});
+		const choices2 = new Choices('.js-choice2', {
+			searchChoices: false,
+			searchEnabled: false,
+		});
