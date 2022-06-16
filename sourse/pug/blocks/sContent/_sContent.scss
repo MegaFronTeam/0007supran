@@ -7,6 +7,20 @@
 		--sPT: #{rem(64)};
 		--sPB: #{rem(0)};
 	}
+	&--4 {
+		--sPB: #{rem(40)};
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(131)};
+		}
+	}
+	.container {
+		&--indent {
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(110);
+			}
+		}
+	}
 	&__back {
 		display: flex;
 		justify-content: center;
@@ -61,8 +75,37 @@
 			height: 100%;
 		}
 	}
+	h6 {
+		font-weight: 600;
+	}
+	// ul {
+	// 	list-style-type: none;
+	// 	li {
+	// 		position: relative;
+	// 		&::before {
+	// 			content: '';
+	// 			position: absolute;
+	// 			display: block;
+	// 			width: 3px;
+	// 			height: 3px;
+	// 			background-color: #08080B;
+	// 			left: -21px;
+	// 			top: 14px;
+	// 			// transform: translateY(-50%);
+	// 			border-radius: 50%;
+	// 		}
+	// 	}
+	// }
+	ul {
+		li {
+			&::marker {
+				font-size: 16px;
+			}
+		}
+	}
 	&__default-list {
 		font-weight: 300;
+		margin-left: rem(23);
 		& > li {
 			margin-left: rem(15);
 			padding-top: rem(16);
@@ -181,6 +224,7 @@
 		padding-left: 0;
 		margin-bottom: 0;
 		counter-reset: num;
+		margin-left: rem(23);
 		& > li {
 			padding-left: rem(20);
 			margin-top: rem(16);
@@ -245,8 +289,55 @@
 		display: flex;
 		gap: 24px;
 	}
+
+	// content 3
+	&__list-title {
+		margin-bottom: rem(22);
+	}
+	&__list-text {
+		color: #08080B;
+		font-weight: 300;
+		margin-bottom: rem(16);
+	}
+	&__list {
+		margin-left: rem(33);
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(53);
+		}
+		li {
+			font-weight: 300;
+			color: #08080B;
+			&:not(:last-child) {
+				margin-bottom: rem(14);
+			}
+		}
+	}
+
+	// content 4
+	&__row {
+		--bs-gutter-x: #{rem(25)};
+		--bs-gutter-y: #{rem(23)};
+	}
+	&__row-second {
+		--bs-gutter-x: #{rem(48)};
+		--bs-gutter-y: #{rem(23)};
+	}
+	&__item {
+		h2 {
+			color: $primary;
+			margin-bottom: rem(4);
+		}
+		p {
+			color: #08080B;
+			font-weight: 300;
+			margin-bottom: 0;
+			opacity: 0.6;
+			@include media-breakpoint-up(lg) {
+				opacity: 1;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-up(xs) {}

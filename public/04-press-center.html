@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -205,8 +206,12 @@
 				</div>
 				<div class="container">
 					<div class="headerBlock__inner">
-						<h1>Пресс-центр</h1>
-						<p>В&nbsp;этом разделе вы&nbsp;можете ознакомиться с&nbsp;новостями САПРАН, прочитать статьи и&nbsp;интервью, подготовленные нашими специалистами.</p>
+						<div class="headerBlock__title-block" data-aos="fade-up" data-aos-delay="300">
+							<h1>Пресс-центр</h1>
+						</div>
+						<div class="headerBlock__text-block" data-aos="fade-up" data-aos-delay="500">
+							<p>В&nbsp;этом разделе вы&nbsp;можете ознакомиться с&nbsp;новостями САПРАН, прочитать статьи и&nbsp;интервью, подготовленные нашими специалистами.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -659,6 +664,22 @@
 				</div>
 			</section>
 			<!-- end sEventsList-->
+			<!-- start sCaptionBlock-->
+			<section class="sCaptionBlock bg-white" id="sCaptionBlock">
+				<!-- picture-->
+				<picture> 
+					<source type="image/webp" srcset="img/@2x/webp/caption-block-press.webp"/><img src="img/@2x/caption-block-press.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<div class="sCaptionBlock__wrap">
+					<h2>Контакты PR-службы</h2>
+					<a class="sCaptionBlock__link-soc" href="tel:+74956637759">+7 495 663 7759
+					</a>
+					<a class="sCaptionBlock__link-soc" href="mailto:info@saprun.com">info@saprun.com
+					</a>
+				</div>
+			</section>
+			<!-- end sCaptionBlock-->
 			<footer class="footer">
 				<div class="footer__block container">
 					<div class="row">

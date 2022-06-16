@@ -660,3 +660,17 @@ iframe {
 		margin-bottom: rem(56);
 	}
 }
+
+.pb-56 {
+	padding-bottom: rem(48);
+	@include media-breakpoint-up(lg) {
+		padding-bottom: rem(56);
+	}
+}
+
+.mb-72 {
+	margin-bottom: rem(40);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(72);
+	}
+}

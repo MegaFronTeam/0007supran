@@ -90,6 +90,139 @@ mixin sContent()
 			h4.mb-32 H4 Header two line words description
 			h5 H5 Header two line words description
 			p.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
-		.container.container--small.pb-32
+		.container.container--small.pb-56
 			+share()
 	// end sContent
+
+mixin sContent2()
+	// start sContent
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.container.container--small.mb-56
+			h4 Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a sed est.
+			p.fw-light.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--small.mb-56
+			h2 Fusce sed auctor nibh
+			p.fw-light.mb-0 Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--small.mb-56
+			+e.UL.default-list
+				li Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla
+				li In posuere, augue eget ornare congue, eros ex bibendum
+					ul
+						li In finibus vitae lorem nec scelerisque
+						li Phasellus eu aliquam ex. Integer facilisis velit lacus, vel venenatis est aliquam sit amet
+				li Proin suscipit placerat turpis
+		.container.container--large.mb-56
+			.mediaContent
+				+img('img/article-img-2.jpg', 'bg')
+			span Description
+		.container.container--small.mb-56
+			mixin articleTable(th1, th2, th3, th4)
+				+e.tableWrap
+					table
+						thead
+							tr
+								th(scope='col')!= th1
+								th(scope='col')!= th2
+								th(scope='col')!= th3
+								th(scope='col')!= th4
+						tbody
+							block
+			mixin articleTableContent(thead, td1, td2, td3)
+				tr
+					td(scope='row')!= thead
+					td!= td1
+					td!= td2
+					td!= td3
+			h6.mb-32 H6 Header two line words description
+			+articleTable('Maecenas', 'Phasellus', 'Gravida', 'Integer')
+				+articleTableContent('Nullam', 'Tincidunt', 'Tincidunt', 'Dapibus')
+				+articleTableContent('Luctus', 'Mauris', 'Felis', 'Aenean')
+				+articleTableContent('Dignissim', 'Vestibulum', 'Fusce', 'Donec')
+		.container.container--large.container--indent
+			blockquote
+				h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+				cite Алексей Литвин
+					span Директор
+		.container.container--small.mb-32
+			h3.mb-32 H3 Header two line words description
+			p.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--small.mb-56
+			+e.OL.num-list
+				li Nam luctus orci non suscipit mollis
+				li Proin suscipit placerat turpis, vitae fermentum turpis auctor vel
+					ol
+						li Donec scelerisque massa nec sapien tempus consectetur
+						li Morbi vehicula mauris neque
+				li Quisque aliquet nibh nec egestas faucibus
+		.container.container--small.mb-56
+			mixin slide()
+				+e.slide.swiper-slide
+					+e.item
+						+img(`img/article-img-3.jpg`, `bg`, 0)
+					
+			+e.sliderContainer
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide()
+						+slide()
+						+slide()
+				+e.arrow-wrap
+					+arrow
+		.container.container--small.mb-56
+			h4.mb-32 H4 Header two line words description
+			h5 H5 Header two line words description
+			p.mb-0 Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo pulvinar tincidunt et vel enim. Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+		.container.container--small.pb-56
+			+share()
+
+mixin content-list(t, listText, ...list)
+	+e.H3.list-title!= t
+	if listText
+		+e.list-text!= listText
+	+e.UL.list
+		each item in list
+			li!= item
+
+mixin sContent3()
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.container.container--small.mb-56
+			+content-list('Возможности решения', '', 'Регистрация, квалификация и&nbsp;дисквалификация поставщиков' ,'Регистрация, квалификация и&nbsp;дисквалификация поставщиков', 'Процесс классификации поставщиков по&nbsp;товарам, регионам и&nbsp;бизнес-подразделениям на&nbsp;основе сегментационной матрицы' , 'Фиксация всех документов поставщика, включая сертификаты', 'Готовые автоматизированные отчеты, обеспечивающие комплексное представление всех данных о&nbsp;поставщике с&nbsp;консолидацией всех относящихся расходов', 'Автоматизированные уведомления на&nbsp;инструментальной панели и&nbsp;в&nbsp;системах KPI при выявлении выходящих за&nbsp;пределы оценок')
+		.container.container--small.mb-56
+			+content-list('Выгоды для бизнеса', '', 'Повышение надежности и эффективности поставщиков', 'Сотрудничество с лучшими поставщиками', 'Снижение операционных затрат на процесс около 11%')
+		.container.container--small.mb-56
+			+content-list('Как это работает', 'Автоматизация на&nbsp;базе продукта SAP ARIBA SLP (Supplier Lifecycle and Performance). Является облачным решением.' , 'Внедрение облачного решения Ariba SLP не&nbsp;требует обширных инвестиций и&nbsp;значительного времени', 'Интеграция с&nbsp;бизнес-сетью Ариба', 'Возможность использования преднастроенных бизнес-процессов', 'Процесс управления поставщиками интегрирован в end-to-end процесс закупок', 'Повышение эффективности операционной деятельности департамента закупки за&nbsp;счет вовлечения поставщиков', 'Полный обзор деятельности поставщика в&nbsp;профиле 360', 'Возможность подключения с мобильных устройств')
+		.container.container--small.mb-56
+			+content-list('Преимущества работы с SAPRUN', '', 'Наличие сертифицированных консультантов, которые обладают опытом и&nbsp;знаниями для успешного развертывания решения.', 'Использование опыта (ноу-хау) наших предыдущих проектов')
+		.container.container--small.pb-56
+			+content-list('Успешные внедрения')
+			+e.list-text #[a(href="#") Bank of Georgia] &laquo;Внедрение системы управления поставщиками&raquo; (ссылка<br>на&nbsp;соответствующий кейс)
+		//- .container.container--small.mb-56
+		//- 	+share()
+
+mixin sContent4()
+	+b.SECTION.sContent--4.section#sContent&attributes(attributes)
+		.container.container--small.mb-56
+			h4 Donec pellentesque efficitur dui, id dictum ex aliquam id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a sed est.
+		.container.container--small.mb-72
+			+e.row.row
+				mixin item(title, text)
+					+e.item
+						h2!= title
+						p!= text 
+				.col-md-4
+					+item('№1', 'Первое внедрение SAP в&nbsp;банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017')
+				.col-md-4
+					+item('220+', 'Источников информации из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД')
+				.col-md-4
+					+item('400', 'Количество пользователей единой системы')
+			+e.row-second.row
+				.col-md-6
+					+item('№1', 'Первое внедрение SAP в&nbsp;банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017')
+				.col-md-6
+					+item('220+', 'Источников информации из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД')
+		.container.container--small.mb-56
+			+content-list('Функциональный объем', '', 'Хранилище данных SAP BW', 'SAP CRM', 'Кредитный конвейер PEGA', 'Визуализация КПЭ SAP BO Design Studio', 'Детальная отчетность SAP BO Web intelliegence')
+		.container.container--small.mb-56
+			+content-list('Сроки проекта', 'Март 2017 — Февраль 2018')
+		.container.container--small
+			+content-list('Достигнутые результаты', '', 'Сокращено до&nbsp;5&nbsp;раз время выдачи кредитов клиентам банка', 'Данные из&nbsp;220 систем-источников поступают в&nbsp;Корпоративное хранилище данных', 'Новая SAP CRM позволила объединить более 600 тыс клиентов всех подразделений банка в&nbsp;единой системе', 'Получение отчетности о&nbsp;ключевых показателях деятельности банка в&nbsp;режиме &laquo;день в&nbsp;день&raquo;: более 40&nbsp;оперативных управленческих отчетов, включающих свыше 170 показателей (до&nbsp;внедрения&nbsp;70% отчетов формировалось с&nbsp;задержкой 1-2&nbsp;недели)', 'Время на&nbsp;обработку обращений клиентов сокращено до&nbsp;3&nbsp;рабочих дней за&nbsp;счет создания колл-центра')

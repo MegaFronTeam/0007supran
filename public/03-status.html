@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -205,8 +206,12 @@
 				</div>
 				<div class="container">
 					<div class="headerBlock__inner">
-						<h1>Статусы и награды</h1>
-						<p>Входим в&nbsp;TOP-10 крупнейших поставщиков BI-решений в&nbsp;России 2020, в&nbsp;TOP-5 аутсорсеров поддержки решений SAP в&nbsp;России по&nbsp;версии аналитического центра TAdviser</p>
+						<div class="headerBlock__title-block" data-aos="fade-up" data-aos-delay="300">
+							<h1>Статусы и награды</h1>
+						</div>
+						<div class="headerBlock__text-block" data-aos="fade-up" data-aos-delay="500">
+							<p>Входим в&nbsp;TOP-10 крупнейших поставщиков BI-решений в&nbsp;России 2020, в&nbsp;TOP-5 аутсорсеров поддержки решений SAP в&nbsp;России по&nbsp;версии аналитического центра TAdviser</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -237,6 +242,30 @@
 				</div>
 			</section>
 			<!-- end sStatus-->
+			<!-- start sCaptionBlock-->
+			<section class="sCaptionBlock bg-white" id="sCaptionBlock">
+				<!-- picture-->
+				<picture> 
+					<source type="image/webp" srcset="img/@2x/webp/caption-block-about.webp"/><img src="img/@2x/caption-block-about.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<div class="sCaptionBlock__wrap">
+					<h2>Рейтинги</h2>
+					<div class="sCaptionBlock__item">
+						<div class="sCaptionBlock__item-title">TOP 10
+						</div>
+						<div class="sCaptionBlock__item-caption">Крупнейших поставщиков BI-систем в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+						</div>
+					</div>
+					<div class="sCaptionBlock__item">
+						<div class="sCaptionBlock__item-title">TOP 5
+						</div>
+						<div class="sCaptionBlock__item-caption">Крупнейших аутсорсеров поддержки систем SAP в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCaptionBlock-->
 			<footer class="footer">
 				<div class="footer__block container">
 					<div class="row">

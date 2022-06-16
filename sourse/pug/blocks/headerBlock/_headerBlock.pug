@@ -5,8 +5,10 @@ mixin headerBlock()
 		+blur()
 		.container
 			+e.inner
-				h1 Открываем для компаний #[span новые возможности] в&nbsp;проектах цифровой&nbsp;трансформации
-				p Разрабатываем и&nbsp;внедряем комплексные IT-решения  в&nbsp;области управления ресурсами предприятия
+				+e.title-block(data-aos="fade-up" data-aos-delay="300")
+					h1 Открываем для компаний #[span новые возможности] в&nbsp;проектах цифровой&nbsp;трансформации
+				+e.text-block(data-aos="fade-up" data-aos-delay="500")
+					p Разрабатываем и&nbsp;внедряем комплексные IT-решения  в&nbsp;области управления ресурсами предприятия
 	// end headerBlock
 
 
@@ -23,7 +25,70 @@ mixin headerBlockBody(name,title,caption,right)
 			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
 		.container
 			+e.inner
-				h1!=title
-				p!=caption
+				+e.title-block(data-aos="fade-up" data-aos-delay="300")
+					h1!=title
+				+e.text-block(data-aos="fade-up" data-aos-delay="500")
+					p!=caption
 	// end headerBlock
 
+mixin headerArtical-content(first, second)
+	if first
+		+e.content
+			.h6 12 сентября 2022
+			h1 SAPRUN вошёл в TOP-5 крупнейших российских аутсорсеров поддержки решений SAP-2020.
+			p online
+			a(href="#").btn.btn-outline-primary Хочу пойти
+	else if second
+		+e.content--2
+			h1 Управление поставщиками
+			p Автоматизация процессов регистрации, квалификации, сегментации, а&nbsp;также контроль эффективности поставщиков. Управление данными о&nbsp;поставщиках, их&nbsp;KPI, финансовой документацией, сертификатами и&nbsp;прочей информацией.
+	else
+		+e.content--3
+			+img('img/svg/Infinbank.svg')
+			.h6 банки
+			h1 Программа проектов «Реновация» цифровой трансформации банка InfinBank
+			a(href="#").btn.btn-outline-primary Запросить детали проекта
+
+
+
+mixin headerArtical(link, img, desc, ...tags)
+	// start headerBlock
+	+b.headerBlock--artical.bg-wrap.section#headerBlock&attributes(attributes)
+		+e.row.row
+			.col-md-6.order-2.order-md-1
+				+e.img-wrap
+					+img(`img/${img}`, 'bg')
+				+e.tags.d-flex.d-md-none
+					each tag in tags
+						a(href="#")!= tag
+			+e.col.col-md-6.text-center.bg-wrap.order-1.order-md-2
+				video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp').bg-video
+					source(src='video/video.webm' type='video/webm')
+					source(src='video/video.mp4' type='video/mp4')
+				+e.back(href="#").mb-32
+					+icon('chevron-left')
+					!= link
+				block
+				if desc
+					+e.desc Управление цепочками поставок, Взаимоотношения с клиентами и клиентский опыт
+				+e.tags.d-none.d-md-flex
+					each tag in tags
+						a(href="#")!= tag
+
+mixin headerSearch(name)
+	// start headerBlock
+	+b.headerBlock--search.bg-wrap.section#headerBlock&attributes(attributes)
+		+blur().animate-blur--right 
+		+e.bg.picture-bg
+			img(src=`img/headerBlock${name}-bg.jpg`, alt="")
+		+e.bg--mob.picture-bg
+			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
+		.container
+			+input('Поиск', 'text', '')
+				+icon('search')
+				p Найдено 27 результатов
+				+e.found
+					a(href="#") Управление поставщиками
+					a(href="#") Управление жизненным циклом продукции
+					a(href="#") Управление активами предприятия
+					a(href="#") Управление поставщиками и предприятиями

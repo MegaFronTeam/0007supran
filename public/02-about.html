@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -308,27 +309,27 @@
 					<div class="status-block">
 						<div class="status-block__wrap">
 							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-1.svg" alt=""/>
+								<a class="status-block__status-pic" href="#" data-aos="fade-up" data-aos-delay="200"><img src="img/svg/status-1.svg" alt=""/>
 								</a>
 							</div>
 							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-2.svg" alt=""/>
+								<a class="status-block__status-pic" href="#" data-aos="fade-up" data-aos-delay="400"><img src="img/svg/status-2.svg" alt=""/>
 								</a>
 							</div>
 							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-3.svg" alt=""/>
+								<a class="status-block__status-pic" href="#" data-aos="fade-up" data-aos-delay="600"><img src="img/svg/status-3.svg" alt=""/>
 								</a>
 							</div>
 							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-4.svg" alt=""/>
+								<a class="status-block__status-pic" href="#" data-aos="fade-up" data-aos-delay="800"><img src="img/svg/status-4.svg" alt=""/>
 								</a>
 							</div>
 							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-5.svg" alt=""/>
+								<a class="status-block__status-pic" href="#" data-aos="fade-up" data-aos-delay="1000"><img src="img/svg/status-5.svg" alt=""/>
 								</a>
 							</div>
 							<div class="status-block__item">
-								<a class="status-block__status-pic" href="#"><img src="img/svg/status-6.svg" alt=""/>
+								<a class="status-block__status-pic" href="#" data-aos="fade-up" data-aos-delay="1200"><img src="img/svg/status-6.svg" alt=""/>
 								</a>
 							</div>
 						</div>
@@ -336,8 +337,38 @@
 				</div>
 			</section>
 			<!-- end sStatus-->
+			<!-- start sCaptionBlock-->
+			<section class="sCaptionBlock bg-white" id="sCaptionBlock">
+				<!-- picture-->
+				<picture> 
+					<source type="image/webp" srcset="img/@2x/webp/caption-block-about.webp"/><img src="img/@2x/caption-block-about.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<div class="sCaptionBlock__wrap">
+					<h2>Рейтинги</h2>
+					<div class="sCaptionBlock__item">
+						<div class="sCaptionBlock__item-title">TOP 10
+						</div>
+						<div class="sCaptionBlock__item-caption">Крупнейших поставщиков BI-систем в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+						</div>
+					</div>
+					<div class="sCaptionBlock__item">
+						<div class="sCaptionBlock__item-title">TOP 5
+						</div>
+						<div class="sCaptionBlock__item-caption">Крупнейших аутсорсеров поддержки систем SAP в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+						</div>
+					</div>
+					<div class="sCaptionBlock__item">
+						<div class="sCaptionBlock__item-title">TOP 5
+						</div>
+						<div class="sCaptionBlock__item-caption">Крупнейших аутсорсеров поддержки систем SAP в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCaptionBlock-->
 			<!-- start sForm-->
-			<section class="sForm section bg-dark section section--vh" id="sForm">
+			<section class="sForm section bg-dark" id="sForm">
 				<div class="animate-blur"><img src="img/@2x/webp/animate-blur.webp" alt=""/></div>
 				<div class="container">
 					<div class="form-wrap">

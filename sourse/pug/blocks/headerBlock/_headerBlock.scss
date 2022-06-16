@@ -74,9 +74,254 @@
 			z-index: 0;
 		}
 	}
-	@include media-breakpoint-up(xl) {
+	&--artical {
+		padding-top: rem(48);
+		padding-bottom: rem(24);
+		height: auto;
+		min-height: auto;
+		background-color: #fff;
+		justify-content: center;
+		height: 100%;
+		@include media-breakpoint-up(lg) {
+			padding: 0 rem(16);
+		}
+		@include media-breakpoint-up(md) {
+			padding-top: 48px;
+			height: 100vh;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: 47px;
+			padding-bottom: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-top: 57px;
+		}
+	}
+	&__row {
+		--bs-gutter-x: 0;
+		min-height: calc(100vh - 48px);
+		@include media-breakpoint-up(xl) {
+			min-height: calc(100vh - 56px);
+		}
+		@include media-breakpoint-down(md) {
+			min-height: auto;
+		}
+	}
+	&__col {
+		padding: rem(24) rem(48) rem(35);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@include media-breakpoint-down(md) {
+			padding-right: rem(16);
+			padding-left: rem(16);
+		}
+	}
+	&__img-wrap {
+		@include block(328,328);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		@include media-breakpoint-down(md) {
+			margin: rem(16);
+		}
+		@include media-breakpoint-up(sm) {
+			--ratio: 151/328;
+		}
+		@include media-breakpoint-up(md) {
+			height: 100%;
+			--ratio: 624/623;
+		}
+	}
+	&__back {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(13);
+		color: #fff;
+		font-weight: 300;
+		.icon {
+			font-size: rem(16);
+			color: #fff;
+			flex: 0 0 auto;
+			margin-right: 8px;
+		}
+		@include media-breakpoint-down(md) {
+			position: absolute;
+			width: 100%;
+			height: rem(48);
+			background-color: #fff;
+			color: #08080B;
+			top: rem(-48);
+			left: 0;
+			.icon {
+				color: #08080B;
+
+			}
+		}
+	}
+	&__content {
+		.h6 {
+			margin-bottom: rem(16);
+		}
+		h1 {
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(40);
+			}
+		}
+		p {
+			margin-bottom: rem(16);
+			color: #fff;
+		}
+		a {
+			width: 100%;
+			@include media-breakpoint-up(md) {
+				max-width: rem(219);
+			}
+		}
+		&--2 {
+			h1 {
+				margin-bottom: rem(16);
+				@include media-breakpoint-up(md) {
+					margin-bottom: rem(16);
+				}
+			}
+			p {
+				opacity: 1;
+				font-weight: 300;
+				font-size: rem(18);
+			}
+		}
+		&--3 {
+			margin-top: auto;
+			img {
+				margin-bottom: rem(54);
+			}
+			.h6 {
+				margin-bottom: rem(10);
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+			h1 {
+				margin-bottom: rem(21);
+			}
+			a {
+				width: 100%;
+				@include media-breakpoint-up(md) {
+					max-width: rem(279);
+				}
+			}
+		}
+		
+	}
+	&__desc {
+		margin-top: rem(32);
+		font-weight: 300;
+		font-size: rem(13);
+		margin-bottom: rem(16);
+		color: #7E7D85;
+		@include media-breakpoint-up(md) {
+			margin-top: auto;
+		}
+	}
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px 8px;
+		margin-left: rem(16);
+		@include media-breakpoint-up(md) {
+			justify-content: center;
+			margin-left: 0;
+		}
+		a {
+			font-size: rem(10);
+			font-weight: 300;
+			padding: 1px 7.5px;
+			border: 0.5px solid $primary;
+			border-radius: 35px;
+			
+			// &:not(:last-child) {
+			// 	margin-right: 8px;
+			// }
+		}
 	}
 
+	// Search
+	&--search {
+		min-height: rem(280);
+		z-index: unset;
+		.headerBlock {
+			&__input-wrap {
+				position: relative;
+				max-width: rem(426);
+				margin-left: auto;
+				margin-right: auto;
+				.icon {
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(calc(-50% - #{rem(14)}));
+					font-size: rem(24);
+				}
+				p {
+					font-size: rem(13);
+					font-weight: 300;
+					color: #ACB4C0;
+					margin-bottom: 0;
+				}
+			}
+			&__input {
+				border: none;
+				border-bottom: 1px solid #7E7D85;
+				font-size: rem(20);
+				font-weight: 300;
+				margin-bottom: rem(8);
+				padding-right: rem(25);
+			}
+			&__found {
+				@include mt;
+				position: absolute;
+				top: calc(100% - 20px);
+				left: 0;
+				width: 100%;
+				max-height: rem(224px);
+				// max-height: rem(224px);
+				background-color: #fff;
+				z-index: 10;
+				overflow-y: auto;
+				opacity: 0;
+				pointer-events: none;
+				&.active {
+					opacity: 1;
+					pointer-events: all;
+				}
+				a {
+					padding: rem(14) rem(16);
+					display: block;
+					color: #08080B;
+					&:hover {
+						background-color: rgba(227, 231, 236, 0.2);
+					}
+				}
+			}
+		}
+		.animate-blur {
+			// top: -20%;
+			bottom: -170%;
+			@include media-breakpoint-up(md) {
+				top: -40%;
+				bottom: auto;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	
 	@include media-breakpoint-up(lg) {
 	}
 

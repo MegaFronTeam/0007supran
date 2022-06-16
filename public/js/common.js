@@ -21,7 +21,7 @@ let gsapSet = (el, start = '50% bottom', end = 'top top', scrub = .8, pin, marke
 		}
 	})
 }
-
+AOS.init()
 const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -775,12 +775,12 @@ function eventHandler() {
 			})
 
 		}
-	}
-
-
-
+	} 
 	
-
+	const sSearchResultSwiper = new Swiper('.sSearchResult__slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

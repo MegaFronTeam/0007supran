@@ -1,0 +1,52 @@
+mixin sCaptionBlock(data)
+	// start sCaptionBlock
+	+b.SECTION.sCaptionBlock#sCaptionBlock&attributes(attributes)
+		+pic('caption-block-about.jpg','',0)
+		+e.wrap
+			h2 Рейтинги
+			+e.item
+				+e.item-title TOP 10
+				+e.item-caption Крупнейших поставщиков BI-систем в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+			+e.item
+				+e.item-title TOP 5
+				+e.item-caption Крупнейших аутсорсеров поддержки систем SAP в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+			+e.item
+				+e.item-title TOP 5
+				+e.item-caption Крупнейших аутсорсеров поддержки систем SAP в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+	// end sCaptionBlock
+
+mixin sCaptionBlockStatus(data)
+	// start sCaptionBlock
+	+b.SECTION.sCaptionBlock#sCaptionBlock&attributes(attributes)
+		+pic('caption-block-about.jpg','',0)
+		+e.wrap
+			h2 Рейтинги
+			+e.item
+				+e.item-title TOP 10
+				+e.item-caption Крупнейших поставщиков BI-систем в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+			+e.item
+				+e.item-title TOP 5
+				+e.item-caption Крупнейших аутсорсеров поддержки систем SAP в&nbsp;России по&nbsp;версии аналитического агентства TAdviser
+	// end sCaptionBlock
+
+mixin sCaptionBlockPress(data)
+	// start sCaptionBlock
+	+b.SECTION.sCaptionBlock#sCaptionBlock&attributes(attributes)
+		+pic('caption-block-press.jpg','',0)
+		+e.wrap
+			h2 Контакты PR-службы
+			+e.link-soc(href="tel:+74956637759") +7 495 663 7759
+			+e.link-soc(href="mailto:info@saprun.com") info@saprun.com
+	// end sCaptionBlock
+
+mixin sCaptionBlockWork(data)
+	// start sCaptionBlock
+	+b.SECTION.sCaptionBlock--work#sCaptionBlock&attributes(attributes)
+		+pic('caption-block-work.jpg','',0)
+		+e.wrap
+			h2 Стажировка в Saprun
+			p Стажерские программы&nbsp;&mdash; это отличная возможность для выпускников ВУЗов начать карьеру в&nbsp;САПРАН. Наших стажеров обучают лучшие эксперты компании. После обучения у&nbsp;них есть возможность сразу влиться в&nbsp;реальные проекты для ведущих российских компаний.
+			+e.link(href="#")
+				span Стажировка в SAPRUN
+				+icon('arrow-right-link')
+	// end sCaptionBlock
