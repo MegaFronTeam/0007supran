@@ -12,6 +12,7 @@ include ../blocks/sAboutCaption/_sAboutCaption.pug
 include ../blocks/sStatus/_sStatus.pug
 include ../blocks/sTrust/_sTrust.pug
 include ../blocks/sCaptionBlock/_sCaptionBlock.pug 
+include ../blocks/sExpert/_sExpert.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sTeam/_sTeam.pug
 include ../blocks/footer/_footer.pug
@@ -35,7 +36,9 @@ block pagecontent
 	+sAboutCaption.bg-white.section--vh
 	+sTeam.bg-dark.section--vh
 	+sStatus.bg-white.section--vh
+	+sExpert.bg-dark.section--vh
 	+sCaptionBlock.bg-white
+	
 	//- +sNews.bg-white.section--vh
 	//- +sEvents.bg-dark.section--vh
 	//- +sWays.bg-white.section--vh
