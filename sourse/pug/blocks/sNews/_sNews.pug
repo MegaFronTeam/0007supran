@@ -33,7 +33,7 @@ mixin sNewsPressCenter(data)
 	// start sNews
 	+b.SECTION.sNews--PressCenter.section#sNews&attributes(attributes)
 		.container
-			+e.slider--js.swiper.sNews--PressCenter__slider--js
+			.swiper.sNews--PressCenter__slider--js
 				+b.section-title
 					.row
 						.col
@@ -64,3 +64,33 @@ mixin sNewsPressCenter(data)
 							+icon('arrow-right-link')
 				.swiper-scrollbar
 	// end sNews
+
+mixin sNewsPublication(data)
+	// start sNews
+	+b.SECTION.sNews--Publication.section#sNews&attributes(attributes)
+		.container
+			.swiper.sNews--Publication__slider--js.sNews--Publication__slider
+				+b.section-title
+					.row
+						.col
+							h2 Публикации
+				.swiper-wrapper
+					- for (var x = 0; x < 6; x++)
+						+publ-item(`Июнь 2022`,`1`,`Сотрудники ИНВИТРО ставят цели и&nbsp;планируют развитие с&nbsp;помощью SAP SuccessFactors`)
+						+publ-item(`Август 2022`,`2`,`Золотая награда SAP QUALITY AWARD 2017`)
+						+publ-item(`Май 2022`,`3`,`SAPRUN Group представит решение для построения эффективной дистрибуторской сети`)
+					+publ-item(`Июнь 2022`,`1`,`Сотрудники ИНВИТРО ставят цели и&nbsp;планируют развитие с&nbsp;помощью SAP SuccessFactors`)
+					+publ-item(`Август 2022`,`2`,`Золотая награда SAP QUALITY AWARD 2017`)
+					+b.publ-item.swiper-slide
+						+b.end-news-card
+							+e.title Перейти в раздел новости
+							+icon('arrow-right-link')
+				.swiper-scrollbar
+	// end sNews
+
+
+mixin publ-item(date,img,caption)
+	+b.publ-item.swiper-slide
+		+e.date!=date
+		+pic(`publ-pic-${img}.jpg`,'',0)
+		+e.caption!=caption

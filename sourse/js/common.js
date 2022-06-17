@@ -702,6 +702,28 @@ function eventHandler() {
 			}
 		}
 	});
+	const swiperPublication = new Swiper('.sNews--Publication__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		// navigation: {
+		// 	nextEl: ".swiper-button-next",
+		// 	prevEl: ".swiper-button-prev",
+		// },
+		breakpoints: {
+			768: {
+				spaceBetween: 44,
+			},
+			1200:{
+				spaceBetween: 96,
+			}
+		}
+	});
 
 	const swiperstabs = new Swiper('.tabs-slider--js', {
 		slidesPerView: 'auto',

@@ -13,3 +13,16 @@ mixin sTeam(data)
 		
 		include sTeam-js.pug
 	// end sTeam
+
+mixin sTeamService(data)
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Направления и численность Центра прикладной разработки
+			+e.list#sTeam__list()
+				+e.wrap
+					<canvas id="myChart" ></canvas>
+			+e.bar.d-md-none()
+		include sTeam-js-2.pug
+	// end sTeam
