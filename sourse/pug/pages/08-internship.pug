@@ -1,0 +1,39 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sService/_sService.pug
+ 
+//- include ../blocks/sContact/_sContact.pug 
+include ../blocks/sValueProposition/_sValueProposition.pug
+include ../blocks/sNumericalIndicators/_sNumericalIndicators.pug
+include ../blocks/sStatus/_sStatus.pug
+include ../blocks/sPrinciples/_sPrinciples.pug
+include ../blocks/sWorkConditions/_sWorkConditions.pug
+include ../blocks/sJoin/_sJoin.pug 
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage=  null
+	- let  bg= null
+
+block title
+	- let  title= 'Работа в SAPRUN'
+	title= title
+block pagecontent
+	+mob-mnu()
+	video(preload='auto' autoplay='autoplay' loop='loop' playsinline='playsinline' muted='muted' poster='img/poster.webp').bg-video
+			source(src='video/video.webm' type='video/webm')
+			source(src='video/video.mp4' type='video/mp4')
+	
+	+top-nav()
+	
+	+footer().bg-dark
+      
+
+
+
