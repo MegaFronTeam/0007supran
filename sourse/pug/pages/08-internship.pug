@@ -6,7 +6,6 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sService/_sService.pug
-include ../blocks/sSearchResult/_sSearchResult.pug
  
 //- include ../blocks/sContact/_sContact.pug 
 include ../blocks/sValueProposition/_sValueProposition.pug
@@ -23,7 +22,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Результаты поиска'
+	- let  title= 'Работа в SAPRUN'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -32,13 +31,7 @@ block pagecontent
 			source(src='video/video.mp4' type='video/mp4')
 	
 	+top-nav()
-	+headerSearch('Search').bg-dark
-	//- +sValueProposition.bg-white.section--vh
-	//- +sNumericalIndicators.bg-dark.section--vh
-	//- +sPrinciples.bg-white.section--vh
-	//- +sWorkConditions.bg-dark.section--vh
-	//- +sStatus.bg-white.section--vh
-	+sSearchResult().bg-white.section--vh
+	
 	+footer().bg-dark
       
 
