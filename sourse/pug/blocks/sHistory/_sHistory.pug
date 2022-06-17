@@ -2,8 +2,22 @@ mixin sHistory(data)
 	// start sHistory
 	+b.SECTION.sHistory#sHistory&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sHistory
-				
-			.row
+			+b.section-title
+				h2 История
+			+e.wrap
+				mixin item(year,text)
+					+e.item
+						+e.item-year!=`${year} г.`
+						+e.item-text!=text
+				+item(`1999`,`Первый контракт SAP`)
+				+item(`2003`,`Старт направления BI`)
+				+item(`2004`,`Первый сертификат SAP по ABAP разработке`)
+				+item(`2006`,`Реорганизация в ОАО «БК Софт»`)
+				+item(`2015`,`Старт проектов по OpenText`)
+				+item(`2012`,`Старт мобильного направления`)
+				+item(`2011`,`Сертификация по ISO 9001:2008`)
+				+item(`2008`,`Первый международный контракт`)
+				+item(`2017`,`Сертификация по ISO 9001:2015`)
+				+item(`2018`,`Развитие в регионах, старт направлений прикладной и мобильной разработки`)
+				+item(`2020`,`Слияние с компанией ООО «Сапран Консалтинг», создание Центра прикладной разработки`)
 	// end sHistory

@@ -4,6 +4,7 @@
 1. <https://megafronteam.github.io/0007supran/public/04-press-center.html>
 1. <https://megafronteam.github.io/0007supran/public/05-work.html>
 1. <https://megafronteam.github.io/0007supran/public/06-service.html>
+1. <https://megafronteam.github.io/0007supran/public/07-service-2.html>
 1. <https://megafronteam.github.io/0007supran/public/08-internship.html>
 1. <https://megafronteam.github.io/0007supran/public/09-subspecies-services.html>
 1. <https://megafronteam.github.io/0007supran/public/10-experience.html>
