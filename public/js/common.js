@@ -855,8 +855,8 @@ function eventHandler() {
 				var myPlacemark = new ymaps.Placemark(mapCenter, {
 					// Свойства.
 					// Содержимое иконки, балуна и хинта.
-					hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
-					balloonContent: 'г. Москва, Нахимовский проспект, дом 24',
+					hintContent: '',
+					balloonContent: '',
 				}, {
 					hideIconOnBalloonOpen: false,
 					iconLayout: 'default#image',
