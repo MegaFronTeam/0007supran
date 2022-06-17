@@ -840,7 +840,8 @@ function eventHandler() {
 		
 		function init () {
 			var myMap,  myPlacemark2;
-			let mapCenter = map.dataset.center.split(',');
+			let mapCenter = map.dataset.center.split(','),
+					markIcon = 'img/svg/mapMark.png';
 			// console.log(mapCenter);
 			// Создание экземпляра карты и его привязка к контейнеру с
 			// заданным id ("map").
@@ -851,21 +852,20 @@ function eventHandler() {
 					zoom:10,
 					
 				});
-				myPlacemark2 = new ymaps.Placemark(mapCenter, {
+				var myPlacemark = new ymaps.Placemark(mapCenter, {
 					// Свойства.
-					hintContent: 'Собственный значок метки'
+					// Содержимое иконки, балуна и хинта.
+					hintContent: 'Магазин Golden Decor в ТЦ Экспострой',
+					balloonContent: 'г. Москва, Нахимовский проспект, дом 24',
 				}, {
-						// Опции.
-						// Своё изображение иконки метки.
-						iconImageHref: 'img/svg/mapMark.png',
-						// Размеры метки.
-						iconImageSize: [30, 42],
-						// Смещение левого верхнего угла иконки относительно
-						// её "ножки" (точки привязки).
-						iconImageOffset: [-3, -42]
+					hideIconOnBalloonOpen: false,
+					iconLayout: 'default#image',
+					iconImageHref: markIcon,
+					iconImageSize: [73, 83],
+					iconImageOffset: [-36, 0]
 				});
 				console.log(myPlacemark2);
-				myMap.geoObjects.add(myPlacemark2);
+				myMap.geoObjects.add(myPlacemark);
 				myMap.behaviors.disable('scrollZoom');
 				//на мобильных устройствах... (проверяем по userAgent браузера)
 				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

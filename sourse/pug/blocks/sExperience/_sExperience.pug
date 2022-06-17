@@ -20,7 +20,7 @@ mixin sExperienceItem(imgBg, bankImg, upTitle, title, subText)
 						p Подробнее о проекте
 
 mixin sExperienceMap(id, title, subText, center)
-	+e.item.section--vh&attributes(attributes)
+	+e.item.section--vh&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
 		+e.img-wrap
 			.map(data-center=`${center}` id=`map-${id}`)
 		+e.wrap
