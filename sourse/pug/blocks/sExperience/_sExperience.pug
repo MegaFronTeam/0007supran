@@ -19,6 +19,16 @@ mixin sExperienceItem(imgBg, bankImg, upTitle, title, subText)
 						+icon('arrow-right-link')
 						p Подробнее о проекте
 
+mixin sExperienceMap(id, title, subText, center)
+	+e.item.section--vh&attributes(attributes)
+		+e.img-wrap
+			.map(data-center=`${center}` id=`map-${id}`)
+		+e.wrap
+			h2!= title
+			+e.sub-text!= subText
+			+e.num(href="tel:+74956637759") +7 495 663 7759
+			+e.email(href="mailto:info@saprun.com") info@saprun.com
+
 mixin sExperience(data)
 	// start sExperience
 	+b.category-filter 
@@ -70,15 +80,10 @@ mixin sExperience(data)
 			| Показать ещё проекты
 			+icon('chevron-down')
 	// end sExperience
-	//- sExperience-bg-1.jpg
-	//- script(src="libs/choices.js/public/assets/scripts/choices.min.js") 
-	//- script.
 
-	//- 	const choices = new Choices('.custom-select', {
-	//- 		searchChoices: false,
-	//- 		searchEnabled: false,
-	//- 	});
-		//- const choices2 = new Choices('.custom-input2', {
-		//- 	searchChoices: false,
-		//- 	searchEnabled: false,
-		//- });
+mixin sExperience2(data)
+	+b.SECTION.sExperience--map.section#sExperience&attributes(attributes)
+		+sExperienceMap(0, 'Офис Москвы', 'ул. Октябрьская 72, 127521', '55.79916256893915, 37.61309849999998').bg-white
+		+sExperienceMap(1, 'Офис Санкт-Петербурга', 'ул. Белоостровская 17к2, 197342', '59.98682106410957, 30.32125800000001').bg-dark
+		+sExperienceMap(2, 'Офис Перми', 'ул. Стахановская д.54И, 614066', '57.98969856659982, 56.20387749999989').bg-white
+		//- +sExperienceMap

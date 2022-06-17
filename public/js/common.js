@@ -811,6 +811,70 @@ function eventHandler() {
 			AOS.refresh();
 		})
 	});
+
+
+	// for (let item of mapArr) {
+		// console.log(center);
+		// var myMap;
+		// ymaps.ready(init);
+		
+		// let center = item.dataset.center;
+		// function init () {
+		// 	myMap = new ymaps.Map(item, {
+		// 			center: [55.76, 37.64],
+		// 			zoom:10
+		// 	});
+
+		// 	myMap.behaviors.disable('scrollZoom');
+		// 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			// 		// ... отключаем перетаскивание карты
+			// 		myMap.behaviors.disable('drag');
+		// 	}
+		// }
+		// }
+	let maps = document.querySelectorAll('.map');
+	let index = 0;
+	for (const map of maps) {
+		// console.log(center);
+		// Дождёмся загрузки API и готовности DOM.
+		
+		function init () {
+			var myMap,  myPlacemark2;
+			let mapCenter = map.dataset.center.split(',');
+			// console.log(mapCenter);
+			// Создание экземпляра карты и его привязка к контейнеру с
+			// заданным id ("map").
+			myMap = new ymaps.Map(`map-${index++}`, {
+					// При инициализации карты обязательно нужно указать
+					// её центр и коэффициент масштабирования.
+					center: mapCenter, // Москва
+					zoom:10,
+					
+				});
+				myPlacemark2 = new ymaps.Placemark(mapCenter, {
+					// Свойства.
+					hintContent: 'Собственный значок метки'
+				}, {
+						// Опции.
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/svg/mapMark.png',
+						// Размеры метки.
+						iconImageSize: [30, 42],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-3, -42]
+				});
+				console.log(myPlacemark2);
+				myMap.geoObjects.add(myPlacemark2);
+				myMap.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap.behaviors.disable('drag');
+				}
+			};
+		ymaps.ready(init);
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

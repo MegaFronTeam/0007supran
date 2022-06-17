@@ -8,6 +8,7 @@
 1. <https://megafronteam.github.io/0007supran/public/09-subspecies-services.html>
 1. <https://megafronteam.github.io/0007supran/public/10-experience.html>
 1. <https://megafronteam.github.io/0007supran/public/11-case.html>
+1. <https://megafronteam.github.io/0007supran/public/12-offices.html>
 1. <https://megafronteam.github.io/0007supran/public/13-article.html>
 1. <https://megafronteam.github.io/0007supran/public/13-article-2.html>
 1. <https://megafronteam.github.io/0007supran/public/15-search-result.html>
