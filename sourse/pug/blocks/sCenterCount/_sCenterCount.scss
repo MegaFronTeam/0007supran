@@ -6,7 +6,7 @@
 	position: relative;
 	&__row {
 		--bs-gutter-x: #{rem(12)};
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
 		}
 		margin-bottom: rem(20);
@@ -22,20 +22,20 @@
 	&__wrap {
 		display: flex;
 		position: relative;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			flex-direction: row;
 			flex-wrap: wrap;
-			gap: rem(116) rem(240);
+			gap: rem(140) rem(240);
 			justify-content: space-between;
 		}
 		@include media-breakpoint-up(xxl){
-			gap: rem(116) rem(380);
+			gap: rem(180) rem(380);
 		}
 		flex-direction: column;
 	}
 	h2 {
 		text-transform: uppercase;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			font-size: rem(30);
 		}
 		font-size: rem(25);
@@ -43,12 +43,12 @@
 	&__item {
 		position: relative;
 		@include media-breakpoint-up(xxl){
-			width: calc(50% - rem(240));
-			max-width: calc(50% - rem(240));
+			width: calc(50% - rem(280));
+			max-width: calc(50% - rem(280));
 		}
-		@include media-breakpoint-up(md) {
-			width: calc(50% - rem(170));
-			max-width: calc(50% - rem(170));
+		@include media-breakpoint-up(lg) {
+			width: calc(50% - rem(210));
+			max-width: calc(50% - rem(210));
 			margin-bottom: 0;
 		}
 		&::after {
@@ -60,20 +60,20 @@
 			border-bottom: 1px solid #525254;
 			left: 5%;
 			@include media-breakpoint-up(lg){
-				top: rem(22);
+				top: rem(16);
 			}
-			top: rem(70);
+			// top: rem(70);
 			transform: skew(-40deg);
-			@include media-breakpoint-down(md){
+			@include media-breakpoint-down(lg){
 				display: none;
 			}
 		}
-		&:nth-child(2){
+		&--down-left{
 			&::after{
 				border-right: 1px solid #525254;
 			}
 		}
-		&:nth-child(3){
+		&--up-right{
 			&::after{
 				border-top: 1px solid #525254;
 				border-left: 1px solid #525254;
@@ -81,12 +81,12 @@
 				left: auto;
 				right: 5%;
 				@include media-breakpoint-up(lg){
-					top: rem(72);
+					top: rem(60);
 				}
-				top: rem(120);
+				// top: rem(120);
 			}
 		}
-		&:nth-child(4){
+		&--down-right{
 			&::after{
 				border-left: 1px solid #525254;
 				left: auto;
@@ -99,22 +99,22 @@
 			margin-bottom: 0;
 		}
 		&--order {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				order: -1;
 			}
 		}
 	}
 	&__item-number {
-		font-size: rem(48);
+		font-size: rem(40);
 		line-height: 100%;
 	}
 	&__item-title {
-		@include media-breakpoint-up(md) {
-			max-width: rem(175);
+		@include media-breakpoint-up(lg) {
+			max-width: rem(150);
 			text-align: left;
 		}
 		text-align: right;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			padding-left: rem(10);
 			white-space: nowrap;
 			text-overflow: ellipsis;
@@ -122,7 +122,7 @@
 			max-width: 100%;
 		}
 		font-weight: 300;
-		font-size: rem(16);
+		font-size: rem(14);
 		color: #c9cad1;
 		line-height: calc(24 / 16);
 	}
@@ -133,22 +133,37 @@
 		font-weight: 300;
 	}
 	.title-block{
+		pointer-events: none;
 		&::after{
 			display: none !important;
 		}
 	}
-	canvas{
+	&__canvas-wrap{
 		position: absolute;
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(lg){
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%,-50%);
-			// width: rem(240) !important;
-			// height: rem(240) !important;
+			transform: translate(-50%,-50%) rotate(30deg);
+			width: rem(240) !important;
+			height: rem(240) !important;
 		}
 		@include media-breakpoint-up(xxl){
-
+			width: rem(380) !important;
+			height: rem(380) !important;
 		}
+	}
+	canvas{
+		// position: absolute;
+		// @include media-breakpoint-up(md){
+		// 	top: 50%;
+		// 	left: 50%;
+		// 	transform: translate(-50%,-50%);
+		// 	// width: rem(240) !important;
+		// 	// height: rem(240) !important;
+		// }
+		// @include media-breakpoint-up(xxl){
+
+		// }
 	}
 	@include media-breakpoint-up(xl) {
 	}
