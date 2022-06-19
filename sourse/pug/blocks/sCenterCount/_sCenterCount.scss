@@ -12,6 +12,7 @@
 		margin-bottom: rem(20);
 		// --bs-gutter-y: #{rem()};
 	}
+	position: relative;
 	.section-title {
 	}
 	&__col {
@@ -20,6 +21,7 @@
 	}
 	&__wrap {
 		display: flex;
+		position: relative;
 		@include media-breakpoint-up(md) {
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -133,6 +135,19 @@
 	.title-block{
 		&::after{
 			display: none !important;
+		}
+	}
+	canvas{
+		position: absolute;
+		@include media-breakpoint-up(md){
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			// width: rem(240) !important;
+			// height: rem(240) !important;
+		}
+		@include media-breakpoint-up(xxl){
+
 		}
 	}
 	@include media-breakpoint-up(xl) {
