@@ -83,8 +83,9 @@ mixin sNewsPublication(data)
 					+publ-item(`Август 2022`,`2`,`Золотая награда SAP QUALITY AWARD 2017`)
 					+b.publ-item.swiper-slide
 						+b.end-news-card(href="#")
-							+e.title Перейти в раздел новости
-							+icon('arrow-right-link')
+							+e.wrap
+								+e.title Перейти в раздел новости
+								+icon('arrow-right-link')
 				.swiper-scrollbar
 	// end sNews
 
