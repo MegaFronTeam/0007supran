@@ -2,9 +2,9 @@ script(src="libs/chart.js/chart.min.js")
 script.
 				let charData = [
 					{caption:'Направления и численность Центра прикладной разработки',order:'true',title:'true'},
-					{ number:'35+', name: 'Прикладная разработка', caption:'Заказная разработка решений для планирования, прогнозирования, моделирования и&nbsp;оптимизации производственной и&nbsp;операционной деятельности предприятия. Системы сбора и&nbsp;консолидации инцормации, корпоративные порталы и&nbsp;интеграционные решения', percent: 22, color: '#5b3b22', order:'true',position:'up-right'},
-					{ number:'10+', name: 'Мобильная разработка', caption:'Корпоративные мобильные приложения для управления операционной деятельностью предприятия (управление ремонтами, закупками, проектами, продажами, торговыми залами, складами и&nbsp;распределительными процессами). Мобильная аналитика, управлени мобильными доступами и&nbsp;устройствами', percent: 6, color: '#312116',position:'down-right'},
-					{ number:'115+', name: 'Заказная разработка&nbsp;SAP', caption:' Расширение стандартной функциональности, интерграционные решения, пользовательские и&nbsp;портальные интерфейсы, а&nbsp;также мобильные приложения для всей продуктовой линейки SAP систем', percent: 72, color: '#d68843',order:'true', position:'down-left'},
+					{ number:'35+', name: 'Прикладная разработка', caption:'Заказная разработка решений для планирования, прогнозирования, моделирования и&nbsp;оптимизации производственной и&nbsp;операционной деятельности предприятия. Системы сбора и&nbsp;консолидации инцормации, корпоративные порталы и&nbsp;интеграционные решения', percent: 22, color: '#5b3b22', order:'true',position:'up-right', progress:100},
+					{ number:'10+', name: 'Мобильная разработка', caption:'Корпоративные мобильные приложения для управления операционной деятельностью предприятия (управление ремонтами, закупками, проектами, продажами, торговыми залами, складами и&nbsp;распределительными процессами). Мобильная аналитика, управлени мобильными доступами и&nbsp;устройствами', percent: 6, color: '#312116',position:'down-right', progress:44},
+					{ number:'115+', name: 'Заказная разработка&nbsp;SAP', caption:' Расширение стандартной функциональности, интерграционные решения, пользовательские и&nbsp;портальные интерфейсы, а&nbsp;также мобильные приложения для всей продуктовой линейки SAP систем', percent: 72, color: '#d68843',order:'true', position:'down-left', progress: 24},
 					//- { name: 'Департамент ERP', percent: 6, color: '#312116' },
 					//- { name: 'Департамент BI', percent: 72, color: '#d68843' },
 				];
@@ -109,6 +109,7 @@ script.
 						let order = charData[ i ][ 'order' ];
 						let position = charData[ i ][ 'position' ];
 						let title = charData[ i ][ 'title' ];
+						let progress = charData[ i ][ 'progress' ];
 						let charContentItem = document.createElement("div");
 						charContentItem.classList.add('sCenterCount__item');
 						if (order){
@@ -134,6 +135,7 @@ script.
 										<div class="sCenterCount__item-title">${name}</div>
 									</div>
 								</div>
+								<div class="sCenterCount__progress-bar" style="--width:${progress}%"></div>
 								<div class="sCenterCount__item-caption">
 									${caption}
 								</div>

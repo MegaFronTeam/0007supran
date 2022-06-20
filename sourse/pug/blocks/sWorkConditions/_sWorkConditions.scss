@@ -71,7 +71,7 @@
 			--bs-gutter-x: #{rem(64)};
 			--bs-gutter-y: #{rem(40)};
 		}
-		
+		--bs-gutter-y: #{rem(26)};
 	}
 	&__item {
 		display: flex;
