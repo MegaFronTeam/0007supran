@@ -95,11 +95,16 @@
 			}
 		}
 		margin-bottom: rem(48);
-		&:last-child {
-			margin-bottom: 0;
-		}
+		// &:last-child {
+		// 	margin-bottom: 0;
+		// }
 		&--order {
 			@include media-breakpoint-up(lg) {
+				order: -1;
+			}
+		}
+		&--order-mob {
+			@include media-breakpoint-down(lg) {
 				order: -1;
 			}
 		}
@@ -164,6 +169,7 @@
 	}
 	.title-block {
 		pointer-events: none;
+		order: -1;
 		&::after {
 			display: none !important;
 		}
