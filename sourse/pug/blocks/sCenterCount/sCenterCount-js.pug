@@ -1,24 +1,25 @@
 script(src="libs/chart.js/chart.min.js") 
 script.
 				let charData = [
-					{caption:'Направления и численность Центра прикладной разработки',order:'true',title:'true'},
-					{ number:'35+', name: 'Прикладная разработка', caption:'Заказная разработка решений для планирования, прогнозирования, моделирования и&nbsp;оптимизации производственной и&nbsp;операционной деятельности предприятия. Системы сбора и&nbsp;консолидации инцормации, корпоративные порталы и&nbsp;интеграционные решения', percent: 22, color: '#5b3b22', order:'true',position:'up-right', progress:44},
-					{ number:'10+', name: 'Мобильная разработка', caption:'Корпоративные мобильные приложения для управления операционной деятельностью предприятия (управление ремонтами, закупками, проектами, продажами, торговыми залами, складами и&nbsp;распределительными процессами). Мобильная аналитика, управлени мобильными доступами и&nbsp;устройствами', percent: 6, color: '#312116',position:'down-right', progress:24},
-					{ number:'115+', name: 'Заказная разработка&nbsp;SAP', caption:' Расширение стандартной функциональности, интерграционные решения, пользовательские и&nbsp;портальные интерфейсы, а&nbsp;также мобильные приложения для всей продуктовой линейки SAP систем', percent: 72, color: '#d68843',order:'true', orderMob:'true', position:'down-left', progress: 100},
+					{caption:'Направления и численность Центра прикладной разработки',order:'true',title:'true', delay:200},
+					{ number:'35+', name: 'Прикладная разработка', caption:'Заказная разработка решений для планирования, прогнозирования, моделирования и&nbsp;оптимизации производственной и&nbsp;операционной деятельности предприятия. Системы сбора и&nbsp;консолидации инцормации, корпоративные порталы и&nbsp;интеграционные решения', percent: 22, color: '#5b3b22', order:'true',position:'up-right', progress:44, delay:400},
+					{ number:'10+', name: 'Мобильная разработка', caption:'Корпоративные мобильные приложения для управления операционной деятельностью предприятия (управление ремонтами, закупками, проектами, продажами, торговыми залами, складами и&nbsp;распределительными процессами). Мобильная аналитика, управлени мобильными доступами и&nbsp;устройствами', percent: 6, color: '#312116',position:'down-right', progress:24, delay:600},
+					{ number:'115+', name: 'Заказная разработка&nbsp;SAP', caption:' Расширение стандартной функциональности, интерграционные решения, пользовательские и&nbsp;портальные интерфейсы, а&nbsp;также мобильные приложения для всей продуктовой линейки SAP систем', percent: 72, color: '#d68843',order:'true', orderMob:'true', position:'down-left', progress: 100, delay:800},
 					//- { name: 'Департамент ERP', percent: 6, color: '#312116' },
 					//- { name: 'Департамент BI', percent: 72, color: '#d68843' },
 				];
 
-				let charNames = [], charPercent = [], charColors = [], charColorsGray = [], myChart;
+				let charNames = [], charPercent = [], charColors = [], charColorsGray = [], charDelay = [], myChart;
 
 				let charContent = document.querySelector(".sCenterCount__wrap");
 				for (var i = 0; i < charData.length; i++) {
 					let name = charData[ i ][ 'name' ];
 					let color = charData[ i ][ 'color' ];
-					
+					let delay = charData[ i ][ 'delay' ];
 					charNames.push(name)
 					charPercent.push(charData[i]['percent'])
 					charColors.push(color);
+					charDelay.push(delay);
 					charColorsGray.push('rgba(255,255,255, .1)');
 				}
 				const data ={
@@ -58,7 +59,7 @@ script.
 								
 								if (elements[ 0 ]) { 
 									let index = elements[ 0 ].index;
-									let bar = document.querySelector(".sTeam__bar"); 
+									//- let bar = document.querySelector(".sTeam__bar"); 
 									//- if (bar) {
 									//- 	bar.style.setProperty('--el-index', index);
 									//- }
@@ -111,8 +112,11 @@ script.
 						let position = charData[ i ][ 'position' ];
 						let title = charData[ i ][ 'title' ];
 						let progress = charData[ i ][ 'progress' ];
+						let delay = charData[ i ][ 'delay' ];
 						let charContentItem = document.createElement("div");
 						charContentItem.classList.add('sCenterCount__item');
+						charContentItem.setAttribute('data-aos','fade-zoom-in');
+						charContentItem.setAttribute('data-aos-delay', delay);
 						if (order){
 							charContentItem.classList.add('sCenterCount__item--order');
 						}
@@ -147,10 +151,10 @@ script.
 						}
 						charContent.appendChild(charContentItem);
 						
-						let bar = document.querySelector(".sCenterCount__bar"); 
-						if (bar) {
-							bar.style.setProperty('--el-count', charData.length);
-						}
+						//- let bar = document.querySelector(".sCenterCount__bar"); 
+						//- if (bar) {
+						//- 	bar.style.setProperty('--el-count', charData.length);
+						//- }
 						
 						charContentItem.addEventListener("mouseover", function () {  
 							myChart.setActiveElements([
