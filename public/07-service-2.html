@@ -417,7 +417,7 @@
 			<section class="sCenterCount section bg-dark section section--vh" id="sCenterCount">
 				<div class="container">
 					<div class="sCenterCount__wrap">
-						<div class="sCenterCount__canvas-wrap"><canvas id="myChart" ></canvas>
+						<div class="sCenterCount__canvas-wrap" data-aos="fade-zoom-in"><canvas id="myChart"  ></canvas>
 						</div>
 					</div>
 				</div>
@@ -486,7 +486,7 @@
 										//- if (bar) {
 										//- 	bar.style.setProperty('--el-index', index);
 										//- }
-										console.log(`sCenterCount__item:nth-child(${index + 2}) sCenterCount__item-inner`);
+										//- console.log(`sCenterCount__item:nth-child(${index + 2}) sCenterCount__item-inner`);
 										$(`.sCenterCount__item-inner`).removeClass("hover")
 										$(`.sCenterCount__item:nth-child(${index + 2}) .sCenterCount__item-inner`).addClass("hover")
 										myChart.data.datasets[ 0 ].backgroundColor = charColorsGray; 

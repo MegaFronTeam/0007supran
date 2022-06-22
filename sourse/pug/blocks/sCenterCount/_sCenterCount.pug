@@ -3,8 +3,8 @@ mixin sCenterCount(data)
 	+b.SECTION.sCenterCount.section#sCenterCount&attributes(attributes)
 		.container
 			+e.wrap
-				+e.canvas-wrap
-					<canvas id="myChart" ></canvas>
+				+e.canvas-wrap(data-aos="fade-zoom-in")
+					<canvas id="myChart"  ></canvas>
 		include sCenterCount-js.pug
 	// end sCenterCount
 

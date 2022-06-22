@@ -176,10 +176,10 @@
 	}
 	&__canvas-wrap {
 		position: absolute;
-		@include media-breakpoint-up(lg) {
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) rotate(30deg);
+
+		@include media-breakpoint-up(lg) { 
+			transform:  rotate(30deg);
+			@include a-cent;
 			width: rem(240) !important;
 			height: rem(240) !important;
 		}
