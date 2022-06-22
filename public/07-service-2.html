@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/aos/aos.css" rel="stylesheet"/>
@@ -263,10 +264,69 @@
 			<!-- start sResourceBase-->
 			<section class="sResourceBase section bg-dark section section--vh" id="sResourceBase">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sResourceBase</h2>
+					<div class="section-title">
+						<h2>Ресурсная база – концепция единого центра разработки клиента</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sResourceBase__list">
+						<div class="sResourceBase__item">
+							<div class="sResourceBase__number">01
+							</div>
+							<div class="sResourceBase__item-info">
+								<div class="sResourceBase__item-title">Регионы присутствия 
+								</div>
+								<div class="sResourceBase__text">Москва, Санкт-Петербург, Пермь, Волгоград, Самара, Старый Оскол, Казань
+								</div>
+							</div>
+						</div>
+						<div class="sResourceBase__item">
+							<div class="sResourceBase__number">02
+							</div>
+							<div class="sResourceBase__item-info">
+								<div class="sResourceBase__item-title">Регионы присутствия 
+								</div>
+								<div class="sResourceBase__text">Компания SAPRUN и&nbsp;её&nbsp;окружение входит в&nbsp;один из&nbsp;крупнейших российских ИТ-холдингов INLINE Technologies Group
+								</div>
+							</div>
+						</div>
+						<div class="sResourceBase__item">
+							<div class="sResourceBase__number">03
+							</div>
+							<div class="sResourceBase__item-info">
+								<div class="sResourceBase__item-title">Корпоративный университет
+								</div>
+								<div class="sResourceBase__text">Ежегодно ряды компании пополняются десятками молодых специалистов&nbsp;&mdash; выпускниками ведущих технических вузов, которые проходят обучение по&nbsp;выбранной специальности. Обучение проводят собственные и&nbsp;приглашенные эксперты
+								</div>
+							</div>
+						</div>
+						<div class="sResourceBase__item">
+							<div class="sResourceBase__number">04
+							</div>
+							<div class="sResourceBase__item-info">
+								<div class="sResourceBase__item-title">Команда
+								</div>
+								<div class="sResourceBase__text">Консолидированная экспертиза&nbsp;&mdash; стабильная и&nbsp;замотивированная команда разработчиков в&nbsp;шаговой доступности с&nbsp;различными знаниями и&nbsp;опытом. Возможность оперативной замены сотрудника в&nbsp;случае форс-мажора.
+								</div>
+							</div>
+						</div>
+						<div class="sResourceBase__item">
+							<div class="sResourceBase__number">05
+							</div>
+							<div class="sResourceBase__item-info">
+								<div class="sResourceBase__item-title">Задачи
+								</div>
+								<div class="sResourceBase__text">
+									<ul>
+										<li>Обеспечить единый подход к&nbsp;разработке</li>
+										<li>Обеспечить высокий уровень доступности специалистов</li>
+										<li>Минимизировать риски сдвига сроков и&nbsp;увеличения бюджета разработок.</li>
+										<li>Обеспечить прозрачность ведения разработок на&nbsp;протяжении всего жизненного цикла продукта</li>
+										<li>Обеспечить контроль качества и&nbsp;повысить отказоустойчивость реализуемых разработок</li>
+										<li>Формировать адекватную команду, соответствующую ожиданиям и&nbsp;потребностям Заказчика</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sResourceBase-->
@@ -353,6 +413,197 @@
 				</div>
 			</section>
 			<!-- end sWorkConditions-->
+			<!-- start sCenterCount-->
+			<section class="sCenterCount section bg-dark section section--vh" id="sCenterCount">
+				<div class="container">
+					<div class="sCenterCount__wrap">
+						<div class="sCenterCount__canvas-wrap"><canvas id="myChart" ></canvas>
+						</div>
+					</div>
+				</div>
+				<script src="libs/chart.js/chart.min.js"> </script>
+				<script>
+					let charData = [
+						{caption:'Направления и численность Центра прикладной разработки',order:'true',title:'true', delay:200},
+						{ number:'35+', name: 'Прикладная разработка', caption:'Заказная разработка решений для планирования, прогнозирования, моделирования и&nbsp;оптимизации производственной и&nbsp;операционной деятельности предприятия. Системы сбора и&nbsp;консолидации инцормации, корпоративные порталы и&nbsp;интеграционные решения', percent: 22, color: '#5b3b22', order:'true',position:'up-right', progress:44, delay:400},
+						{ number:'10+', name: 'Мобильная разработка', caption:'Корпоративные мобильные приложения для управления операционной деятельностью предприятия (управление ремонтами, закупками, проектами, продажами, торговыми залами, складами и&nbsp;распределительными процессами). Мобильная аналитика, управлени мобильными доступами и&nbsp;устройствами', percent: 6, color: '#312116',position:'down-right', progress:24, delay:600},
+						{ number:'115+', name: 'Заказная разработка&nbsp;SAP', caption:' Расширение стандартной функциональности, интерграционные решения, пользовательские и&nbsp;портальные интерфейсы, а&nbsp;также мобильные приложения для всей продуктовой линейки SAP систем', percent: 72, color: '#d68843',order:'true', orderMob:'true', position:'down-left', progress: 100, delay:800},
+						//- { name: 'Департамент ERP', percent: 6, color: '#312116' },
+						//- { name: 'Департамент BI', percent: 72, color: '#d68843' },
+					];
+					
+					let charNames = [], charPercent = [], charColors = [], charColorsGray = [], charDelay = [], myChart;
+					
+					let charContent = document.querySelector(".sCenterCount__wrap");
+					for (var i = 0; i < charData.length; i++) {
+						let name = charData[ i ][ 'name' ];
+						let color = charData[ i ][ 'color' ];
+						let delay = charData[ i ][ 'delay' ];
+						charNames.push(name)
+						charPercent.push(charData[i]['percent'])
+						charColors.push(color);
+						charDelay.push(delay);
+						charColorsGray.push('rgba(255,255,255, .1)');
+					}
+					const data ={
+						labels: charNames,
+						datasets: [{
+								// label: '# of Votes',
+								data:charPercent,
+								backgroundColor: charColors,
+								hoverOffset: 20,
+							}]
+						};
+						
+						
+						const config = {
+							type: 'doughnut',
+							data: data,
+							options: {
+								spacing: 40,
+									borderWidth: 0,  
+									hoverBackgroundColor:  '#D68843',
+									cutout: '94%',
+									layout: {
+										padding: 20
+								},
+								plugins: {
+									tooltip: {
+										// Disable the on-canvas tooltip
+										enabled: false,  
+								},
+									legend: {
+										display: false,
+										position: 'right'
+									}, 
+								}, 
+								onHover: function(event,elements) {
+									$("#myChart").css("cursor", elements[ 0 ] ? "pointer" : "default"); 
+									
+									if (elements[ 0 ]) { 
+										let index = elements[ 0 ].index;
+										//- let bar = document.querySelector(".sTeam__bar"); 
+										//- if (bar) {
+										//- 	bar.style.setProperty('--el-index', index);
+										//- }
+										console.log(`sCenterCount__item:nth-child(${index + 2}) sCenterCount__item-inner`);
+										$(`.sCenterCount__item-inner`).removeClass("hover")
+										$(`.sCenterCount__item:nth-child(${index + 2}) .sCenterCount__item-inner`).addClass("hover")
+										myChart.data.datasets[ 0 ].backgroundColor = charColorsGray; 
+									}
+									else { 
+										myChart.data.datasets[ 0 ].backgroundColor =    charColors; 
+									}
+									myChart.update();
+								},
+								//- onHover: function(event,elements) {
+								//- 	$("#myChart").css("cursor", elements[ 0 ] ? "pointer" : "default"); 
+									
+								//- 	if (elements[ 0 ]) { 
+								//- 		let index = elements[ 0 ].index;
+								//- 		let bar = document.querySelector(".sTeam__bar"); 
+								//- 		if (bar) {
+								//- 			bar.style.setProperty('--el-index', index);
+								//- 		}
+								//- 		console.log(`sCenterCount__item:nth-child(${index + 2}) sCenterCount__item-inner`);
+								//- 		$(`.sCenterCount__item-inner`).removeClass("hover")
+								//- 		$(`.sCenterCount__item:nth-child(${index + 2}) .sCenterCount__item-inner`).addClass("hover")
+								//- 		myChart.data.datasets[ 0 ].backgroundColor = charColorsGray; 
+								//- 	}
+								//- 	else { 
+								//- 		myChart.data.datasets[ 0 ].backgroundColor =    charColors; 
+								//- 	}
+								//- 	myChart.update();
+								//- },
+					
+							},
+						// tooltip
+					};
+					
+					
+						const ctx = document.getElementById('myChart').getContext('2d');
+					
+						myChart = new Chart(ctx, config);
+						for (var i = 0; i < charData.length; i++) {
+							let el = i;
+							let name = charData[ i ][ 'name' ];
+							let number = charData[ i ][ 'number' ];
+							let caption = charData[ i ][ 'caption' ];
+							let color = charData[ i ][ 'color' ];
+							let order = charData[ i ][ 'order' ];
+							let orderMob = charData[ i ][ 'orderMob' ];
+							let position = charData[ i ][ 'position' ];
+							let title = charData[ i ][ 'title' ];
+							let progress = charData[ i ][ 'progress' ];
+							let delay = charData[ i ][ 'delay' ];
+							let charContentItem = document.createElement("div");
+							charContentItem.classList.add('sCenterCount__item');
+							charContentItem.setAttribute('data-aos','fade-zoom-in');
+							charContentItem.setAttribute('data-aos-delay', delay);
+							if (order){
+								charContentItem.classList.add('sCenterCount__item--order');
+							}
+							if (orderMob){
+								charContentItem.classList.add('sCenterCount__item--order-mob');
+							}
+							if (position){
+								charContentItem.classList.add(`sCenterCount__item--${position}`);
+							}
+							if (title){
+								charContentItem.classList.add(`title-block`);
+								charContentItem.style.setProperty('--bg', color);
+								charContentItem.setAttribute('data-chart', i);
+								charContentItem.innerHTML = `<h2>${caption}</h2>`;
+							} else{
+								charContentItem.style.setProperty('--bg', color);
+								charContentItem.setAttribute('data-chart', i);
+								charContentItem.innerHTML = `<div class="sCenterCount__item-inner">
+									<div class="sCenterCount__row row">
+										<div class="col-lg-auto col">
+											<div class="sCenterCount__item-number">${number}</div>
+										</div>
+										<div class="col-auto">
+											<div class="sCenterCount__item-title">${name}</div>
+										</div>
+									</div>
+									<div class="sCenterCount__progress-bar" style="--width:${progress}%"></div>
+									<div class="sCenterCount__item-caption">
+										${caption}
+									</div>
+								</div>`;
+							}
+							charContent.appendChild(charContentItem);
+							
+							//- let bar = document.querySelector(".sCenterCount__bar"); 
+							//- if (bar) {
+							//- 	bar.style.setProperty('--el-count', charData.length);
+							//- }
+							
+							charContentItem.addEventListener("mouseover", function () {  
+								myChart.setActiveElements([
+									{datasetIndex: 0, index: el},
+								]); 
+					
+								// charColorsGray[ el ] = '#D68843';
+								myChart.data.datasets[0].backgroundColor= charColorsGray;
+								myChart.update();
+							})
+							
+							charContentItem.addEventListener("mouseleave", function () { 
+								// charColorsGray[ el ] = charColors[el];
+								myChart.data.datasets[ 0 ].backgroundColor = charColors; 
+								// console.log(	myChart.data.datasets[ 0 ].backgroundColor);
+								myChart.setActiveElements([
+									{datasetIndex: 1 },
+								]);
+								myChart.update();
+							})
+					
+						} 
+					
+				</script>
+			</section>
+			<!-- end sCenterCount-->
 			<!-- start sTechnology-->
 			<section class="sTechnology section bg-white section section--vh" id="sTechnology">
 				<div class="container">
@@ -543,10 +794,77 @@
 			<!-- start sHistory-->
 			<section class="sHistory bg-dark section section--vh" id="sHistory">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sHistory</h2>
+					<div class="section-title">
+						<h2>История</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sHistory__wrap">
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">1999 г.
+							</div>
+							<div class="sHistory__item-text">Первый контракт SAP
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2003 г.
+							</div>
+							<div class="sHistory__item-text">Старт направления BI
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2004 г.
+							</div>
+							<div class="sHistory__item-text">Первый сертификат SAP по ABAP разработке
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2006 г.
+							</div>
+							<div class="sHistory__item-text">Реорганизация в ОАО «БК Софт»
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2015 г.
+							</div>
+							<div class="sHistory__item-text">Старт проектов по OpenText
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2012 г.
+							</div>
+							<div class="sHistory__item-text">Старт мобильного направления
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2011 г.
+							</div>
+							<div class="sHistory__item-text">Сертификация по ISO 9001:2008
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2008 г.
+							</div>
+							<div class="sHistory__item-text">Первый международный контракт
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2017 г.
+							</div>
+							<div class="sHistory__item-text">Сертификация по ISO 9001:2015
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2018 г.
+							</div>
+							<div class="sHistory__item-text">Развитие в регионах, старт направлений прикладной и мобильной разработки
+							</div>
+						</div>
+						<div class="sHistory__item">
+							<div class="sHistory__item-year">2020 г.
+							</div>
+							<div class="sHistory__item-text">Слияние с компанией ООО «Сапран Консалтинг», создание Центра прикладной разработки
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sHistory-->
@@ -790,6 +1108,8 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
 		<script src="libs/gsap/gsap.min.js"> </script>
 		<script src="libs/aos/aos.js"> </script>

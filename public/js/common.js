@@ -415,51 +415,50 @@ function eventHandler() {
 
 
 
-		let upY = '200';
-		gsap.utils.toArray(".section--up").forEach(wow => {
+	let upY = '200';
+	gsap.utils.toArray(".section--up").forEach(wow => {
 
-			gsap.from(wow, {
-				y: upY,
-				scrollTrigger: {
-					trigger: wow,
-					start: "top bottom",
-					end: "bottom bottom",
-					scrub: 1,
-					markers: true
-				}
-			})
+		gsap.from(wow, {
+			y: upY,
+			scrollTrigger: {
+				trigger: wow,
+				start: "top bottom",
+				end: "bottom bottom",
+				scrub: 1,
+				markers: true
+			}
 		})
+	})
 
 
 
 
-		gsap.utils.toArray(".section--vh").forEach(wow => {
+	gsap.utils.toArray(".section--vh").forEach(wow => {
 
-			if (!topNav) return;
-			let h = topNav.offsetHeight;
-			// let h2 = document.querySelector(".dots-wrap").offsetHeight;
-		 
-			function myfunction() {
-				if (!wow.classList.contains("bg-dark")) {
-					$(".top-nav").addClass("top-nav--light")
-				}
-				else {
-					$(".top-nav").removeClass("top-nav--light")
+		if (!topNav) return;
+		let h = topNav.offsetHeight;
+		// let h2 = document.querySelector(".dots-wrap").offsetHeight;
 
-				}
-			};
+		function myfunction() {
+			if (!wow.classList.contains("bg-dark")) {
+				$(".top-nav").addClass("top-nav--light")
+			}
+			else {
+				$(".top-nav").removeClass("top-nav--light")
+
+			}
+		};
 
 
-			function myfunction3() {
-				if (!wow.classList.contains("bg-dark")) {
-					$(".top-nav").addClass("top-nav--light-mob")
-				}
-				else {
-					$(".top-nav").removeClass("top-nav--light-mob")
+		function myfunction3() {
+			if (!wow.classList.contains("bg-dark")) {
+				$(".top-nav").addClass("top-nav--light-mob")
+			}
+			else {
+				$(".top-nav").removeClass("top-nav--light-mob")
 
-				}
-			};
-
+			}
+		};
 
 			function myfunction2() {
 				let sec = wow.dataset.section;
@@ -475,49 +474,63 @@ function eventHandler() {
 				}
 			};
 
-			const rect = wow.getBoundingClientRect();
-			ScrollTrigger.create({
-				scroller: scroller,
-				trigger: wow,
-				start: `top top+=${h / 2}`,
-				end: `bottom-=${h / 2} top`,
-				// markers: true,
-				// toggleActions: "play none play none",
-				onEnter: () => myfunction(),
-				// onLeave: () => myfunction(),
-				// onLeaveBack: () => myfunction(),
-				onEnterBack: () => myfunction(),
-				invalidateOnRefresh: true,
-			});
-			ScrollTrigger.create({
-				scroller: scroller,
-				trigger: wow,
-				start: `top bottom`,
-				end: `bottom top`,
-				// markers: true,
-				// toggleActions: "play none play none",
-				onEnter: () => myfunction3(),
-				// onLeave: () => myfunction(),
-				// onLeaveBack: () => myfunction(),
-				onEnterBack: () => myfunction3(),
-				invalidateOnRefresh: true,
-			});
+		function myfunction2() {
+			let sec = wow.dataset.section;
+			// console.log(wow);
+			console.log(sec);
+			$(`.dots-wrap__item.active`).removeClass('active');
+			$(`[data-link="${sec}"]`).addClass('active');
+			if (wow.classList.contains("bg-white")) {
+				$(".dots-wrap").addClass("dots-wrap--dark")
+			}
+			else {
+				$(".dots-wrap").removeClass("dots-wrap--dark")
+			}
+		};
 
-			ScrollTrigger.create({
-				scroller: scroller,
-				trigger: wow,
-				start: `top center`,
-				end: `bottom center`,
-				// markers: true,
-				// toggleActions: "play none reverse none",
-				onEnter: () => myfunction2(),
-				// onLeave: () => myfunction2(),
-				// onLeaveBack: () => myfunction2(),
-				onEnterBack: () => myfunction2(),
-				invalidateOnRefresh: true,
-			});
+		const rect = wow.getBoundingClientRect();
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: wow,
+			start: `top top+=${h / 2}`,
+			end: `bottom-=${h / 2} top`,
+			// markers: true,
+			// toggleActions: "play none play none",
+			onEnter: () => myfunction(),
+			// onLeave: () => myfunction(),
+			// onLeaveBack: () => myfunction(),
+			onEnterBack: () => myfunction(),
+			invalidateOnRefresh: true,
+		});
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: wow,
+			start: `top bottom`,
+			end: `bottom top`,
+			// markers: true,
+			// toggleActions: "play none play none",
+			onEnter: () => myfunction3(),
+			// onLeave: () => myfunction(),
+			// onLeaveBack: () => myfunction(),
+			onEnterBack: () => myfunction3(),
+			invalidateOnRefresh: true,
+		});
 
-		})
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: wow,
+			start: `top center`,
+			end: `bottom center`,
+			// markers: true,
+			// toggleActions: "play none reverse none",
+			onEnter: () => myfunction2(),
+			// onLeave: () => myfunction2(),
+			// onLeaveBack: () => myfunction2(),
+			onEnterBack: () => myfunction2(),
+			invalidateOnRefresh: true,
+		});
+
+	})
 
 
 
@@ -689,6 +702,28 @@ function eventHandler() {
 			}
 		}
 	});
+	const swiperPublication = new Swiper('.sNews--Publication__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		// navigation: {
+		// 	nextEl: ".swiper-button-next",
+		// 	prevEl: ".swiper-button-prev",
+		// },
+		breakpoints: {
+			768: {
+				spaceBetween: 44,
+			},
+			1200:{
+				spaceBetween: 96,
+			}
+		}
+	});
 
 	const swiperstabs = new Swiper('.tabs-slider--js', {
 		slidesPerView: 'auto',
@@ -699,6 +734,36 @@ function eventHandler() {
 			}
 		}
 	});
+	// const swiperExpertGlobal = new Swiper('.sExpert__slider-global--js', {
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 0,
+
+	// });
+	const swiperExpertPagination = new Swiper('.sExpert__slider-pagination--js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 8,
+		// initialSlide: 1,
+		// breakpoints: {
+		// 	768: {
+		// 		spaceBetween: 24,
+		// 	}
+		// }
+	});
+	const swiperExpert = new Swiper('.sExpert__slider--js', {
+		slidesPerView: 'auto', 
+		spaceBetween: 8,
+		thumbs: {
+			multipleActiveThumbs: false,
+			swiper: swiperExpertPagination,
+		},
+		// initialSlide: 1,
+		breakpoints: {
+			768: {
+				spaceBetween: 24,
+			}
+		}
+	});
+
 
 	// modal window
 	$('.menu').on("click", '.menu-item-has-children>a', function (e) {
@@ -748,14 +813,94 @@ function eventHandler() {
 		freeMode: true,
 	});
 
-	$('.category-filter__wrap').on('click', function () {
+	$('.category-filter__toggle').on('click', function () {
 		$(this).hide;
 		$('.category-filter__content').addClass('active');
 	});
 	$('.icon-close').on('click', function() {
-		$('.category-filter__wrap').show;
+		$('.category-filter__toggle').show;
 		$('.category-filter__content').removeClass('active');
 	});
+
+	let customSelect = document.querySelectorAll('.custom-select--js');
+	for (let item of customSelect) {
+		const choices = new Choices(item, {
+			searchChoices: false,
+			searchEnabled: false,
+			itemSelectText: '',
+		});
+	}
+
+	$('.btn-aos-refresh').on('click', function() {
+		$('.tabs__content.active', function() {
+
+			AOS.refresh();
+		})
+	});
+
+
+	// for (let item of mapArr) {
+		// console.log(center);
+		// var myMap;
+		// ymaps.ready(init);
+		
+		// let center = item.dataset.center;
+		// function init () {
+		// 	myMap = new ymaps.Map(item, {
+		// 			center: [55.76, 37.64],
+		// 			zoom:10
+		// 	});
+
+		// 	myMap.behaviors.disable('scrollZoom');
+		// 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			// 		// ... отключаем перетаскивание карты
+			// 		myMap.behaviors.disable('drag');
+		// 	}
+		// }
+		// }
+	let maps = document.querySelectorAll('.map');
+	let index = 0;
+	for (const map of maps) {
+		// console.log(center);
+		// Дождёмся загрузки API и готовности DOM.
+		
+		function init () {
+			var myMap,  myPlacemark2;
+			let mapCenter = map.dataset.center.split(','),
+					markIcon = 'img/svg/mapMark.png';
+			// console.log(mapCenter);
+			// Создание экземпляра карты и его привязка к контейнеру с
+			// заданным id ("map").
+			myMap = new ymaps.Map(`map-${index++}`, {
+					// При инициализации карты обязательно нужно указать
+					// её центр и коэффициент масштабирования.
+					center: mapCenter, // Москва
+					zoom:10,
+					
+				});
+				var myPlacemark = new ymaps.Placemark(mapCenter, {
+					// Свойства.
+					// Содержимое иконки, балуна и хинта.
+					hintContent: '',
+					balloonContent: '',
+				}, {
+					hideIconOnBalloonOpen: false,
+					iconLayout: 'default#image',
+					iconImageHref: markIcon,
+					iconImageSize: [73, 83],
+					iconImageOffset: [-36, 0]
+				});
+				console.log(myPlacemark2);
+				myMap.geoObjects.add(myPlacemark);
+				myMap.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap.behaviors.disable('drag');
+				}
+			};
+		ymaps.ready(init);
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

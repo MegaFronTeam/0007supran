@@ -1,0 +1,46 @@
+mixin sCenterCount(data)
+	// start sCenterCount
+	+b.SECTION.sCenterCount.section#sCenterCount&attributes(attributes)
+		.container
+			+e.wrap
+				+e.canvas-wrap
+					<canvas id="myChart" ></canvas>
+		include sCenterCount-js.pug
+	// end sCenterCount
+
+
+
+
+
+//- mixin sCenterCount(data)
+//- 	// start sCenterCount
+//- 	+b.SECTION.sCenterCount.section#sCenterCount&attributes(attributes)
+//- 		.container
+//- 			+e.wrap
+//- 				+e.item--order.title-block
+//- 					h2 Направления и численность Центра прикладной разработки
+//- 				+e.item
+//- 					+e.row.row
+//- 						.col-lg-auto.col-md-12.col
+//- 							+e.item-number 115+
+//- 						.col-auto
+//- 							+e.item-title Заказная разработка SAP
+//- 					+e.item-caption Расширение стандартной функциональности, интерграционные решения, пользовательские и&nbsp;портальные интерфейсы, а&nbsp;также мобильные приложения для всей продуктовой линейки SAP систем
+//- 				+e.item--order
+//- 					+e.row.row
+//- 						.col-lg-auto.col-md-12.col
+//- 							+e.item-number 35+
+//- 						.col-auto
+//- 							+e.item-title Прикладная разработка
+//- 					+e.item-caption Заказная разработка решений для планирования, прогнозирования, моделирования и&nbsp;оптимизации производственной и&nbsp;операционной деятельности предприятия. Системы сбора и&nbsp;консолидации инцормации, корпоративные порталы и&nbsp;интеграционные решения.
+//- 				+e.item
+//- 					+e.row.row
+//- 						.col-lg-auto.col-md-12.col
+//- 							+e.item-number 10+
+//- 						.col-auto
+//- 							+e.item-title Мобильная разработка
+//- 					+e.item-caption Корпоративные мобильные приложения для управления операционной деятельностью предприятия (управление ремонтами, закупками, проектами, продажами, торговыми залами, складами и&nbsp;распределительными процессами). Мобильная аналитика, управлени мобильными доступами и&nbsp;устройствами.
+//- 		+e.canvas-wrap
+//- 			<canvas id="myChart" ></canvas>
+//- 		include sCenterCount-js.pug
+//- 	// end sCenterCount

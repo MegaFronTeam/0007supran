@@ -11,6 +11,7 @@ include ../blocks/sStatus/_sStatus.pug
 include ../blocks/sTrust/_sTrust.pug
 include ../blocks/sCaptionBlock/_sCaptionBlock.pug 
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sExpert/_sExpert.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -29,6 +30,7 @@ block pagecontent
 	+top-nav()
 	+headerBlockBody('Status',`Статусы и награды`,`Входим в&nbsp;TOP-10 крупнейших поставщиков BI-решений в&nbsp;России 2020, в&nbsp;TOP-5 аутсорсеров поддержки решений SAP в&nbsp;России по&nbsp;версии аналитического центра TAdviser`,).bg-dark.section--vh
 	+sStatus2.bg-white.section--vh
+	+sExpert.bg-dark.section--vh
 	+sCaptionBlockStatus.bg-white
 	//- +sNews.bg-white.section--vh
 	//- +sEvents.bg-dark.section--vh

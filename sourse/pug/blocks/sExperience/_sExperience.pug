@@ -2,9 +2,11 @@ mixin sExperienceListItem(listTitle, listText)
 	.col-6(data-aos="fade-up" data-aos-delay="300")
 		+e.list-title!= listTitle
 		+e.text!= listText
-
+//- (data-aos="fade-up" data-aos-delay="300")
 mixin sExperienceItem(imgBg, bankImg, upTitle, title, subText)
-	+e.item&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
+	+e.item.section--vh&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
+		+e.img-wrap
+			+img(`img/${imgBg}`, 'bg')
 		+e.wrap
 			+img(`img/svg/${bankImg}`)
 			+e.uptitle!= upTitle
@@ -16,49 +18,72 @@ mixin sExperienceItem(imgBg, bankImg, upTitle, title, subText)
 					+e.read(href="#" data-aos="fade-up" data-aos-delay="300")
 						+icon('arrow-right-link')
 						p Подробнее о проекте
+
+mixin sExperienceMap(id, title, subText, center)
+	+e.item.section--vh&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
 		+e.img-wrap
-			+img(`img/${imgBg}`, 'bg')
+			.map(data-center=`${center}` id=`map-${id}`)
+		+e.wrap
+			h2!= title
+			+e.sub-text!= subText
+			+e.num(href="tel:+74956637759") +7 495 663 7759
+			+e.email(href="mailto:info@saprun.com") info@saprun.com
 
 mixin sExperience(data)
 	// start sExperience
 	+b.category-filter 
-		+e.wrap
-			+e.icon-wrap
+		+e.toggle
+			+e.toggle-inner
 				+icon('filter')
-			p Фильтр
+				+e.text Фильтр
+			//- +e.icon-wrap
 		+e.content
 			+icon('close')
 			p Фильтр
-			+select('', 'Выберите отрасль', 'Финансы', 'Сеть и управление расходами', 'Управление цепочками поставок', 'Взаимоотношение с клиентами и клиентский опыт')
-				+icon('chevron-down')
-			+select('', 'Выберите отрасль', 'Финансы', 'Сеть и управление расходами', 'Управление цепочками поставок', 'Взаимоотношение с клиентами и клиентский опыт')
-				+icon('chevron-down')
+			+e.select-wrap
+				select.custom-select.custom-select--js
+					option Выберите отрасль
+					option Финансы
+					option Сеть и управление расходами
+					option Управление цепочками поставок
+					option Взаимоотношение с клиентами и клиентский опыт
+				select.custom-select.custom-select--js
+					option Выберите отрасль
+					option Финансы
+					option Сеть и управление расходами
+					option Управление цепочками поставок
+					option Взаимоотношение с клиентами и клиентский опыт
 			+e.confrim(href="#").btn.btn-primary Применить
 	+b.SECTION.sExperience.section#sExperience&attributes(attributes)
-		+sExperienceItem('sExperience-bg-1.jpg', 'Infinbank.svg', 'Банки', 'Программа проектов &laquo;Реновация&raquo; цифровой трансформации банка InfinBank', 'Управление цепочками поставок, Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт')
+		+sExperienceItem('sExperience-bg-1.jpg', 'Infinbank.svg', 'Банки', 'Программа проектов &laquo;Реновация&raquo; цифровой трансформации банка InfinBank', 'Управление цепочками поставок, Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт').bg-dark
 			+sExperienceListItem('№1', 'Первое внедрение SAP в&nbsp;банковском секторе Узбекистана. Проект-победитель SAP Quality Awords 2017')
 			+sExperienceListItem('220+', 'Источников информации из&nbsp;систем и&nbsp;подразделений банка объединено в&nbsp;КХД')
 			+sExperienceListItem('400', 'Количество пользователей единой системы')
-		+sExperienceItem('sExperience-bg-2.jpg', 'transBlack.svg', 'Нефть и газ', 'Управление программой IT-деятельности компании на&nbsp;базе SAP BPC&nbsp;NW', 'Взаимоотношения с клиентами и клиентский опыт').--white.--ordered
+		+sExperienceItem('sExperience-bg-2.jpg', 'transBlack.svg', 'Нефть и газ', 'Управление программой IT-деятельности компании на&nbsp;базе SAP BPC&nbsp;NW', 'Взаимоотношения с клиентами и клиентский опыт').bg-white
 			+sExperienceListItem('400', 'Пользователей системы на&nbsp;базе SAP BPC&nbsp;NW')
 			+sExperienceListItem('97', 'Отчетных форм унифицировано')
-		+sExperienceItem('sExperience-bg-3.jpg', 'pulkovo-white.svg', 'Транспорт и логистика', 'Автоматизированная система управления ресурсами SAP ERP', 'Управление цепочками поставок, Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт')
+		+sExperienceItem('sExperience-bg-3.jpg', 'pulkovo-white.svg', 'Транспорт и логистика', 'Автоматизированная система управления ресурсами SAP ERP', 'Управление цепочками поставок, Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт').bg-dark
 			+sExperienceListItem('2500', 'Пользователей системы всех юридических лиц и&nbsp;филиалов &laquo;BBCC&raquo;')
 			+sExperienceListItem('17', 'Подмодулей SAP ERP')
-		+sExperienceItem('sExperience-bg-4.jpg', 'sberbank.svg', 'Банки', 'Построение автоматизированной системы распределения операционных расходов', 'Сеть и&nbsp;управление расходами').--white.--ordered
+		+sExperienceItem('sExperience-bg-4.jpg', 'sberbank.svg', 'Банки', 'Построение автоматизированной системы распределения операционных расходов', 'Сеть и&nbsp;управление расходами').bg-white
 			+sExperienceListItem('800', 'Территориальных подразделений используют систему')
 			+sExperienceListItem('2000', 'МВЗ-источников данных')
-		+sExperienceItem('sExperience-bg-5.jpg', 'gazprom-white.svg', 'Нефть и газ', 'Корпоративное хранилище данных блока экономики и&nbsp;финансов', 'Финансы, Управление цепочками поставок')
+		+sExperienceItem('sExperience-bg-5.jpg', 'gazprom-white.svg', 'Нефть и газ', 'Корпоративное хранилище данных блока экономики и&nbsp;финансов', 'Финансы, Управление цепочками поставок').bg-dark
 			+sExperienceListItem('91', 'Компания переведена на&nbsp;автоматическую загрузку данных через КХД')
 			+sExperienceListItem('5', 'Уровней сбора и&nbsp;подготовки данных для подготовки финансовой отчетности')
 			+sExperienceListItem('№1', 'Проект-победитель SAP Value Award 2018')
-		+sExperienceItem('sExperience-bg-6.jpg', 'aapoca-white.svg', 'Энергетика и добыча', 'Ааналитическая система &laquo;Информационные панели для руководителей&raquo;', 'Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт').--white.--ordered
+		+sExperienceItem('sExperience-bg-6.jpg', 'aapoca-white.svg', 'Энергетика и добыча', 'Ааналитическая система &laquo;Информационные панели для руководителей&raquo;', 'Взаимоотношения с&nbsp;клиентами и&nbsp;клиентский опыт').bg-white
 			+sExperienceListItem('100', 'Пользователей системы')
 			+sExperienceListItem('57', 'Отчетов Web Intelligence')
 			+sExperienceListItem('№1', 'Проект-победитель SAP Value Award 2018')
-		+e.showMore(href="#")
+		+e.showMore(href="#" data-aos="fade-up" data-aos-delay="300")
 			| Показать ещё проекты
 			+icon('chevron-down')
 	// end sExperience
 
-	//- sExperience-bg-1.jpg
+mixin sExperience2(data)
+	+b.SECTION.sExperience--map.section#sExperience&attributes(attributes)
+		+sExperienceMap(0, 'Офис Москвы', 'ул. Октябрьская 72, 127521', '55.79916256893915, 37.61309849999998').bg-white
+		+sExperienceMap(1, 'Офис Санкт-Петербурга', 'ул. Белоостровская 17к2, 197342', '59.98682106410957, 30.32125800000001').bg-dark
+		+sExperienceMap(2, 'Офис Перми', 'ул. Стахановская д.54И, 614066', '57.98969856659982, 56.20387749999989').bg-white
+		//- +sExperienceMap
