@@ -30,7 +30,7 @@
 		font-weight: 300;
 		.icon {
 			font-size: rem(16);
-			color: #000;
+			// color: #000;
 			flex: 0 0 auto;
 			margin-right: 8px;
 		}
@@ -40,6 +40,7 @@
 		font-weight: 600;
 		color: #08080B;
 		margin-bottom: 24px;
+		text-transform: uppercase;
 	}
 	h1 {
 		margin-bottom: 27px;
@@ -152,7 +153,8 @@
 		tbody {
 			border-top: none!important;
 			& > tr {
-				&:nth-child(2n) {
+				@include mt;
+				&:hover {
 					background-color: rgba($color: #EFEAE7, $alpha: 0.5);
 				}
 			}

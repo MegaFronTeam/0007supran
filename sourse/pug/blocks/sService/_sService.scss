@@ -111,6 +111,13 @@
 			&__caption {
 				font-size: rem(18);
 			}
+			&__online {
+				font-size: rem(13);
+				font-weight: 300;
+				text-transform: uppercase;
+				margin-bottom: rem(6);
+				padding-top: rem(6);
+			}
 			&__link {
 				color: $primary;
 				@include media-breakpoint-up(lg) {

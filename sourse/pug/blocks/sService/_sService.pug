@@ -18,7 +18,7 @@ mixin sService(data)
 				//- +item('Прикладная и мобильная разработка','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima molestiae necessitatibus esse recusandae omnis odio nobis maxime eos nemo fugit mollitia beatae magnam enim expedita iusto repellendus non blanditiis, ullam et laudantium!')
 	// end sService
 
-mixin sService2Item(title,caption, right, img, subtext, single)
+mixin sService2Item(title,caption, right, img, subtext, single, online)
 	.col-md(data-aos="fade-up" data-aos-delay="300")
 		+e.item(href="#")&attributes(attributes)
 			if right
@@ -37,6 +37,8 @@ mixin sService2Item(title,caption, right, img, subtext, single)
 				+img(`img/svg/${img}`)
 			if title
 				+e.title!=title
+			if online
+				+e.online online
 			if caption
 				+e.caption!=caption
 			if subtext
