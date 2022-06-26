@@ -28,8 +28,54 @@
 			h2{
 				text-transform: none;
 			}
+			p {
+				font-size: rem(13);
+				font-weight: 300;
+				opacity: 0.5;
+				margin-bottom: rem(15);
+			}
+			.custom-input {
+				margin-bottom: rem(12);
+				&:last-child {
+					margin-bottom: rem(32);
+				}
+				&__input {
+					border-color: #fff;
+				}
+				&__text {
+					font-size: rem(13);
+					font-weight: 300;
+					vertical-align: text-bottom;
+				}
+			}
 		}
-		 
+	&--2 {
+		.form-wrap__policy {
+			margin-bottom: rem(16);
+		}
+		.filepond {
+			cursor: pointer;
+			&--drop-label {
+				cursor: pointer;
+				border-radius: 4px;
+				font-size: rem(13);
+				font-weight: 300;
+				background-color: rgba(255, 255, 255, 0.05);
+				border: 1px dashed rgba(255, 255, 255, 0.2);
+				color: #7E7D85;
+				label {
+					cursor: pointer;
+				}
+			}
+			&--panel-root {
+				cursor: pointer;
+				background-color: transparent !important;
+			}
+			&--credits {
+				display: none;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -901,6 +901,35 @@ function eventHandler() {
 			};
 		ymaps.ready(init);
 	}
+
+	const swipersReviews = new Swiper('.sNews--Reviews__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 47,
+			}
+		}
+	});
+
+	// Get a reference to the file input element
+	const inputElement = document.querySelector('input[type="file"]');
+
+	// Create a FilePond instance
+	const pond = FilePond.create(inputElement, {
+		labelIdle: `Нажмите или перетащите  файлы в эту область. .rar .zip .doc .docx .pdf .jpg не более 10 мб`,
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

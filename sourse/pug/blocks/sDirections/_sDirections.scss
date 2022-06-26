@@ -1,18 +1,42 @@
 // start .sDirections
 .sDirections {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(32)};
+	--sPB: #{rem(16)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(76)};
+		--sPB: #{rem(60)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
+		padding: rem(24) 0;
+		&:not(:last-child) {
+			border-bottom: 1px solid #E3E7EC;
+		}
 	}
 	.section-title{
-		margin-bottom: rem(76);
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(52);
+		}
 		h2 {
 			margin-bottom: 0;
+			font-weight: 500;
 		}
+	}
+	h4 {
+		font-weight: 300;
+		margin-bottom: rem(16);
+		color: #08080B;
+		@include media-breakpoint-up(lg) {
+			max-width: rem(330);
+		}
+	}
+	p {
+		font-weight: 300;
+		color: $secondary;
+		margin-bottom: 0;
 	}
 	&__col{
 
