@@ -1,7 +1,7 @@
 mixin sDirections(data)
 	// start sDirections
 	+b.SECTION.sDirections.section#sDirections&attributes(attributes)
-		.container
+		.container(data-aos="fade-up" data-aos-delay="300")
 			+b.section-title
 				h2 Направления
 			mixin item(title, text)

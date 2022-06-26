@@ -930,6 +930,40 @@ function eventHandler() {
 	const pond = FilePond.create(inputElement, {
 		labelIdle: `Нажмите или перетащите  файлы в эту область. .rar .zip .doc .docx .pdf .jpg не более 10 мб`,
 	});
+
+	const sAdvantagesSwipers = new Swiper('.sAdvantages__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 69,
+			}
+		}
+	});
+
+	const sTariffsSwipers = new Swiper('.sTariffs__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: {
+			992: {
+				// slidesPerView: 2,
+				spaceBetween: 0,
+			}
+		}
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

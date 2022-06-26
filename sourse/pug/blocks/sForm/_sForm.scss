@@ -36,6 +36,7 @@
 			}
 			.custom-input {
 				margin-bottom: rem(12);
+				cursor: pointer;
 				&:last-child {
 					margin-bottom: rem(32);
 				}
@@ -50,6 +51,10 @@
 			}
 		}
 	&--2 {
+		background-color: transparent !important;
+		h2 {
+			font-weight: 500;
+		}
 		.form-wrap__policy {
 			margin-bottom: rem(16);
 		}
@@ -73,6 +78,31 @@
 			}
 			&--credits {
 				display: none;
+			}
+		}
+	}
+	&.bg-white {
+		.form-wrap {
+			&__input-title {
+				color: #08080B;
+			}
+			&__btn {
+				@extend .btn-secondary;
+				--bs-btn-bg: #08080B;
+				--bs-btn-color: #fff;
+			}
+		}
+		.custom-input {
+			&__input {
+				border-color: #08080B;
+			}
+		}
+		.filepond {
+			&--drop-label {
+				cursor: pointer;
+				background-color: rgba(8, 8, 11, 0.05);
+				border: 1px dashed rgba(8, 8, 11, 0.2);
+				color: #7E7D85;
 			}
 		}
 	}

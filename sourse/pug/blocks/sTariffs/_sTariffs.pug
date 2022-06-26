@@ -1,0 +1,41 @@
+mixin sTariffs(data)
+	// start sTariffs
+	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
+		.container(data-aos="fade-up" data-aos-delay="300")
+			+b.section-title
+				h2 Тарифы
+			+e.slider--js.swiper
+				+e.row.row.swiper-wrapper
+					+e.slide.swiper-slide.col-12.col-lg-4
+						+img('img/sTariffs-img-1.png')
+						h6 Очное обучение
+						ul
+							li Персональные инструкции от&nbsp;SAP экспертов в&nbsp;ультрасовременном Учебном центре
+							li Специалисты SAP обеспечат получение практических навыков при выполнении упражнений
+							li Наши эксперты всегда готовы ответить на&nbsp;ваши вопросы
+						+e.btn(href="#").btn.btn-outline-light Подать заявку
+						+e.link(href="#") 
+							| Подробнее
+							+icon('popup')
+					+e.slide.swiper-slide.col-12.col-lg-4
+						+img('img/sTariffs-img-2.png')
+						h6 Дистанционное обучение
+						ul
+							li Обучение под руководством экспертов SAP
+							li Дистанционное обучение в&nbsp;виртуальном классе
+							li Наши эксперты всегда готовы ответить на&nbsp;ваши вопросы
+						+e.btn(href="#").btn.btn-outline-light Подать заявку
+						+e.link(href="#") 
+							| Подробнее
+							+icon('popup')
+					+e.slide.swiper-slide.col-12.col-lg-4
+						+img('img/sTariffs-img-3.png')
+						h6 Самостоятельное обучение
+						ul
+							li Курсы для самостоятельного изучения (e-Learnings), доступны в&nbsp;любое время и&nbsp;в&nbsp;любом месте
+						+e.btn(href="#").btn.btn-outline-light Подать заявку
+						+e.link(href="#") 
+							| Подробнее
+							+icon('popup')
+				.swiper-scrollbar
+	// end sTariffs

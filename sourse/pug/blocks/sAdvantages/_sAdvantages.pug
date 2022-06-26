@@ -1,0 +1,30 @@
+mixin sAdvantages(data)
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container(data-aos="fade-up" data-aos-delay="300")
+			.row
+				.col-lg-4
+					h2 Преимущества курсов SAP
+				.col-lg-8
+					+e.slider--js.swiper
+						+e.wrapper.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.item
+									+img('img/svg/sOpportunities-img-1.svg')
+									h6 Темп
+									p Курсы соответствующие потребностям Вашего бизнеса
+								+e.item
+									+img('img/svg/sOpportunities-img-2.svg')
+									h6 Удобство
+									p Разные виды обучения под руководством опытных преподавателей
+							+e.slide.swiper-slide
+								+e.item
+									+img('img/svg/sOpportunities-img-4.svg')
+									h6 Скорость
+									p Оперативный доступ к обучению по новым продуктам SAP и поддержка от преподавателей
+								+e.item
+									+img('img/svg/sOpportunities-img-5.svg')
+									h6 Система скидок
+									p Специальные цены при регистрации через Авторизованного партнера по обучению SAP
+						.swiper-scrollbar
+	// end sAdvantages

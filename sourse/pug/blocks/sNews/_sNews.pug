@@ -92,7 +92,7 @@ mixin sNewsPublication(data)
 mixin sNewsReviews(data)
 	// start sNews
 	+b.SECTION.sNews--PressCenter.section#sNews&attributes(attributes)
-		.container
+		.container(data-aos="fade-up" data-aos-delay="300")
 			.swiper.sNews--Reviews__slider--js
 				+b.section-title
 					.row
