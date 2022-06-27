@@ -150,7 +150,7 @@
 }
 
 .toggle-menu-mobile {
-	--h: 1px;
+	--h: #{rem(1.2)};
 	--color: var(--top-nav-color, #fff);
 	--position: calc(var(--h) * 5);
 	will-change: transform;

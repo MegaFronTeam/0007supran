@@ -34,7 +34,8 @@ mixin sService2Item(title,caption, right, img, subtext, single, online)
 				+e.link--left.d-inline-block.d-md-none
 					+icon('arrow-right-link')
 			if img
-				+img(`img/svg/${img}`)
+				+e.img-wrap
+					+img(`img/svg/${img}`)
 			if title
 				+e.title!=title
 			if online

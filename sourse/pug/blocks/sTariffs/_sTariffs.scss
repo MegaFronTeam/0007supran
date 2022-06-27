@@ -59,6 +59,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: rem(27);
+			height: rem(120);
 		}
 		h6 {
 			text-align: center;
@@ -82,8 +83,9 @@
 					background-image: url('../img/svg/check.svg');
 					background-repeat: no-repeat;
 					background-position: center;
-					width: 16px;
-					height: 16px;
+					background-size: 100%;
+					width: rem(16px);
+					height: rem(16px);
 					left: 0;
 					top: 0;
 				}
