@@ -17,6 +17,11 @@
 	z-index: 100;
 	color: var(--top-nav-color, #fff);
 	&__logo{
+		svg{
+
+			width: rem(112);
+			height: rem(23);
+		}
 		[fill="white"]{
 			fill:  var(--top-nav-color, #fff) !important;
 		}

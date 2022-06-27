@@ -43,7 +43,8 @@
 		// }
 		@include media-breakpoint-up(md) {
 			width: 50%;
-			--ratio: 720/641;
+			--ratio: 0;
+			min-height: 100%;
 		}
 		img {
 			position: absolute;
@@ -82,6 +83,7 @@
 		}
 		img {
 			margin-bottom: rem(8);
+			width: rem(172);
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(72);
 			}
@@ -221,13 +223,13 @@
 
 .category-filter {
 	position: fixed;
-	bottom: 56px;
-	right: 8px;
+	bottom: rem(56px);
+	right: rem(8px);
 	z-index: 44;
 	width: 100%;
 	@include media-breakpoint-up(md) {
-		bottom: 24px;
-		left: 24px;
+		bottom: rem(24px);
+		left: rem(24px);
 		right: auto;
 	}
 	&__toggle {
@@ -241,7 +243,7 @@
 		margin-left: auto;
 		cursor: pointer;
 		font-weight: 300;
-		border-radius: 100px;
+		border-radius: rem(100px);
 		background-color: $primary;
 		// padding-left: 16px;
 		// height: 56px;
@@ -254,7 +256,7 @@
 		}
 		.icon {
 			font-size: rem(24);
-			margin-right: 7px;
+			margin-right: rem(7px);
     	flex: 0 0 auto;
 		}
 		// p {
@@ -275,8 +277,8 @@
 	&__icon-wrap {
 		cursor: pointer;
 		@include mt(.1s);
-		padding: 12px;
-		border-radius: 49px;
+		padding: rem(12px);
+		border-radius: rem(49px);
 		background-color: $primary;
 		flex: 0 0 auto;
 		order: 2;
@@ -299,9 +301,9 @@
 			}
 		}
 		&:hover {
-			border-radius: 0 49px 49px 0;
+			border-radius: 0 rem(49px) rem(49px) 0;
 			@include media-breakpoint-up(md) {
-				border-radius: 49px 0 0 49px;
+				border-radius: rem(49px) 0 0 rem(49px);
 			}
 			&:before {
 				display: block;
@@ -318,7 +320,7 @@
 		background-color: #fff;
 		padding: rem(24);
 		width: 100%;
-		max-width: 348px;
+		max-width:rem( 348px);
 		bottom: 0;
 		right: 0;
 		left: auto;
@@ -336,8 +338,8 @@
 			font-size: rem(24);
 			color: $body-color;
 			position: absolute;
-			right: 8px;
-			top: 8px;
+			right: rem(8px);
+			top: rem(8px);
 			stroke: currentColor;
 			cursor: pointer;
 		}
@@ -347,8 +349,8 @@
 		}
 		@include media-breakpoint-down(md) {
 			max-width: none;
-			right: -8px;
-			bottom: -13px;
+			right: rem(-8px);
+			bottom: rem(-13px);
 		}
 	}
 	// &__input-wrap {
@@ -386,6 +388,7 @@
 	// 	}
 	// }
 	.choices {
+		font-size: 1rem;
 		&:last-child {
 			margin-bottom: rem(24);
 		}
@@ -398,7 +401,7 @@
 	}
 	.choices__list--dropdown .choices__item--selectable {
 		@media (min-width: 640px) {
-			padding: 10px;
+			padding: rem(10px);
 		}
 		&.is-selected {
 			color: $primary;
@@ -412,7 +415,7 @@
 		font-weight: 600;
 	}
 	&__toggle-inner {
-		width: 100px;
+		width: rem(100px);
 		display: flex;
 		align-items: center;
 		padding-left: rem(16);
@@ -422,4 +425,34 @@
 		@include mt;
 		transform: translateX(var(--tx, #{rem(10)}));
 	}
+}
+
+.choices{
+	margin-bottom: rem(24);
+}
+.choices__list--single {
+	// display: inline-block;
+	padding: rem(4px) rem(16px) rem(4px) rem(4px);
+	// width: 100%;
+}
+.choices__inner{ 
+    padding: rem(7.5px) rem(7.5px) rem(3.75px);
+    border-width: rem(1);
+    border-radius: rem(2.5px);
+    font-size: rem(14px);
+    min-height: rem(44px);
+    overflow: hidden;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+	padding-bottom: rem(7.5px);
+}
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list{
+	min-height: rem(300);
+}
+
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item{
+	font-size: rem(14);
 }

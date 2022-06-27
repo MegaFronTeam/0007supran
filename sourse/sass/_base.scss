@@ -597,11 +597,11 @@ iframe {
 .dots-wrap__item{
 	// background-blend-mode: darken, luminosity;
 	cursor: pointer;
-	width: 4px;
-	height: 4px;
+	width: rem(4px);
+	height: rem(4px);
 	border-radius: 50%;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: rem(20px);
+	margin-bottom: rem(20px);
 	position: relative;
 	background:   rgb(210 210 210 / 60%);
 	background-blend-mode: darken, luminosity;
@@ -679,4 +679,7 @@ iframe {
 .swiper-horizontal>.swiper-scrollbar{
 	width: 100%;
 	left: 0;
+}
+.swiper-horizontal>.swiper-scrollbar {
+	height: rem(2);
 }
