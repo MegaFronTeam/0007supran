@@ -39,11 +39,11 @@
 		font-size: rem(16);
 		font-weight: 600;
 		color: #08080B;
-		margin-bottom: 24px;
+		margin-bottom: rem(24px);
 		text-transform: uppercase;
 	}
 	h1 {
-		margin-bottom: 27px;
+		margin-bottom: rem(27px);
 		line-height: 1.25em;
 	}
 	// p {
@@ -53,13 +53,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 16px 8px;
+		gap: rem(16px) rem(8px);
 		a {
-			font-size: 10px;
+			font-size: rem(10px);
 			font-weight: 300;
-			padding: 1px 7.5px;
+			padding: 1px rem(7.5px);
 			border: 0.5px solid $primary;
-			border-radius: 35px;
+			border-radius: rem(35px);
 			
 			// &:not(:last-child) {
 			// 	margin-right: 8px;
@@ -100,7 +100,7 @@
 	ul {
 		li {
 			&::marker {
-				font-size: 16px;
+				font-size: rem(16px);
 			}
 		}
 	}
@@ -131,7 +131,7 @@
 		overflow-x: auto;
 		position: relative;
 		table {
-			min-width: 579px;
+			min-width: rem(579px);
 		}
 	}
 	table {
@@ -195,11 +195,12 @@
 				content: '';
 				position: absolute;
 				display: block;
-				width: 24px;
-				height: 24px;
+				width: em(18);
+				height: em(18);
 				background-image: url("../img/svg/quote.svg");
 				background-repeat: no-repeat;
 				background-position: center;
+				background-size: 100%;
 				left: 0;
 				top: 0;
 			}
