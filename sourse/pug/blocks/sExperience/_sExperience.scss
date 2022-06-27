@@ -145,8 +145,10 @@
 			--bs-gutter-x: #{rem(45)};
 		}
 	}
-	&__showMore {
+	&__animation {
 		background-color: #08080B;
+	}
+	&__showMore {
 		position: relative;
 		display: flex;
 		justify-content: center;

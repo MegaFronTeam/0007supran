@@ -4,10 +4,10 @@ mixin sExperienceListItem(listTitle, listText)
 		+e.text!= listText
 //- (data-aos="fade-up" data-aos-delay="300")
 mixin sExperienceItem(imgBg, bankImg, upTitle, title, subText)
-	+e.item.section--vh&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
-		+e.img-wrap
+	+e.item.section--vh&attributes(attributes)
+		+e.img-wrap(data-aos="fade-up" data-aos-delay="300")
 			+img(`img/${imgBg}`, 'bg')
-		+e.wrap
+		+e.wrap(data-aos="fade-up" data-aos-delay="300")
 			+img(`img/svg/${bankImg}`)
 			+e.uptitle!= upTitle
 			h3!= title
@@ -20,10 +20,10 @@ mixin sExperienceItem(imgBg, bankImg, upTitle, title, subText)
 						p Подробнее о проекте
 
 mixin sExperienceMap(id, title, subText, center)
-	+e.item.section--vh&attributes(attributes)(data-aos="fade-up" data-aos-delay="300")
-		+e.img-wrap
+	+e.item.section--vh&attributes(attributes)
+		+e.img-wrap(data-aos="fade-up" data-aos-delay="300")
 			.map(data-center=`${center}` id=`map-${id}`)
-		+e.wrap
+		+e.wrap(data-aos="fade-up" data-aos-delay="300")
 			h2!= title
 			+e.sub-text!= subText
 			+e.num(href="tel:+74956637759") +7 495 663 7759
@@ -76,9 +76,10 @@ mixin sExperience(data)
 			+sExperienceListItem('100', 'Пользователей системы')
 			+sExperienceListItem('57', 'Отчетов Web Intelligence')
 			+sExperienceListItem('№1', 'Проект-победитель SAP Value Award 2018')
-		+e.showMore(href="#" data-aos="fade-up" data-aos-delay="300")
-			| Показать ещё проекты
-			+icon('chevron-down')
+		+e.animation
+			+e.showMore(href="#" data-aos="fade-up" data-aos-delay="300")
+				| Показать ещё проекты
+				+icon('chevron-down')
 	// end sExperience
 
 mixin sExperience2(data)

@@ -67,16 +67,18 @@
 		display: flex;
 		flex-wrap: wrap;
 		// justify-content: center;
-		gap: 16px 8px;
+		// gap: 16px 8px;
 		position: relative;
 		z-index: 3;
 		a {
-			font-size: 10px;
+			font-size: rem(10);
 			font-weight: 300;
-			padding: 1px 7.5px;
+			padding: rem(1) rem(7.5);
 			border: 0.5px solid $primary;
 			border-radius: 35px;
 			color: $primary;
+			margin-right: rem(16);
+			margin-bottom: rem(8);
 			&:hover {
 				color: $white;
 				background-color: $primary;
