@@ -98,7 +98,7 @@
 
 	&__contact{
 		@include media-breakpoint-down(lg) {
-
+			
 			border-top: 1px solid rgba(#E3E7EC, .2);
 			padding-top: rem(16);
 			margin-top: 16px;
@@ -110,8 +110,18 @@
 		}
 		margin-bottom: rem(20);
 	}
+	&__block--addr{
+			@include media-breakpoint-down(md) {
+				padding-top: 0;
+			}
+
+	}
 	&__block--footer{
 		border-top: 1px solid rgba(#E3E7EC, .2);
+		@include media-breakpoint-down(md) {
+			text-transform: uppercase;
+		}
+
 		font-size: rem(13);
 		> * {
 			opacity: 0.3;

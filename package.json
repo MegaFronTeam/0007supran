@@ -49,6 +49,7 @@
     "aos": "^3.0.0-beta.6",
     "chart.js": "^3.8.0",
     "choices.js": "^10.1.0",
+    "filepond": "^4.30.4",
     "gsap": "^3.10.4",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",

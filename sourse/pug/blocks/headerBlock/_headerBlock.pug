@@ -71,7 +71,7 @@ mixin headerArtical(link, img, desc, ...tags)
 				block
 				if desc
 					+e.desc Управление цепочками поставок, Взаимоотношения с клиентами и клиентский опыт
-				+e.tags.d-none.d-md-flex(data-aos="fade-up" data-aos-delay="300")
+				+e.tags.d-none.d-md-flex
 					each tag in tags
 						a(href="#")!= tag
 

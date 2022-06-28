@@ -105,7 +105,7 @@
 					color: $primary;
 				}
 				&--single {
-					padding-bottom: 38px;
+					// padding-bottom: rem(38px);
 				}
 			}
 			&__caption {
@@ -114,7 +114,7 @@
 			&__online {
 				font-size: rem(13);
 				font-weight: 300;
-				text-transform: uppercase;
+				// text-transform: uppercase;
 				margin-bottom: rem(6);
 				padding-top: rem(6);
 			}
@@ -126,20 +126,21 @@
 						top: 50%;
 						transform: translateY(-50%);
 						margin-top: 0;
-						right: -85px;
+						right: rem(-85px);
 					}
 					&--left {
 						position: absolute;
 						top: 50%;
 						transform: translateY(-50%);
 						margin-top: 0;
-						left: -85px;
+						left: rem(-85px);
 					}
 				}
 				&--single {
-					position: absolute;
-					bottom: 0;
-					left: 0;
+					// position: absolute;
+					// bottom: 0;
+					// left: 0;
+					margin-top: rem(8);
 				}
 				.icon {
 					font-size: rem(7);
@@ -154,6 +155,21 @@
 		}
 		img {
 			display: block;
+		}
+	}
+	&__img-wrap{
+		// @include block(148, 48);
+		display: flex;
+		align-items: center;
+		width: rem(148);
+		max-height: rem(48);
+		img{
+
+			// position: absolute;
+			width: 100%;
+			max-height: 100%;
+			flex-shrink: 0;
+			// height: 100%;
 		}
 	}
 	@include media-breakpoint-up(xl) {

@@ -20,3 +20,32 @@ mixin sForm()
 				+policy
 				+e.btn.btn.btn-primary(type="submit")  Отправить
 	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.SECTION.sForm--2.section#sForm&attributes(attributes)
+		+blur()
+		.container(data-aos="fade-up" data-aos-delay="300")
+			+form-wrap
+				+b.section-title
+					h2 Заполните заявку для записи на стажировку
+				+e.row.row
+					.col-md-6
+						+input("Имя")
+					.col-md-6
+						+input("Фамилия")
+					.col-md-6
+						+input("Телефон",'tel')
+					.col-md-6
+						+input("E-mail",'email')
+					.col-12
+						p Интересующий вид направления
+						+in-c('checkbox', 'Финансы')
+						+in-c('checkbox', 'Сеть и управление расходами')
+						+in-c('checkbox', 'Управление цепочками поставко')
+						+in-c('checkbox', 'Взаимоотношения с клиентами и клиентский опыт')
+					.col-12
+						<input type="file" class="filepond" name="filepond" multiple data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
+				+policy
+				+e.btn.btn.btn-primary(type="submit")  Отправить
+	// end sForm

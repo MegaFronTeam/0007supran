@@ -144,6 +144,8 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/s404/_s404'; 
 @import '../pug/blocks/sExperience/_sExperience'; 
 @import '../pug/blocks/sDirections/_sDirections'; 
+@import '../pug/blocks/sAdvantages/_sAdvantages'; 
+@import '../pug/blocks/sTariffs/_sTariffs'; 
 
 @import "media"; // Всегда в конце
 

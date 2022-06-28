@@ -84,8 +84,43 @@ mixin sNewsPublication(data)
 					+b.publ-item.swiper-slide
 						+b.end-news-card(href="#")
 							+e.wrap
-								+e.title Перейти в раздел новости
+								+e.title Перейти в раздел публикации
 								+icon('arrow-right-link')
+				.swiper-scrollbar
+	// end sNews
+
+mixin sNewsReviews(data)
+	// start sNews
+	+b.SECTION.sNews--PressCenter.section#sNews&attributes(attributes)
+		.container(data-aos="fade-up" data-aos-delay="300")
+			.swiper.sNews--Reviews__slider--js
+				+b.section-title
+					.row
+						.col
+							h2 Отзывы
+						.col-auto 
+							.arrow-wrapper
+								.swiper-button-prev
+									+icon('chevron-left')
+								.swiper-button-next
+									+icon('chevron-right')
+				.swiper-wrapper
+					- for (var x = 0; x < 6; x++)
+						//- mixin sNewsSlide()
+						+e.slide--sNews.swiper-slide
+							h4 Работаю в&nbsp;компании 3&nbsp;года, начинала с&nbsp;менеджера наряду, недавно доросла до&nbsp;заместителя руководителя. Каждый день сталкиваясь с&nbsp;новыми задачами, не&nbsp;плюхаюсь сама, если это что-то неизвестное, а&nbsp;получаю поддержку от&nbsp;своего руководителя.
+							+e.author
+								+img('img/reviews-img-1.jpg')
+								+e.text-wrap
+									h6 Ковалина Анастасия
+									p Заместитель руководителя
+						+e.slide--sNews.swiper-slide
+							h4 Дружный коллектив и&nbsp;дружелюбная атмосфера позволяют не&nbsp;утаиваться проблемам, а&nbsp;наоборот быстрее их&nbsp;решать, учитывая мнение каждого. Интересно в&nbsp;компании проходят любые процессы: праздники, акции и&nbsp;тп, просто поражаешься креативу сотрудников.
+							+e.author
+								+img('img/reviews-img-2.jpg')
+								+e.text-wrap
+									h6 Козловский Даниил
+									p Менеджер
 				.swiper-scrollbar
 	// end sNews
 

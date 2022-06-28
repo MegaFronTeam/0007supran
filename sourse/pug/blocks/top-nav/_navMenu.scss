@@ -59,7 +59,8 @@
 						background-color: #000;
 					}
 					&::after{
-						transform: rotate(var(--rotate, 90deg));
+						transform: rotate(var(--rotateL, 90deg));
+						@include mt;
 					}
 				}
 				.sub-menu-wrap{
@@ -104,7 +105,10 @@
 		}
 	}
 	.menu-item-has-children.active{
-		--rotate: 0;
+		& > a{
+			
+			--rotateL: 0;
+		}
 		// z-index: 2;
 		&> a{
 			color: $primary;
@@ -146,7 +150,7 @@
 }
 
 .toggle-menu-mobile {
-	--h: 1px;
+	--h: #{rem(1.2)};
 	--color: var(--top-nav-color, #fff);
 	--position: calc(var(--h) * 5);
 	will-change: transform;

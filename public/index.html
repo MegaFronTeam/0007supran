@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="libs/filepond/filepond.min.css"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
@@ -845,7 +846,7 @@
 			<!-- end sTrust-->
 			<!-- start sJoin-->
 			<section class="sJoin bg-white section section--vh" id="sJoin">
-				<div class="sJoin__inner">
+				<div class="sJoin__inner d-none d-lg-block">
 					<div class="sJoin__head"><svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M773.389 269.904L717.98 311.544C719.478 314.492 720.976 318.545 721.35 324.441C722.099 336.97 722.473 349.499 722.473 362.027C722.473 374.556 721.724 387.085 720.976 399.614C719.852 415.827 706.749 428.725 690.276 429.83C674.926 430.567 658.828 431.304 642.355 430.936C625.134 430.936 607.912 430.199 590.69 429.093C574.217 427.988 561.488 415.09 560.365 398.508C559.617 388.19 559.242 371.24 558.868 366.081H498.218L500.838 425.04C502.71 453.414 525.173 476.26 553.252 478.103C583.203 480.314 613.153 481.419 643.104 481.419C671.557 481.419 699.636 480.682 726.217 479.208C754.67 477.366 777.133 455.256 779.379 426.882C780.877 404.773 782 382.663 782 360.185C782 338.075 781.626 315.966 780.128 293.488C779.754 283.538 777.507 276.537 773.389 269.904Z" fill="#EB8A03" class="color-fill"/>
 <path d="M710.867 303.08L767.025 261.072C758.414 250.017 744.187 242.279 728.089 240.805C700.01 238.962 672.306 237.857 644.227 237.857C615.025 237.857 585.075 238.594 554.001 240.436C525.548 241.91 502.71 264.388 500.838 292.762C499.341 314.503 498.218 335.876 498.218 356.143H558.868C558.868 346.194 559.617 334.77 560.365 323.715C561.488 307.502 574.592 294.605 591.065 293.499C609.035 292.394 626.257 292.025 642.729 292.025C658.828 292.025 674.552 292.762 690.651 293.868C698.887 294.605 706.749 298.289 710.867 303.08Z" fill="#E1501D"  class="color-fill"/>
@@ -853,9 +854,22 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1280 0H0V720H1280V0ZM497.801 356.497C497.801 336.185 498.926 314.766 500.427 292.978C502.303 264.542 525.19 242.015 553.705 240.538C584.847 238.692 614.862 237.953 644.128 237.953C672.268 237.953 700.032 239.061 728.172 240.907C744.306 242.385 758.563 250.14 767.193 261.219L773.571 270.07C777.698 276.718 779.949 283.734 780.325 293.705C781.825 316.232 782.201 338.39 782.201 360.547C782.201 383.074 781.075 405.232 779.574 427.39C777.323 455.825 754.811 477.983 726.296 479.83C699.657 481.307 671.517 482.045 643.002 482.045C612.986 482.045 582.971 480.937 552.955 478.722C524.815 476.875 502.303 453.979 500.427 425.543L497.801 366.456V356.497Z" fill="white"/>
 </svg>
 					</div>
-					<div class="sJoin__img-wrap d-none d-lg-block"><img class="object-fit-js img-animate" src="img/sjoin-img.jpg" alt="" loading="lazy"/>
+					<div class="sJoin__img-wrap"> <img class="object-fit-js img-animate" src="img/sjoin-img.jpg" alt="" loading="lazy"/>
 					</div>
-					<div class="sJoin__img-wrap-mob d-lg-none"><img class="object-fit-js" src="img/sjoin-img-mobile.jpg" alt="" loading="lazy"/>
+					<div class="sJoin__col col-lg-6 container"> 
+						<div class="section">
+							<h2>Присоединяйтесь <br>  к&nbsp;команде &laquo;SAPRUN&raquo;</h2>
+							<p>В&nbsp;SAPRUN мы&nbsp;создаем успешный бизнес, в&nbsp;котором всем нам комфортно и&nbsp;интересно работать. Бизнес,  в&nbsp;котором отношения строятся на&nbsp;доверии, взаимовыгодном, доброжелательном и&nbsp;долгосрочном сотрудничестве. Наша цель&nbsp;&mdash; максимально реализовать потенциал клиентов и&nbsp;сотрудников.</p>
+							<a class="link-more" href="#">Присоединиться
+								<svg class="icon icon-arrow-right-link ">
+									<use xlink:href="img/svg/sprite.svg#arrow-right-link"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="d-lg-none">
+					<div class="sJoin__img-wrap"> <img class="object-fit-js img-animate" src="img/sjoin-img.jpg" alt="" loading="lazy"/>
 					</div>
 					<div class="sJoin__col col-lg-6 container"> 
 						<div class="section">
@@ -953,7 +967,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="footer__block container">
+				<div class="footer__block footer__block--addr container">
 					<div class="row">
 						<div class="col-lg-9">
 							<div class="row">
@@ -1022,13 +1036,13 @@
 					</div>
 				</div>
 				<div class="container">
-					<div class="footer__block footer__block--footer ttu">
+					<div class="footer__block footer__block--footer">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="footer__copy">Политика обработки персональных данных
 								</div>
 							</div>
-							<div class="col-md">
+							<div class="col-md ttu">
 								<div class="footer__year">© 2022 SAPRUN
 								</div>
 							</div>
@@ -1075,6 +1089,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
+		<script src="libs/filepond/filepond.min.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
 		<script src="libs/gsap/gsap.min.js"> </script>

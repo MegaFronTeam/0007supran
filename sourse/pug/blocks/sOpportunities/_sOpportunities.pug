@@ -17,3 +17,22 @@ mixin sOpportunities(data)
 				.col-md-4
 					+sAboutCaptionItem(`hosting`,`Услуги хостинга`,``)
 	// end sOpportunities
+
+mixin sOpportunities2(data)
+	// start sOpportunities
+	+b.sOpportunities.section#sOpportunities&attributes(attributes)
+		.container(data-aos="fade-up" data-aos-delay="300")
+			.row
+				.col-md-4
+					h2 Что вы получите от стажировки
+				.col-md-4
+					+sAboutCaptionItem(`sOpportunities-img-1`,`Темп`,`Курсы соответствующие потребностям Вашего бизнеса`)
+				.col-md-4
+					+sAboutCaptionItem(`sOpportunities-img-2`,`Удобство`,`Разные виды обучения под руководством опытных преподавателей`)
+				.col-md-4
+					+sAboutCaptionItem(`sOpportunities-img-3`,`Возможности`,`Разные виды обучения под руководством опытных преподавателей`)
+				.col-md-4
+					+sAboutCaptionItem(`sOpportunities-img-4`,`Скорость`,`Оперативный доступ к&nbsp;обучению по&nbsp;новым продуктам SAP и&nbsp;поддержка от&nbsp;преподавателей`)
+				.col-md-4
+					+sAboutCaptionItem(`sOpportunities-img-5`,`Система скидок`,`Специальные цены при регистрации через Авторизованного партнера по&nbsp;обучению SAP`)
+	// end sOpportunities

@@ -21,6 +21,17 @@ mixin sService(data)
 mixin sService2Item(title,caption, right, img, subtext, single, online)
 	.col-md(data-aos="fade-up" data-aos-delay="300")
 		+e.item(href="#")&attributes(attributes)
+			if img
+				+e.img-wrap
+					+img(`img/svg/${img}`)
+			if title
+				+e.title!=title
+			if online
+				+e.online online
+			if caption
+				+e.caption!=caption
+			if subtext
+				+e.subtext!= subtext
 			if right
 				if single
 					+e.link--single
@@ -33,16 +44,6 @@ mixin sService2Item(title,caption, right, img, subtext, single, online)
 					+icon('arrow-left-link')
 				+e.link--left.d-inline-block.d-md-none
 					+icon('arrow-right-link')
-			if img
-				+img(`img/svg/${img}`)
-			if title
-				+e.title!=title
-			if online
-				+e.online online
-			if caption
-				+e.caption!=caption
-			if subtext
-				+e.subtext!= subtext
 mixin sService2(data)
 	// start sService
 	+b.SECTION.sService--2.section#sService&attributes(attributes)

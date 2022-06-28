@@ -4,7 +4,7 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	position: relative;
-	z-index: 2;
+	z-index: 4;
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -28,6 +28,51 @@
 		margin-bottom: var(--y, 40px);
 		@include media-breakpoint-down(md) {
 			width: 90%;
+		}
+		&--sNews {
+			&::before {
+				content: '';
+				background-image: url('../img/svg/quote.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				width: rem(24px);
+				height: rem(24px);
+				display: block;
+				margin-bottom: rem(8);
+			}
+			h4 {
+				font-family: 'Playfair Display',serif;
+				margin-bottom: rem(22);
+			}
+		}
+	}
+	&__author {
+		display: flex;
+		align-items: center;
+		img {
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			width: 100%;
+			height: 100%;
+			max-width: rem(48px);
+			max-height: rem(48px);
+			border-radius: rem(83px);
+			flex: 0 0 auto;
+			margin-right: rem(16);
+		}
+	}
+	&__text-wrap {
+		h6 {
+			font-weight: 500;
+			text-transform: uppercase;
+			font-size: rem(12);
+			margin-bottom: rem(4);
+		}
+		p {
+			font-size: rem(13);
+			font-weight: 300;
+			margin-bottom: 0;
 		}
 	}
 
@@ -108,7 +153,7 @@
 	&__date {
 		color: $secondary;
 		font-weight: 300;
-		font-size: 13px;
+		font-size: rem(13px);
 		line-height: calc(16 / 13);
 	}
 	&__text {
@@ -181,7 +226,7 @@
 		margin-bottom: rem(16);
 	}
 	&__caption {
-		letter-spacing: 1px;
+		letter-spacing: rem(1px);
 		text-transform: uppercase;
 		font-weight: 500;
 		font-size: rem(12);

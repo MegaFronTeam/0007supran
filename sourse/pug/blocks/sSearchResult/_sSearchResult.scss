@@ -17,18 +17,18 @@
 		overflow: visible;
 		top: 0;
 		// top: -83px;
-    height: 40px;
+    height: rem(40);
 		left: 0;
 		position: relative;
-		margin-top: -61px;
+		margin-top: rem(-61);
 		@include media-breakpoint-up(xl) {
-			margin-top: -97px;
+			margin-top: rem(-89);
 		}
 		@include media-breakpoint-up(lg) {
-			margin-top: -83px;
+			margin-top: rem(-83);
 		}
 		@include media-breakpoint-up(md) {
-			left: 36px;
+			left: rem(36);
 		}
 	}
 	&__slide{
@@ -46,7 +46,7 @@
 	&__item {
 		// width: max-content;
 		@include mt;
-		padding: 0 21px;
+		padding: 0 rem(21);
 		position: relative;
 		height: 100%;
 		color: #fff;
@@ -57,7 +57,7 @@
 			position: absolute;
 			display: block;
 			width: 100%;
-			height: 2px;
+			height: rem(2);
 			background-color: transparent;
 			bottom: 0;
 			left: 0;
@@ -67,16 +67,18 @@
 		display: flex;
 		flex-wrap: wrap;
 		// justify-content: center;
-		gap: 16px 8px;
+		// gap: 16px 8px;
 		position: relative;
 		z-index: 3;
 		a {
-			font-size: 10px;
+			font-size: rem(10);
 			font-weight: 300;
-			padding: 1px 7.5px;
+			padding: rem(1) rem(7.5);
 			border: 0.5px solid $primary;
 			border-radius: 35px;
 			color: $primary;
+			margin-right: rem(16);
+			margin-bottom: rem(8);
 			&:hover {
 				color: $white;
 				background-color: $primary;

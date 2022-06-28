@@ -3,6 +3,10 @@
 	--animate-delay: 1.2s;
 	
 	// --bs-body-font-size: #{$em-base};
+	@media (min-width: 2400px) {
+		--bs-body-font-size: calc(#{$em-base}   + .62vw + .62vh); 
+	}
+
 	@include media-breakpoint-up(xl) {
 		--bs-body-font-size: calc(#{$em-base}   + .12vw + .12vh);
 
@@ -10,6 +14,7 @@
 		--sPB: #{rem(94)};
 		--sTPB: #{rem(40)};
 	}
+	
 
 	--sPT: #{rem(80 * .5)};
 	--sPB: #{rem(90 * .5)};

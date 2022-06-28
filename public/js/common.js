@@ -88,7 +88,8 @@ const JSCCommon = {
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
+			[ document.body, document.querySelector('html') ].forEach(el => el.classList.toggle("fixed"));
+			$(".menu-item-has-children.active").removeClass("active")
 		}, { passive: true });
 	},
 	closeMenu() {
@@ -377,13 +378,13 @@ function eventHandler() {
 	var t1 = gsapSet('.sJoin', 'top  top', '+=400%', .5, '.sJoin__inner');
 	t1
 		// .to(".sJoin svg", { scale: 1.5 })
-		.to(".sJoin .color-fill", { opacity: 0 })
-		.to(".sJoin .sJoin__head", { scale: 2 }, ">-.5")
-		.to(".sJoin .img-animate, .sJoin__col", { opacity: 1 }, ">-.5")
-		.to(".sJoin .border-fill", { opacity: 0 }, ">-.5")
-		.to(".sJoin .sJoin__head", { scale: 5 })
-		.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
-		.from(".sJoin .section", { opacity: 0, y: '100%' }, ">-.5")
+		.to(".sJoin__inner .color-fill", { opacity: 0 })
+		.to(".sJoin__inner .sJoin__head", { scale: 2 }, ">-.5")
+		.to(".sJoin__inner :is(.img-animate, .sJoin__col)", { opacity: 1 }, ">-.5")
+		.to(".sJoin__inner .border-fill", { opacity: 0 }, ">-.5")
+		.to(".sJoin__inner .sJoin__head", { scale: 5 })
+		.to(".sJoin__inner .sJoin__img-wrap", { x: '-50%' })
+		.from(".sJoin__inner .section", { opacity: 0, y: '100%' }, ">-.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 })
 
@@ -811,6 +812,7 @@ function eventHandler() {
 	const sSearchResultSwiper = new Swiper('.sSearchResult__slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
+		centeredSlides: true,
 	});
 
 	$('.category-filter__toggle').on('click', function () {
@@ -901,6 +903,69 @@ function eventHandler() {
 			};
 		ymaps.ready(init);
 	}
+
+	const swipersReviews = new Swiper('.sNews--Reviews__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 47,
+			}
+		}
+	});
+
+	// Get a reference to the file input element
+	const inputElement = document.querySelector('input[type="file"]');
+
+	// Create a FilePond instance
+	const pond = FilePond.create(inputElement, {
+		labelIdle: `Нажмите или перетащите  файлы в эту область. .rar .zip .doc .docx .pdf .jpg не более 10 мб`,
+	});
+
+	const sAdvantagesSwipers = new Swiper('.sAdvantages__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 69,
+			}
+		}
+	});
+
+	const sTariffsSwipers = new Swiper('.sTariffs__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+			hide: false,
+			snapOnRelease: true,
+		},
+		breakpoints: {
+			992: {
+				// slidesPerView: 2,
+				spaceBetween: 0,
+			}
+		}
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
