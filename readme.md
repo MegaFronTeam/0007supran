@@ -14,4 +14,5 @@
 1. <https://megafronteam.github.io/0007supran/public/13-article-2.html>
 1. <https://megafronteam.github.io/0007supran/public/14-education.html>
 1. <https://megafronteam.github.io/0007supran/public/15-search-result.html>
+1. <https://megafronteam.github.io/0007supran/public/15-search-result-2.html>
 2. <https://megafronteam.github.io/0007supran/public/00-modal.html>

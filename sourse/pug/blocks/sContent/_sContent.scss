@@ -152,12 +152,6 @@
 		}
 		tbody {
 			border-top: none!important;
-			& > tr {
-				@include mt;
-				&:hover {
-					background-color: rgba($color: #EFEAE7, $alpha: 0.5);
-				}
-			}
 		}
 		th {
 			border-bottom: 1px solid #E3E7EC;
@@ -278,10 +272,10 @@
 			.icon {
 				font-size: rem(24);
 			}
-			&:hover {
-				background-color: #000;
-				color: #fff;
-			}
+			// &:hover {
+			// 	background-color: #000;
+			// 	color: #fff;
+			// }
 		}
 	}
 	&__slider {
