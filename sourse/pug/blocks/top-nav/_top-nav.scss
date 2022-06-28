@@ -43,12 +43,14 @@
 		// background-color: #000;
 	}
 	
+	@include media-breakpoint-down(md) {
+		background: rgba(9, 9, 10, 0.8);
+	}
 	&--light-mob.fixed{
-		@include media-breakpoint-down(md) {
 
-			background-color: rgba($color: #fff, $alpha: .8);
-			--top-nav-color: #020407;
-		}
+		// 	background-color: rgba($color: #fff, $alpha: .8);
+		// 	--top-nav-color: #020407;
+		// }
 		// background-color: #000;
 	}
 

@@ -88,7 +88,8 @@ const JSCCommon = {
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
+			[ document.body, document.querySelector('html') ].forEach(el => el.classList.toggle("fixed"));
+			$(".menu-item-has-children.active").removeClass("active")
 		}, { passive: true });
 	},
 	closeMenu() {
@@ -377,13 +378,13 @@ function eventHandler() {
 	var t1 = gsapSet('.sJoin', 'top  top', '+=400%', .5, '.sJoin__inner');
 	t1
 		// .to(".sJoin svg", { scale: 1.5 })
-		.to(".sJoin .color-fill", { opacity: 0 })
-		.to(".sJoin .sJoin__head", { scale: 2 }, ">-.5")
-		.to(".sJoin .img-animate, .sJoin__col", { opacity: 1 }, ">-.5")
-		.to(".sJoin .border-fill", { opacity: 0 }, ">-.5")
-		.to(".sJoin .sJoin__head", { scale: 5 })
-		.to(".sJoin .sJoin__img-wrap", { x: '-50%' })
-		.from(".sJoin .section", { opacity: 0, y: '100%' }, ">-.5")
+		.to(".sJoin__inner .color-fill", { opacity: 0 })
+		.to(".sJoin__inner .sJoin__head", { scale: 2 }, ">-.5")
+		.to(".sJoin__inner :is(.img-animate, .sJoin__col)", { opacity: 1 }, ">-.5")
+		.to(".sJoin__inner .border-fill", { opacity: 0 }, ">-.5")
+		.to(".sJoin__inner .sJoin__head", { scale: 5 })
+		.to(".sJoin__inner .sJoin__img-wrap", { x: '-50%' })
+		.from(".sJoin__inner .section", { opacity: 0, y: '100%' }, ">-.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 })
 
