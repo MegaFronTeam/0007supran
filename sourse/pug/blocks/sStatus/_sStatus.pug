@@ -24,10 +24,10 @@ mixin sStatus2(data)
 				h6 Более 13 лет мы работаем над тем, чтобы быть лучшей консалтинговой компанией в своем сегменте рынка по объему и качеству оказываемых услуг.
 			+b.status-block
 				+e.wrap
-					mixin item(img)
+					mixin item(img,delay)
 						+e.item
-							+e.status-pic(href="#")
+							+e.status-pic(href="#" data-aos="fade-up" data-aos-delay=`${delay * 200}`)
 								img(src=`img/svg/status-${img}.svg`, alt="")
 					- for(var x = 1;x<4;x++)
-						+item(x)
+						+item(x,x)
 	// end sStatus

@@ -146,7 +146,10 @@
 		max-width: rem(268);
 		margin-bottom: rem(50);
 		&:nth-child(odd) {
-			margin-top: rem(84);
+			padding-top: rem(84);
+		}
+		&:nth-child(even){
+			padding-bottom: rem(84);
 		}
 	}
 	margin-bottom: rem(32);

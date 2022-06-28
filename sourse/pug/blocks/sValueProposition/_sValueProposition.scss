@@ -22,8 +22,8 @@
 			max-width: calc(33.333% - 46px);
 			width: calc(33.333% - 46px);
 		}
-		width: 100%;
-		max-width: 100%;
+		width: calc(100%);
+		max-width: calc(100%);
 	}
 	picture {
 		img {
@@ -52,8 +52,10 @@
 		margin-top: rem(32);
 	}
 	&__slider{
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(md){
 			overflow: visible;
+			width: calc(100% - 16px);
+			margin-left: 0;
 		}
 	}
 	
