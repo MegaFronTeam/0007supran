@@ -812,7 +812,7 @@ function eventHandler() {
 	const sSearchResultSwiper = new Swiper('.sSearchResult__slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
-		centeredSlides: true,
+		// centeredSlides: true,
 	});
 
 	$('.category-filter__toggle').on('click', function () {
