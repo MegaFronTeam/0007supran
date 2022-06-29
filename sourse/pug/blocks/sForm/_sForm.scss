@@ -58,6 +58,10 @@
 		.form-wrap__policy {
 			margin-bottom: rem(16);
 		}
+		.form-wrap__input:focus {
+			color: $gray-900;
+			border-color: $secondary;
+		}
 		.filepond {
 			cursor: pointer;
 			&--drop-label {
