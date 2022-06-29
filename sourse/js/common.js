@@ -813,6 +813,7 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 		// centeredSlides: true,
+		centerInsufficientSlides: true,
 	});
 
 	$('.category-filter__toggle').on('click', function () {
