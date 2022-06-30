@@ -296,10 +296,8 @@
 						<p>Наши сотрудники и&nbsp;то, как мы&nbsp;работаем, делает нашу компанию особенной </p>
 					</div>
 					<div class="sTeam__list" id="sTeam__list">
-						<div class="sTeam__wrap"><canvas id="myChart" ></canvas>
+						<div class="sTeam__wrap d-none d-md-block"><canvas id="myChart" ></canvas> 
 						</div>
-					</div>
-					<div class="sTeam__bar d-md-none">
 					</div>
 				</div>
 				<script src="libs/chart.js/chart.min.js"> </script>
@@ -392,9 +390,11 @@
 										let el = i;
 										let name = charData[ i ][ 'name' ];
 										let color = charData[ i ][ 'color' ];
+										let size = charData[ i ][ 'percent' ];
 										let charContentItem = document.createElement("div");
 										charContentItem.classList.add('sTeam__list-item');
 										charContentItem.style.setProperty('--bg', color);
+										charContentItem.style.setProperty('--percent', size);
 										charContentItem.setAttribute('data-chart', i);
 										charContentItem.innerHTML = `<div class="sTeam__list-item-inner">${name}</div>`;
 										charContent.appendChild(charContentItem);

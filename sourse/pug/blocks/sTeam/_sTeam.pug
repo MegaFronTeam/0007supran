@@ -6,9 +6,8 @@ mixin sTeam(data)
 				h2 Команда
 				p Наши сотрудники и&nbsp;то, как мы&nbsp;работаем, делает нашу компанию особенной 
 			+e.list#sTeam__list()
-				+e.wrap
-					<canvas id="myChart" ></canvas>
-			+e.bar.d-md-none()
+				+e.wrap.d-none.d-md-block
+					<canvas id="myChart" ></canvas> 
 
 		
 		include sTeam-js.pug
