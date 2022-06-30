@@ -37,11 +37,16 @@
 			.custom-input {
 				margin-bottom: rem(12);
 				cursor: pointer;
+				width: max-content;
 				&:last-child {
 					margin-bottom: rem(32);
 				}
 				&__input {
 					border-color: #fff;
+					background-size: 74%;
+					&:checked {
+						background-color: #fff;
+					}
 				}
 				&__text {
 					font-size: rem(13);
@@ -58,20 +63,23 @@
 		.form-wrap__policy {
 			margin-bottom: rem(16);
 		}
-		.form-wrap__input:focus {
-			color: $gray-900;
-			border-color: $secondary;
+		.form-wrap {
+			&__input:focus {
+				color: $gray-900;
+				border-color: $secondary;
+			}
 		}
 		.filepond {
 			cursor: pointer;
 			&--drop-label {
 				cursor: pointer;
 				border-radius: 4px;
-				font-size: rem(13);
+				font-size: rem(12.5);
 				font-weight: 300;
 				background-color: rgba(255, 255, 255, 0.05);
 				border: 1px dashed rgba(255, 255, 255, 0.2);
 				color: #7E7D85;
+				font-family: 'Raleway';
 				label {
 					cursor: pointer;
 				}
@@ -94,11 +102,17 @@
 				@extend .btn-secondary;
 				--bs-btn-bg: #08080B;
 				--bs-btn-color: #fff;
+				--bs-btn-hover-bg: #08080B;
 			}
 		}
 		.custom-input {
 			&__input {
+				background-color: #fff;
 				border-color: #08080B;
+				&:checked {
+					background-color: #08080B;
+					background-image: url('../img/svg/checkboxActiveWhite.svg');
+				}
 			}
 		}
 		.filepond {

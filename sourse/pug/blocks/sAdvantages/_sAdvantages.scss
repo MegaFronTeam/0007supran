@@ -1,7 +1,7 @@
 // start .sAdvantages
 .sAdvantages {
-	--sPT: #{rem(16)};
-	--sPB: #{rem(48)};
+	--sPT: #{rem(32)};
+	--sPB: #{rem(32)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(132)};
@@ -21,6 +21,7 @@
 	h2 {
 		font-weight: 500;
 		margin-bottom: rem(22);
+		text-transform: uppercase;
 	}
 	&__item {
 		margin-bottom: rem(32);
