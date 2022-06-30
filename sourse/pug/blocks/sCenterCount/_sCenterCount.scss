@@ -4,6 +4,13 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	position: relative;
+	background-color: #08080b;
+	@include media-breakpoint-up(xxl) {
+		--bs-body-font-size: calc(#{$em-base} + 0.12vw + 0.12vh);
+	}
+	@include media-breakpoint-up(xl) {
+		--bs-body-font-size: #{$em-base};
+	}
 	&__row {
 		--bs-gutter-x: #{rem(12)};
 		@include media-breakpoint-up(lg) {
@@ -35,8 +42,11 @@
 	}
 	h2 {
 		text-transform: uppercase;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
 			font-size: rem(30);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(28);
 		}
 		font-size: rem(25);
 	}
@@ -45,6 +55,10 @@
 		@include media-breakpoint-up(xxl) {
 			width: calc(50% - rem(280));
 			max-width: calc(50% - rem(280));
+		}
+		@include media-breakpoint-up(xl){
+			width: calc(50% - rem(190));
+			max-width: calc(50% - rem(190));
 		}
 		@include media-breakpoint-up(lg) {
 			width: calc(50% - rem(210));
@@ -177,8 +191,8 @@
 	&__canvas-wrap {
 		position: absolute;
 
-		@include media-breakpoint-up(lg) { 
-			transform:  rotate(30deg);
+		@include media-breakpoint-up(lg) {
+			transform: rotate(30deg);
 			@include a-cent;
 			width: rem(240) !important;
 			height: rem(240) !important;

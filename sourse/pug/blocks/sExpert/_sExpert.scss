@@ -4,7 +4,8 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	--slTitleW: #{rem(388)};
-	--slPT: #{ rem(105)};
+	--slPT: #{rem(105)};
+	background-color: #08080b;
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -18,7 +19,7 @@
 	&__slide-global {
 		width: auto;
 	}
-	&__slider-wrap{
+	&__slider-wrap {
 		position: relative;
 	}
 	&__slider {
@@ -27,12 +28,12 @@
 		max-width: calc(100% - #{rem(30)});
 		@include media-breakpoint-up(md) {
 			margin-left: calc(var(--slTitleW) + 30px);
-			// width: calc(rem(348) + 24px); 
+			// width: calc(rem(348) + 24px);
 			max-width: 100%;
 			max-width: rem(348);
 		}
-		.swiper-wrapper{
-			@include media-breakpoint-up(md) { 
+		.swiper-wrapper {
+			@include media-breakpoint-up(md) {
 				padding-top: var(--slPT);
 			}
 		}
@@ -50,20 +51,19 @@
 		margin-bottom: 0;
 	}
 
-	&__slide{
-		width:  rem(392);
+	&__slide {
+		width: rem(392);
 		height: auto;
 		&--title {
 			margin-bottom: 30px;
 			// width: calc(var(--c-g) + rem(388)) !important;
 			@include media-breakpoint-up(md) {
-
 			}
 			@include media-breakpoint-up(md) {
 				position: absolute;
 				top: 0;
 				left: calc(-1 * (var(--slTitleW) + 30px));
-				width: var(--slTitleW) ;
+				width: var(--slTitleW);
 			}
 			background-color: transparent;
 			padding: 0;
@@ -79,19 +79,16 @@
 		}
 		&.swiper-slide-active {
 			@include media-breakpoint-up(md) {
-				.sExpert__item{
-
+				.sExpert__item {
 					transform: translateY(rem(-105)) !important;
 				}
-				&:not(:first-child){
+				&:not(:first-child) {
 				}
 			}
 		}
 	}
 	&__item {
 		@include media-breakpoint-up(md) {
-			
-			
 		}
 		position: relative;
 		transition-duration: 0.4s;
@@ -99,11 +96,9 @@
 		background-color: #141317;
 		padding: rem(24);
 		height: 100%;
-		min-height:  rem(392);
+		min-height: rem(392);
 		display: flex;
 		flex-direction: column;
-	
-
 	}
 	&__year {
 		color: #acb4c0;
@@ -131,16 +126,16 @@
 		line-height: calc(24 / 18);
 		margin-bottom: rem(8);
 		color: var(--color);
-		&--winner { 
+		&--winner {
 			--color: #47a180;
 		}
-		&--gold { 
+		&--gold {
 			--color: #d3a244;
 		}
-		&--silver { 
+		&--silver {
 			--color: #a5a4a9;
 		}
-		&--bronze { 
+		&--bronze {
 			--color: #5a513b;
 		}
 	}
@@ -179,12 +174,11 @@
 			font-size: rem(13);
 		}
 	}
-	&__slider-pagination-wrap{
+	&__slider-pagination-wrap {
 		margin-top: rem(60);
-		
+
 		z-index: 2;
 		position: relative;
-		
 	}
 	&__slider-pagination {
 		@include media-breakpoint-up(md) {
@@ -197,12 +191,10 @@
 			@include media-breakpoint-up(md) {
 				// flex-wrap: nowrap;
 				// justify-content: space-between;
-			
 			}
 			position: relative;
-			
 		}
-	} 
+	}
 	&__pagination-item {
 		cursor: pointer;
 		// flex-grow: 1;
@@ -215,12 +207,11 @@
 			&:after {
 				content: "";
 				z-index: -1;
-				position: absolute; 
-				// bottom: rem(19); 
+				position: absolute;
+				// bottom: rem(19);
 				top: 100%;
 				@include media-breakpoint-up(md) {
-					
-				} 
+				}
 				// width: calc(100% );
 				// width: calc((100vw - var(--c-g) * 2 ) / 6  + #{rem(14px)} );
 				left: 50%;
@@ -228,14 +219,14 @@
 				// width: calc(100% - rem(130));
 				width: 100%;
 				// width: calc(100% + rem(164));
-				height: .06rem;
+				height: 0.06rem;
 				background-image: url("../img/svg/border-bg.svg");
 				background-repeat: repeat-x;
 			}
 		}
 		&.swiper-slide-thumb-active,
 		&:hover {
-			--color:#{$primary};
+			--color: #{$primary};
 			&::before {
 				background-color: $primary;
 			}
@@ -267,7 +258,7 @@
 			// @include media-breakpoint-down(md) {
 			// 	content: "";
 			// 	position: absolute;
-			// 	// border-top: 1px dotted $white; 
+			// 	// border-top: 1px dotted $white;
 			// 	top: 100%;
 			// 	// top: calc(100% - #{rem(20)});
 			// 	left: rem(32);
@@ -279,7 +270,7 @@
 			// 	height: .06rem;
 			// 	background-image: url("../img/svg/border-bg.svg");
 			// 	background-repeat: repeat-x;
-			// } 
+			// }
 		}
 	}
 	&__pagination-title {
@@ -289,21 +280,21 @@
 		color: var(--color);
 		transition-duration: 0.4s;
 	}
-	&__slide--title{
+	&__slide--title {
 		@include media-breakpoint-up(md) {
 			display: none;
 		}
 	}
-	.swiper-wrapper &__slide--title{
+	.swiper-wrapper &__slide--title {
 		@include media-breakpoint-up(md) {
 			display: block;
 		}
 		display: none;
 	}
 
-	&__slider-pagination{
+	&__slider-pagination {
 		overflow: visible;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 		}
 	}
 	@include media-breakpoint-up(xl) {

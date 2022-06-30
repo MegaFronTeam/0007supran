@@ -3,6 +3,7 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(16)};
+	background: #08080B;
 	// background-color: #08080b;
 	&__row {
 		// --bs-gutter-x: #{rem()};
@@ -44,6 +45,7 @@
 		@include media-breakpoint-up(xl) {
 			margin-right: rem(176);
 		}
+		
 		margin-bottom: rem(20);
 		font-size: rem(18);
 		line-height: calc(24 / 18);
@@ -75,7 +77,6 @@
 	}
 	&__item {
 		display: flex;
-		align-items: center;
 	}
 	&__item-icon {
 		margin-right: rem(16);
@@ -94,6 +95,7 @@
 		font-size: rem(18);
 		line-height: calc(24 / 18);
 		font-weight: 300;
+		align-self: center;
 	}
 	@include media-breakpoint-up(xl) {
 	}
