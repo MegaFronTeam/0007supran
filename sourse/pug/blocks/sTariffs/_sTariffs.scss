@@ -54,6 +54,24 @@
 				border-right: 1px solid rgba($color: #fff, $alpha: .2);
 			}
 		}
+		&:nth-child(1) {
+			img {
+				width: 100%;
+				max-width: rem(171);
+			}
+		}
+		&:nth-child(2) {
+			img {
+				width: 100%;
+				max-width: rem(174);
+			}
+		}
+		&:nth-child(3) {
+			img {
+				width: 100%;
+				max-width: rem(134);
+			}
+		}
 		img {
 			display: block;
 			margin-left: auto;
