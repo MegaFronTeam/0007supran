@@ -1,9 +1,8 @@
 mixin s404(data)
 	// start s404
 	+b.SECTION.s404.section#s404&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 s404
-				
-			.row
+		h1 404
+		+e.text
+			p Страница не найдена. Она не существовала или срок публикации истёк.
+			a(href="#").btn На главную
 	// end s404

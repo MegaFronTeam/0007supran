@@ -3,6 +3,15 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	min-height: 100vh;
+	min-width: 100vw;
+	@include media-breakpoint-down(md) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -17,7 +26,51 @@
 	&__item{
 
 	}
-
+	h1 {
+		font-size: rem(160);
+		background-image: linear-gradient(180deg, #FFFFFF 0%, #141414 88.24%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+		@include media-breakpoint-up(md) {
+			font-size: rem(400);
+			position: absolute;
+			top: rem(40);
+			left: rem(72);
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(70);
+		}
+	}
+	&__text {
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			left: 72px;
+			bottom: 62px;
+		}
+		p	 {
+			color: #fff;
+			font-size: rem(18);
+			font-weight: 300;
+			margin-bottom: rem(22);
+			max-width: rem(524);
+			@include media-breakpoint-down(md) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		a {
+			--bs-btn-border-color: #fff;
+			--bs-btn-color: #fff;
+			width: 100%;
+			max-width: rem(230);
+			&:hover {
+				--bs-btn-hover-border-color: #fff;
+				--bs-btn-hover-bg: #fff;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
