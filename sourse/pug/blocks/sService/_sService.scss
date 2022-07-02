@@ -126,15 +126,23 @@
 						top: 50%;
 						transform: translateY(-50%);
 						margin-top: 0;
-						right: rem(-85px);
+						left: calc(100% + 30px);;
 					}
 					&--left {
 						position: absolute;
 						top: 50%;
 						transform: translateY(-50%);
 						margin-top: 0;
-						left: rem(-85px);
+						right: calc(100% + 30px);
 					}
+				}
+				@include media-breakpoint-up(xxl) {
+					// &--right {
+					// 	right: -99.456px;
+					// }
+					// &--left {
+					// 	left: -176.456px;
+					// }
 				}
 				&--single {
 					// position: absolute;
