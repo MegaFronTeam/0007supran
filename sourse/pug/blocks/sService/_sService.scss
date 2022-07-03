@@ -126,7 +126,7 @@
 						top: 50%;
 						transform: translateY(-50%);
 						margin-top: 0;
-						left: calc(100% + 30px);;
+						left: calc(100% + 30px);
 					}
 					&--left {
 						position: absolute;
@@ -137,12 +137,12 @@
 					}
 				}
 				@include media-breakpoint-up(xxl) {
-					// &--right {
-					// 	right: -99.456px;
-					// }
-					// &--left {
-					// 	left: -176.456px;
-					// }
+					&--right {
+						left: calc(100% + 10px);
+					}
+					&--left {
+						right: calc(100% + 10px);
+					}
 				}
 				&--single {
 					// position: absolute;
