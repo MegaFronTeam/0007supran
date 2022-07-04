@@ -1,7 +1,10 @@
 mixin s404(data)
 	// start s404
-	+b.SECTION.s404.section#s404&attributes(attributes)
+	+b.SECTION.s404.section#s404&attributes(attributes).bg-wrap
+		+img('img/404-bg-1.jpg', 'bg').picture-bg
+		+blur()
 		h1 404
+		img(src='img/404-bg-2.jpg', alt='').picture
 		+e.text
 			p Страница не найдена. Она не существовала или срок публикации истёк.
 			a(href="#").btn На главную

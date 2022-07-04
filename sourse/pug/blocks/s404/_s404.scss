@@ -34,10 +34,10 @@
 		background-clip: text;
 		text-fill-color: transparent;
 		@include media-breakpoint-up(md) {
-			font-size: rem(400);
+			font-size: rem(290);
 			position: absolute;
-			top: rem(40);
-			left: rem(72);
+			top: 6rem;
+			left:  3.922222rem;
 		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: rem(70);
@@ -48,6 +48,7 @@
 			position: absolute;
 			left: 72px;
 			bottom: 62px;
+			z-index: 4;
 		}
 		p	 {
 			color: #fff;
@@ -69,6 +70,26 @@
 				--bs-btn-hover-border-color: #fff;
 				--bs-btn-hover-bg: #fff;
 			}
+		}
+	}
+	.animate-blur {
+		z-index: 5;
+		left: -149%;
+    bottom: 71%;
+		@include media-breakpoint-up(md) {
+			left: unset;
+			right: -109%;
+    	bottom: -129%;
+		}
+	}
+	.picture {
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+		width: 100%;
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
