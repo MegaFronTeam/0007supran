@@ -5,6 +5,8 @@
 	// --sTPB: #{rem()};
 	min-height: 100vh;
 	min-width: 100vw;
+	padding-left: rem(20);
+	padding-right: rem(20);
 	@include media-breakpoint-down(md) {
 		display: flex;
 		align-items: center;
