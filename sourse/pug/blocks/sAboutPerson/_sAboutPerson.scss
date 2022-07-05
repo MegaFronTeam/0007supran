@@ -2,9 +2,13 @@
 .sAboutPerson {
 	--sPT: #{rem(0)};
 	--sPB: #{rem(28)};
+	padding-bottom: 0;
 	// --sTPB: #{rem()};
 	display: flex;
 	flex-direction: column;
+	@include media-breakpoint-up(xl) {
+	max-height: 100vh;
+	}
 	@include media-breakpoint-up(md) {
 		--sPB: #{rem(52)};
 		flex-direction: row !important;
@@ -63,7 +67,7 @@
 		position: relative;
 		font-family: "Playfair Display";
 		font-style: italic;
-		font-size: rem(30);
+		font-size: rem(28);
 		line-height: calc(32 / 30);
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(32);
@@ -88,7 +92,7 @@
 	}
 	&__sign {
 		@include media-breakpoint-up(md) {
-			margin-bottom: rem(68);
+			margin-bottom: 1vh;
 		}
 		margin-bottom: rem(24);
 		width: rem(138);

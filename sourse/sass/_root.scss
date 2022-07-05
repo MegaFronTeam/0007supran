@@ -4,7 +4,7 @@
 	
 	// --bs-body-font-size: #{$em-base};
 	@media (min-width: 2400px) {
-		--bs-body-font-size: calc(#{$em-base}   + .62vw + .62vh); 
+		--bs-body-font-size: calc(#{$em-base}   + .35vw + .35vh); 
 	}
 
 	@include media-breakpoint-up(xl) {

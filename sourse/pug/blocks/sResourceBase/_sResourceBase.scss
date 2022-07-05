@@ -70,6 +70,7 @@
 	}
 	ul{
 		margin-bottom: 0;
+		list-style: none;
 	}
 	&__list{
 		// @include media-breakpoint-up(md){
@@ -77,11 +78,12 @@
 		// 	column-count: 2;
 		// 	column-gap: rem(50);
 		// }
-		// @include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(lg){
 		// 	column-gap: rem(106);
-		// }
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0 rem(106);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 

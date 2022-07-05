@@ -375,7 +375,7 @@ function eventHandler() {
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	var t1 = gsapSet('.sJoin', 'top  top', '+=400%', .5, '.sJoin__inner');
+	var t1 = gsapSet('.sJoin', 'top  top', '+=300%', 1.5, '.sJoin__inner');
 	t1
 		// .to(".sJoin svg", { scale: 1.5 })
 		.to(".sJoin__inner .color-fill", { opacity: 0 })
