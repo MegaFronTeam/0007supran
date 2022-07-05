@@ -82,10 +82,11 @@ mixin sNewsPublication(data)
 					+publ-item(`Июнь 2022`,`1`,`Сотрудники ИНВИТРО ставят цели и&nbsp;планируют развитие с&nbsp;помощью SAP SuccessFactors`)
 					+publ-item(`Август 2022`,`2`,`Золотая награда SAP QUALITY AWARD 2017`)
 					+b.publ-item.swiper-slide
-						+b.end-news-card(href="#")
-							+e.wrap
-								+e.title Перейти в раздел публикации
-								+icon('arrow-right-link')
+						+e.link(href="#")
+							+b.end-news-card
+								+e.wrap
+									+e.title Перейти в раздел публикации
+									+icon('arrow-right-link')
 				.swiper-scrollbar
 	// end sNews
 
@@ -127,6 +128,7 @@ mixin sNewsReviews(data)
 
 mixin publ-item(date,img,caption)
 	+b.publ-item.swiper-slide
-		+e.date!=date
-		+pic(`publ-pic-${img}.jpg`,'',0)
-		+e.caption!=caption
+		+e.link(href="#")
+			+e.date!=date
+			+pic(`publ-pic-${img}.jpg`,'',0)
+			+e.caption!=caption
