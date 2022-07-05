@@ -89,7 +89,7 @@ const JSCCommon = {
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
 			[ document.body, document.querySelector('html') ].forEach(el => el.classList.toggle("fixed"));
-			$(".menu-item-has-children.active").removeClass("active")
+			// $(".menu-item-has-children.active").removeClass("active")
 		}, { passive: true });
 	},
 	closeMenu() {
@@ -100,7 +100,7 @@ const JSCCommon = {
 			toggle.forEach(element => element.classList.remove("on"));
 			menu.classList.remove("active");
 			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
-			$(".menu-item-has-children.active").removeClass("active")
+			// $(".menu-item-has-children.active").removeClass("active")
 		}
 
 	},
@@ -385,6 +385,7 @@ function eventHandler() {
 		.to(".sJoin__inner .sJoin__head", { scale: 5 })
 		.to(".sJoin__inner .sJoin__img-wrap", { x: '-50%' })
 		.from(".sJoin__inner .section", { opacity: 0, y: '100%' }, ">-.5")
+		.from(".sJoin__inner .section", { }, ">+.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 },">-.5")
 	// .to(".sJoin .sJoin__head", { opacity: 0 })
 
@@ -460,21 +461,7 @@ function eventHandler() {
 
 			}
 		};
-
-			function myfunction2() {
-				let sec = wow.dataset.section;
-				// console.log(wow);
-				// console.log(sec);
-				$(`.dots-wrap__item.active`).removeClass('active');
-				$(`[data-link="${sec}"]`).addClass('active');
-				if (wow.classList.contains("bg-white")) {
-					$(".dots-wrap").addClass("dots-wrap--dark")
-				}
-				else {
-					$(".dots-wrap").removeClass("dots-wrap--dark")
-				}
-			};
-
+ 
 		function myfunction2() {
 			let sec = wow.dataset.section;
 			// console.log(wow);

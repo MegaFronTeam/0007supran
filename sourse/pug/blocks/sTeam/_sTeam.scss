@@ -1,5 +1,7 @@
 // start .sTeam
 .sTeam {
+	background-color: $dark;
+	background: #08080B;
 	@include media-breakpoint-up(md) {
 
 		--sPT: #{rem(64)};
@@ -87,6 +89,7 @@
 		
 		&-inner{
 			position: relative;
+			opacity: var(--op, .5);
 			@include media-breakpoint-down(md) {
 				&::after{
 					content: '';
@@ -111,11 +114,10 @@
 
 				}
 				// @include mt;
-				// opacity: var(--op, 0);
+			
 				// transform: translateX(var(--op, 100%));
 				// visibility: var(--op, hidden);
 				&.hover{
-					// --op: 1;
 				}
 			}
 			cursor: pointer;
@@ -126,6 +128,7 @@
 				&.hover,
 				&:hover{
 					color: rgba($color: #fff, $alpha: 1);
+					--op: 1;
 	
 				}
 

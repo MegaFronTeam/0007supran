@@ -37,7 +37,7 @@
 	&--light.fixed{
 		@include media-breakpoint-up(md) {
 
-			background-color: rgba($color: #fff, $alpha: .8);
+			background-color: #fff;
 			--top-nav-color: #020407;
 		}
 		// background-color: #000;

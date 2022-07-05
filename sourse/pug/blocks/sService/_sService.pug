@@ -10,9 +10,9 @@ mixin sService(data)
 						+e.item
 							+e.title!=title
 							+e.caption!=caption
-							+e.link(href="#")
-								span Подробнее
-								+icon('arrow-right-link')
+							//- +e.link(href="#")
+							//- 	span Подробнее
+							//- 	+icon('arrow-right-link')
 				+item('Заказная разработка для систем SAP','Автоматизация процессов регистрации, квалификации, сегментации, а&nbsp;также контроль эффективности поставщиков. Управление данными о&nbsp;поставщиках, их&nbsp;KPI, финансовой документацией, сертификатами и&nbsp;прочей информацией.')
 				+item('Прикладная разработка','Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aliquam tenetur accusamus! Illum quod eius praesentium quisquam quis totam corporis necessitatibus unde dolorum? Commodi, dolore!')
 				//- +item('Прикладная и мобильная разработка','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima molestiae necessitatibus esse recusandae omnis odio nobis maxime eos nemo fugit mollitia beatae magnam enim expedita iusto repellendus non blanditiis, ullam et laudantium!')
@@ -32,18 +32,18 @@ mixin sService2Item(title,caption, right, img, subtext, single, online)
 				+e.caption!=caption
 			if subtext
 				+e.subtext!= subtext
-			if right
-				if single
-					+e.link--single
-						+icon('arrow-right-link')
-				else
-					+e.link--right
-						+icon('arrow-right-link')
-			else
-				+e.link--left.d-none.d-md-inline-block
-					+icon('arrow-left-link')
-				+e.link--left.d-inline-block.d-md-none
-					+icon('arrow-right-link')
+			//- if right
+			//- 	if single
+			//- 		+e.link--single
+			//- 			+icon('arrow-right-link')
+			//- 	else
+			//- 		+e.link--right
+			//- 			+icon('arrow-right-link')
+			//- else
+			//- 	+e.link--left.d-none.d-md-inline-block
+			//- 		+icon('arrow-left-link')
+			//- 	+e.link--left.d-inline-block.d-md-none
+			//- 		+icon('arrow-right-link')
 mixin sService2(data)
 	// start sService
 	+b.SECTION.sService--2.section#sService&attributes(attributes)

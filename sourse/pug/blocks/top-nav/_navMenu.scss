@@ -221,8 +221,12 @@
 		// right: 0;
 		
 		&:not(.active){
-			
+			// visibility: hidden;
 			@include media-breakpoint-up(lg) {
+				.sub-menu-wrap{
+					visibility: hidden;
+					z-index: -1;
+				}
 			transform: translate3d(-120%, 0,0);
 		}
 		transform: translate3d( 0,100%,0);

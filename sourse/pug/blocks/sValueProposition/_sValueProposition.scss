@@ -17,6 +17,16 @@
 	}
 	&__item {
 	}
+	picture {
+		img {
+			width: 100%;
+			max-width: 100%;
+			filter:saturate(0);
+			@include mt;
+		}
+
+		margin-bottom: rem(16);
+	}
 	&__slide {
 		@include media-breakpoint-up(md) {
 			max-width: calc(33.333% - 46px);
@@ -24,15 +34,13 @@
 		}
 		width: calc(100%);
 		max-width: calc(100%);
-	}
-	picture {
-		img {
-			width: 100%;
-			max-width: 100%;
+		&:hover{
+			img{
+				filter:saturate(1);
+			}
 		}
-		filter:saturate(0);
-		margin-bottom: rem(16);
 	}
+
 	&__slide-title {
 		margin-bottom: rem(8);
 		font-weight: 600;

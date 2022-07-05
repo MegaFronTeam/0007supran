@@ -36,11 +36,12 @@
 		width: 100%;
 	}
 	.sAboutCaptionItem {
+		height: 50%;
 		&:first-child {
 			@include media-breakpoint-up(md) {
-				margin-bottom: rem(64);
+				padding-bottom: rem(64);
 			}
-			margin-bottom: rem(24);
+			padding-bottom: rem(24);
 		}
 	}
 
