@@ -28,6 +28,7 @@
 		margin-bottom: rem(16);
 	}
 	&__slide {
+		line-height: calc(24 / 18);
 		@include media-breakpoint-up(md) {
 			max-width: calc(33.333% - 46px);
 			width: calc(33.333% - 46px);
@@ -35,6 +36,9 @@
 		width: calc(100%);
 		max-width: calc(100%);
 		&:hover{
+			.sValueProposition__slide-title{
+				color: $primary;
+			}
 			img{
 				filter:saturate(1);
 			}
@@ -43,14 +47,11 @@
 
 	&__slide-title {
 		margin-bottom: rem(8);
-		font-weight: 600;
-		font-size: rem(18);
-		line-height: calc(24 / 18);
+		font-weight: 600; 
+		@include mt;
 	}
 	&__slide-caption {
-		font-weight: 300;
-		font-size: rem(18);
-		line-height: calc(24 / 18);
+		font-weight: 300; 
 	}
 	.swiper-scrollbar{
 		position: relative;

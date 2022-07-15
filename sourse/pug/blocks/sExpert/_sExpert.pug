@@ -84,18 +84,19 @@ mixin sExpert(data)
 							+e.link(href="#")
 								span О проекте
 								+icon('chevron-right')
-						+e.slide.swiper-slide: +e.item
-							+e.year 2018 г.
-							+e.logo
-								img(src="img/svg/expert-logo-2.svg", alt="")
-							+e.type--bronze
-								+icon('medal')
-								span Бронза, Проекты SuccessFactors
-							+e.title-project Проект
-							+e.project-name Разработка и&nbsp;внедрение системы бюджетирования
-							+e.link(href="#")
-								span О проекте
-								+icon('chevron-right')
+						- for (var x = 0; x < 6; x++)
+							+e.slide.swiper-slide: +e.item
+								+e.year 2018 г.
+								+e.logo
+									img(src="img/svg/expert-logo-2.svg", alt="")
+								+e.type--bronze
+									+icon('medal')
+									span Бронза, Проекты SuccessFactors
+								+e.title-project Проект
+								+e.project-name Разработка и&nbsp;внедрение системы бюджетирования
+								+e.link(href="#")
+									span О проекте
+									+icon('chevron-right')
 			+e.slider-pagination-wrap
 				+e.slider-pagination--js.swiper
 					.swiper-wrapper
@@ -111,6 +112,7 @@ mixin sExpert(data)
 							+e.pagination-title 2018 г.
 						+e.pagination-item.swiper-slide
 							+e.pagination-title 2018 г.
-						+e.pagination-item.swiper-slide
-							+e.pagination-title 2018 г.
+						- for (var x = 0; x < 6; x++)
+							+e.pagination-item.swiper-slide
+								+e.pagination-title 2018 г.
 	// end sExpert
