@@ -85,8 +85,28 @@ mixin headerSearch(name)
 			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
 		.container(data-aos="fade-up" data-aos-delay="300")
 			+input('Поиск', 'text', '')
-				+icon('search')
+				button(type="button").btn
+					+icon('search')
 				p Найдено 27 результатов
+				+e.found
+					a(href="#") Управление поставщиками
+					a(href="#") Управление жизненным циклом продукции
+					a(href="#") Управление активами предприятия
+					a(href="#") Управление поставщиками и предприятиями
+
+mixin headerSearch2(name)
+	// start headerBlock
+	+b.headerBlock--search.bg-wrap.section#headerBlock&attributes(attributes)
+		+blur().animate-blur--right 
+		+e.bg.picture-bg
+			img(src=`img/headerBlock${name}-bg.jpg`, alt="")
+		+e.bg--mob.picture-bg
+			img(src=`img/headerBlock${name}-bg-mob.jpg`, alt="")
+		.container(data-aos="fade-up" data-aos-delay="300")
+			+input('Поиск', 'text', '')(value="ДЛОАЩУП")
+				button(type="button").btn
+					+icon('search')
+				p Найдено 0 результатов
 				+e.found
 					a(href="#") Управление поставщиками
 					a(href="#") Управление жизненным циклом продукции
