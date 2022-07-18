@@ -118,6 +118,7 @@
 	}
 	&__block--footer{
 		border-top: 1px solid rgba(#E3E7EC, .2);
+		font-weight: 300;
 		@include media-breakpoint-down(md) {
 			text-transform: uppercase;
 		}
