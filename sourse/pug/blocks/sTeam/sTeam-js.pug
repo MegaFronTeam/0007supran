@@ -71,6 +71,7 @@ script.
 									myChart.data.datasets[ 0 ].backgroundColor = charColorsGray; 
 								}
 								else { 
+									$(`.sTeam__list-item-inner`).removeClass("hover")
 									myChart.data.datasets[ 0 ].backgroundColor =    charColors; 
 								}
 								myChart.update();

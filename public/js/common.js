@@ -744,6 +744,10 @@ function eventHandler() {
 			multipleActiveThumbs: false,
 			swiper: swiperExpertPagination,
 		},
+		navigation: {
+			nextEl: ".sExpert .swiper-button-next",
+			prevEl: ".sExpert .swiper-button-prev",
+		},
 		// initialSlide: 1,
 		breakpoints: {
 			768: {
@@ -954,6 +958,32 @@ function eventHandler() {
 			}
 		}
 	});
+
+	let sliderWrap = document.querySelector(".slider-hover");
+
+	sliderWrap.addEventListener("mouseout", function(){ 
+		if (this.classList.contains("show-arrow-hover")) {
+			
+			this.classList.remove("show-arrow-hover")
+		} 
+	}, { passive: true })
+
+	sliderWrap.addEventListener("mousemove", function(event){
+		const width = this.offsetWidth / 2; 
+		const x = event.clientX; 
+		this.classList.add("show-arrow-hover")
+		 if(x > width) {
+			this.classList.add("show-arrow-left")
+			this.classList.remove("show-arrow-right")
+			// document.documentElement.style.setProperty('--right-arrow', `${vh}px`);
+			
+		}
+		else{
+				this.classList.add("show-arrow-right")
+				this.classList.remove("show-arrow-left")
+			} 
+	}, { passive: true })
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

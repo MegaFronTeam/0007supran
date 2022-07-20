@@ -8,6 +8,7 @@ mixin sExpert(data)
 					h6 Ежегодно мы&nbsp;заявляем на&nbsp;конкурс SAP Quality Aword выполненные нами проекты, которые обеспечили заказчикам значительные преимущества на&nbsp;рынке за&nbsp;счет повышения эффективности бизнес-процессов
 			//- .d-md-none 
 			+title()
+		.slider-hover.container
 			+e.slider-wrap
 				+e.slider--js.swiper
 					.swiper-wrapper
@@ -97,6 +98,9 @@ mixin sExpert(data)
 								+e.link(href="#")
 									span О проекте
 									+icon('chevron-right')
+				.d-none.d-md-block
+					+arrow
+		.container
 			+e.slider-pagination-wrap
 				+e.slider-pagination--js.swiper
 					.swiper-wrapper
