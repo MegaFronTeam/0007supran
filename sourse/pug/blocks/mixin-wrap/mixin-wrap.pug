@@ -30,8 +30,9 @@ mixin addblock()
 		+e.btn--plus(type="button")
 		
 mixin blur()
-	.animate-blur&attributes(attributes)
-			img(src="img/@2x/webp/animate-blur.webp", alt="")
+	picture.animate-blur&attributes(attributes) 
+		source(srcset="img/@2x/webp/animate-blur.webp", type="image/webp")
+		img(src="img/@2x/animate-blur.png", alt="")
 
 mixin sAboutCaptionItem(pic,title,text)
 	+b.sAboutCaptionItem
