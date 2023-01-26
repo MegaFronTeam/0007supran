@@ -9,7 +9,7 @@
 	// overflow: hidden;
 	&::after,
 	&::before{
-		content: url(../img/@2x/webp/event-before.webp);
+		content: url(../img/@2x/event-before.png);
 		position: absolute;
 		z-index: -1; 
 		top: -15%;
